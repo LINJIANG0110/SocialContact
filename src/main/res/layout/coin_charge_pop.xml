@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/magin_40"
+        android:background="@drawable/shape_cornor_white"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mCoinHintTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_30"
+            android:gravity="center"
+            android:text="您的金币不足"
+            android:textColor="@color/oval_light_yellow"
+            android:textSize="@dimen/middleTextSize" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_20"
+            android:background="@drawable/shape_little_cornor_little_gray"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/magin_20"
+            android:paddingLeft="@dimen/magin_25"
+            android:paddingRight="@dimen/magin_25"
+            android:paddingTop="@dimen/magin_20">
+
+            <ImageView
+                android:id="@+id/mMallImg"
+                android:layout_width="@dimen/magin_30"
+                android:layout_height="@dimen/magin_30"
+                android:src="@mipmap/coin1" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mHaveCoinTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21312"
+                android:textColor="@color/oval_light_yellow"
+                android:textSize="@dimen/littleTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mNeedCoinTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/123123"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/littleTextSize" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_0.1"
+            android:layout_marginTop="@dimen/magin_25"
+            android:background="@color/little_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/cancelTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/magin_20"
+                android:text="去获取"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/sureTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/magin_20"
+                android:text="立即升级"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/middleTextSize" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

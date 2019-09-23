@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mHeadLL"
+        android:visibility="gone"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@drawable/shape_solid_black"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/magin_5"
+        android:paddingLeft="@dimen/magin_5"
+        android:paddingRight="@dimen/magin_5"
+        android:paddingTop="@dimen/magin_5">
+
+        <ImageView
+            android:id="@+id/mHeadLogo"
+            android:layout_width="@dimen/magin_25"
+            android:layout_height="@dimen/magin_25"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:scaleType="fitXY"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:id="@+id/mMsgNum"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="2条新消息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+</LinearLayout>

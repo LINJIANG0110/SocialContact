@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="91dp">
+
+    <RelativeLayout
+        android:id="@+id/mRoot"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_fengmian"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/fang_zhengtouxiang"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/fang_zhengtouxiang"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundAsCircle="true"
+            app:roundedCornerRadius="@dimen/magin_12" />
+
+        <RelativeLayout
+            android:id="@+id/llay_middle"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_fengmian"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男快来五个小姐姐找对象伴侣"
+                android:textColor="@color/tv_black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="10dp"
+                android:text="潕爱"
+                android:textColor="@color/tv_gray"
+                android:textSize="13sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@+id/tv_nickname"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mNameTv"
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="胜多负少"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/littleTextSize"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ageSexLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_cornor_pink"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/magin_3"
+                    android:paddingRight="@dimen/magin_3"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/sexLogo"
+                        android:layout_width="@dimen/magin_8"
+                        android:layout_height="@dimen/magin_8"
+                        android:src="@mipmap/xiangqing_nv1" />
+
+                    <TextView
+                        android:id="@+id/mAgeTv"
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_1"
+                        android:text="12"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tightTextSize" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/mLevelTv"
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_5"
+                    android:background="@drawable/shape_solid_level_color"
+                    android:paddingBottom="@dimen/magin_1"
+                    android:paddingLeft="@dimen/magin_3"
+                    android:paddingRight="@dimen/magin_3"
+                    android:paddingTop="@dimen/magin_1"
+                    android:text="LV34"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tightTextSize"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/llay_middle"
+            android:text="刚刚"
+            android:textColor="@color/tv_gray"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/mRoot"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/magin_5"
+        android:background="#96e5e5e5" />
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wallet_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fbecce"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:text="余额"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/medium_text_size" />
+
+        <ImageView
+            android:layout_width="@dimen/magin_20"
+            android:layout_height="@dimen/magin_30"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:src="@mipmap/diamond1" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/coinRemain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:text="0"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/coinFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/magin_20"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:src="@mipmap/chongzhi_fanbei" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10">
+
+        <net.neiquan.applibrary.wight.RefreshLayout
+            android:id="@+id/refesh_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/mRecylerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </net.neiquan.applibrary.wight.RefreshLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/troubleHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginRight="@dimen/magin_20"
+        android:text="充值遇到问题可关注“千语”微信公众号，一站式解决您的问题"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/tightTextSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <FrameLayout
+            android:id="@+id/aliPayFL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_cornor_white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_10">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/magin_40"
+                    android:src="@mipmap/chongzhi_zhifubao" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_5"
+                    android:text="支付"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/medium_text_size" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/aliPayChosen"
+                android:layout_width="@dimen/magin_20"
+                android:layout_height="@dimen/magin_20"
+                android:layout_gravity="bottom|right"
+                android:src="@mipmap/chongzhi_xuanze"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/wxPayFL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_weight="1"
+            android:background="@drawable/shape_cornor_white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_10">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_35"
+                    android:layout_height="@dimen/magin_40"
+                    android:src="@mipmap/chongzhi_weixin" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_5"
+                    android:text="支付"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/medium_text_size" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/wxPayChosen"
+                android:layout_width="@dimen/magin_20"
+                android:layout_height="@dimen/magin_20"
+                android:visibility="gone"
+                android:layout_gravity="bottom|right"
+                android:src="@mipmap/chongzhi_xuanze" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

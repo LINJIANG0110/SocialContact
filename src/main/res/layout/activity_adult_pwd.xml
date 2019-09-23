@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/magin_40"
+        android:text="确认密码"
+        android:textColor="@color/black"
+        android:textSize="@dimen/middleTextSize2" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_20"
+        android:layout_marginRight="@dimen/magin_20"
+        android:layout_marginTop="@dimen/magin_20"
+        android:text="启用青少年模式，需要先设置独立密码，此密码仅用于开启/关闭青少年模式。"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize" />
+
+    <EditText
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mFirstPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/magin_20"
+        android:background="@drawable/shape_little_cornor_gray"
+        android:hint="请先输入密码"
+        android:paddingBottom="@dimen/magin_8"
+        android:paddingLeft="@dimen/magin_60"
+        android:paddingRight="@dimen/magin_60"
+        android:paddingTop="@dimen/magin_8"
+        android:textColor="@color/text_black"
+        android:textColorHint="@color/text_gray"
+        android:textSize="@dimen/middleTextSize" />
+
+    <EditText
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mSecondPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/magin_20"
+        android:background="@drawable/shape_little_cornor_gray"
+        android:hint="再次输入密码"
+        android:paddingBottom="@dimen/magin_8"
+        android:paddingLeft="@dimen/magin_60"
+        android:paddingRight="@dimen/magin_60"
+        android:paddingTop="@dimen/magin_8"
+        android:textColor="@color/text_black"
+        android:textColorHint="@color/text_gray"
+        android:textSize="@dimen/middleTextSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_20"
+        android:layout_marginTop="@dimen/magin_50"
+        android:layout_marginRight="@dimen/magin_20"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mLastStepTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/shape_cornor_adult_blue"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/magin_8"
+            android:paddingLeft="@dimen/magin_50"
+            android:paddingRight="@dimen/magin_50"
+            android:paddingTop="@dimen/magin_8"
+            android:text="上一步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/middleTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mEnsureTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:background="@drawable/shape_cornor_adult_blue"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/magin_8"
+            android:paddingLeft="@dimen/magin_50"
+            android:paddingRight="@dimen/magin_50"
+            android:paddingTop="@dimen/magin_8"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="@dimen/middleTextSize" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <ImageView
+        android:layout_width="@dimen/magin_50"
+        android:layout_height="@dimen/magin_50"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/magin_50"
+        android:src="@mipmap/wallet1" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="722,897"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/hugeTextSize_" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="当前拥有(葫芦)"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/magin_50"
+        android:orientation="horizontal">
+
+        <EditText
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="输入葫芦数量"
+            android:padding="@dimen/magin_15"
+            android:inputType="number"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/largeTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="@dimen/magin_15"
+            android:text="0元"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_gravity="center"
+        android:text="兑现比例1：1"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/magin_20"
+        android:background="@drawable/app_color_selector"
+        android:gravity="center"
+        android:padding="@dimen/magin_8"
+        android:text="确认兑现"
+        android:textColor="@color/white"
+        android:textSize="@dimen/largeTextSize" />
+</LinearLayout>

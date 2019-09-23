@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRootLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/magin_5">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mHeadImg"
+            android:layout_width="@dimen/magin_40"
+            android:layout_height="@dimen/magin_40"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/fang_zhengtouxiang"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/fang_zhengtouxiang"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_3" />
+        <!--app:fadeDuration="3000"-->
+        <!--app:roundAsCircle="true"-->
+        <!--app:roundingBorderColor="#C3B0A9"-->
+        <!--app:roundingBorderWidth="2dp" />-->
+        <ImageView
+            android:id="@+id/headLogo"
+            android:layout_width="@dimen/magin_15"
+            android:layout_height="@dimen/magin_15"
+            android:layout_gravity="right|bottom"
+            android:layout_marginLeft="-8dp"
+            android:src="@mipmap/patriarch" />
+    </FrameLayout>
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/magin_2"
+        android:singleLine="true"
+        android:text="美人鱼"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/littleTextSize" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15秒前"
+        android:layout_marginTop="@dimen/magin_2"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/tightTextSize" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mManageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_big_cornor_blue"
+        android:paddingBottom="@dimen/magin_3"
+        android:paddingLeft="@dimen/margin_10"
+        android:layout_marginTop="@dimen/magin_5"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/magin_3"
+        android:text="权限"
+        android:textColor="@color/white"
+        android:textSize="@dimen/littleTextSize" />
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mWorldFL"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/skill_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/mCloseLogo"
+        android:layout_width="@dimen/magin_25"
+        android:layout_height="@dimen/magin_25"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/magin_15"
+        android:visibility="gone"
+        android:src="@mipmap/close"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mGiftImg"
+        android:layout_width="@dimen/magin_180"
+        android:layout_height="@dimen/magin_180"
+        android:layout_marginTop="@dimen/magin_100"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:actualImageScaleType="focusCrop"
+        app:failureImageScaleType="centerCrop"
+        app:placeholderImageScaleType="centerCrop"
+        app:progressBarAutoRotateInterval="3000"
+        app:progressBarImage="@drawable/progressbar"
+        app:progressBarImageScaleType="centerInside" />
+    <!--app:roundedCornerRadius="@dimen/magin_4"-->
+    <!--app:fadeDuration="3000"-->
+    <!--app:roundAsCircle="true"-->
+    <!--app:roundingBorderColor="#C3B0A9"-->
+    <!--app:roundingBorderWidth="2dp" />-->
+
+    <com.qianyu.communicate.views.StrokeTextView
+        android:id="@+id/mGiftDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_30"
+        android:layout_marginRight="@dimen/magin_30"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/magin_15"
+        android:gravity="center"
+        android:maxLines="3"
+        app:innnerColor="@color/white"
+        app:outerColor="#e19f74"
+        android:textStyle="bold"
+        android:text="睡了多久发了多少睡了多久发了多久发了多少睡了多久发了多少睡了多少"
+        android:textSize="@dimen/middleTextSize2" />
+
+    <LinearLayout
+        android:id="@+id/mOperateLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mJustForget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bubble"
+            android:background="@drawable/shape_blue_skill"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:text="服了，求饶"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mRevenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bubble"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shape_yellow_skill"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:text="不服，报仇"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

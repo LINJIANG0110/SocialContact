@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/magin_40"
+        android:background="@drawable/shape_cornor_white_"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_half_cornor_app_corlor"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="礼物说明"
+            android:textColor="@color/white"
+            android:textSize="@dimen/middleTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mGiftState1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_20"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:layout_marginRight="@dimen/magin_20"
+            android:lineSpacingExtra="@dimen/magin_5"
+            android:text="斯蒂芬斯蒂芬色粉色斯蒂芬斯蒂芬色粉色斯蒂芬斯蒂芬色粉色斯蒂芬斯蒂芬色粉色斯蒂芬斯蒂芬色粉色"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/magin_20"
+            android:lineSpacingExtra="@dimen/magin_5"
+            android:text="2、礼物只能送给别人，不能赠给自己。"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mGiftState3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:layout_marginRight="@dimen/magin_20"
+            android:lineSpacingExtra="@dimen/magin_5"
+            android:text="斯蒂芬斯蒂芬色粉色斯蒂芬斯蒂芬色粉色斯蒂芬斯蒂芬色粉色斯蒂芬斯蒂芬色粉色斯蒂芬斯蒂芬色粉色"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mGiftSureTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/magin_30"
+            android:layout_marginTop="@dimen/magin_50"
+            android:text="知道"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/middleTextSize2"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

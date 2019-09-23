@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mImage1"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/magin_2"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_0" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mImage2"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/magin_2"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_0" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mImage3"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/magin_2"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mImage4"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginRight="5dp"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_0" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mImage5"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginRight="5dp"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_0" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mImage6"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginRight="5dp"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_0" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mImage7"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginRight="5dp"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_0" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mImage8"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginRight="5dp"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_0" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mImage9"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginRight="5dp"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_0" />
+    </LinearLayout>
+</LinearLayout>

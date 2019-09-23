@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f4f8"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <net.neiquan.applibrary.wight.NoSclooListView
+        android:id="@+id/mRequestListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:listSelector="#00000000" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/mListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:divider="@null"
+            android:listSelector="#00000000" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mTvDialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="@color/app_color"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <net.neiquan.applibrary.wight.MySideBar
+            android:id="@+id/mSiderBar"
+            android:layout_width="30.0dip"
+            android:layout_height="300dp"
+            android:layout_gravity="right|center"
+            android:background="@color/transparent" />
+    </FrameLayout>
+</LinearLayout>

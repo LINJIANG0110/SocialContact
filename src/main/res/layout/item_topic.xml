@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_fengmian"
+            android:layout_width="96dp"
+            android:layout_height="66dp"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@color/gray_pressed"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@color/gray_pressed"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_5" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_15"
+            android:layout_toRightOf="@+id/iv_fengmian"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="在你看来，你这个行业的普通人？"
+            android:textColor="@color/tv_black_s"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_hotnum"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="@dimen/magin_15"
+            android:layout_toRightOf="@+id/iv_fengmian"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="2"
+            android:text="5285 万热度"
+            android:textColor="@color/tv_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_hotnum_noimg"
+            android:visibility="gone"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="@dimen/magin_15"
+            android:layout_toRightOf="@+id/iv_fengmian"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="2"
+            android:text="5285 万热度"
+            android:textColor="@color/tv_gray"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/line_color" />
+</LinearLayout>

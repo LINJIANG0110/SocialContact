@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/friendDetailLL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+
+    <net.neiquan.applibrary.wight.RefreshLayout
+        android:id="@+id/refesh_ly"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/head_view"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+    </net.neiquan.applibrary.wight.RefreshLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/comment_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mCommentET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="我要回答..."
+            android:padding="@dimen/margin_10"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_gray"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/mEmotionLogo"
+            android:layout_width="@dimen/magin_30"
+            android:layout_height="@dimen/magin_30"
+            android:layout_margin="@dimen/magin_5"
+            android:src="@mipmap/siliao_biaoqing" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@drawable/ease_chat_send_btn_selector"
+            android:gravity="center"
+            android:paddingBottom="@dimen/magin_5"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="@dimen/magin_5"
+            android:text="@string/button_send"
+            android:textColor="#666666"
+            android:textSize="@dimen/middleTextSize" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/little_gray" />
+
+    <FrameLayout
+        android:id="@+id/emotionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>

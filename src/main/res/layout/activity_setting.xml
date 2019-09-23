@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <com.qianyu.communicate.views.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:background="@color/little_gray" />
+
+            <RelativeLayout
+                android:id="@+id/countBanding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adapter_select"
+                android:padding="@dimen/magin_15">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="账号绑定"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:src="@mipmap/shezhi_qqhui" />
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:src="@mipmap/shezhi_weixinhui" />
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:src="@mipmap/shezhi_xinlanghui" />
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:src="@mipmap/shezhi_shoujihui" />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_12"
+                        android:layout_height="@dimen/magin_12"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:src="@mipmap/wo_jiantouyou" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_5"
+                android:background="@color/chat_room_bg_" />
+
+            <TextView
+                android:id="@+id/msgNotify"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/adapter_select"
+                android:padding="@dimen/magin_15"
+                android:text="消息通知"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:background="@color/little_gray" />
+
+            <TextView
+                android:id="@+id/privateSetting"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/adapter_select"
+                android:padding="@dimen/magin_15"
+                android:text="隐私设置"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:background="@color/little_gray" />
+
+            <TextView
+                android:id="@+id/funcSetting"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/adapter_select"
+                android:padding="@dimen/magin_15"
+                android:text="功能设置"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_5"
+                android:background="@color/chat_room_bg_"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/suggestBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adapter_select"
+                android:padding="@dimen/magin_15"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="意见反馈"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="帮助我们改进"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/smallTextSize" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:background="@color/little_gray" />
+
+            <TextView
+                android:id="@+id/goodComment"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/adapter_select"
+                android:padding="@dimen/magin_15"
+                android:text="给千语好评"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:background="@color/little_gray"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/clearCache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adapter_select"
+                android:padding="@dimen/magin_15">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="清理缓存"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    android:id="@+id/cacheSize"
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0M"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/smallTextSize" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:background="@color/little_gray" />
+
+            <RelativeLayout
+                android:id="@+id/versionUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/adapter_select"
+                android:padding="@dimen/magin_15">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="版本更新"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/currentVersion"
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当前版本  v1.0.3"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <View
+                        android:layout_width="@dimen/magin_8"
+                        android:layout_height="@dimen/magin_8"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:background="@drawable/shape_cornor_red"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:background="@color/little_gray" />
+
+            <TextView
+                android:id="@+id/aboutUs"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/adapter_select"
+                android:padding="@dimen/magin_15"
+                android:text="关于"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:background="@color/little_gray" />
+
+            <TextView
+                android:id="@+id/cancelLogin"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/adapter_select"
+                android:padding="@dimen/magin_15"
+                android:text="注销"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_5"
+                android:background="@color/chat_room_bg_" />
+
+            <TextView
+                android:id="@+id/existLogin"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/adapter_select"
+                android:gravity="center"
+                android:padding="@dimen/magin_15"
+                android:text="退出"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/medium_text_size" />
+
+        </LinearLayout>
+    </com.qianyu.communicate.views.BounceScrollView>
+</LinearLayout>

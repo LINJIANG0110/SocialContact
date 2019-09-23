@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mContentLL"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/magin_5"
+    android:background="@drawable/adapter_select"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mHeadImg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_105"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_5" />
+        <!--app:fadeDuration="3000"-->
+        <!--app:roundAsCircle="true"-->
+        <!--app:roundingBorderColor="#C3B0A9"-->
+        <!--app:roundingBorderWidth="2dp" />-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_15"
+            android:layout_gravity="left|bottom"
+            android:background="@mipmap/liaotianshi_hui1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="@dimen/margin_10"
+                    android:layout_height="@dimen/margin_10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/magin_3"
+                    app:actualImageScaleType="focusCrop"
+                    app:failureImage="@mipmap/huoqutupianmoshi"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/huoqutupianmoshi"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:progressBarAutoRotateInterval="3000"
+                    app:progressBarImage="@drawable/progressbar"
+                    app:progressBarImageScaleType="centerInside" />
+                <!--app:roundedCornerRadius="5dp" />-->
+                <!--app:fadeDuration="3000"-->
+                <!--app:roundAsCircle="true"-->
+                <!--app:roundingBorderColor="#C3B0A9"-->
+                <!--app:roundingBorderWidth="2dp" />-->
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_2"
+                    android:layout_marginTop="@dimen/magin_1"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:text="拉克丝福建省代理费手机丢了房间数砥砺奋进收到了"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tightTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/magin_1">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mGifLogo"
+                    android:layout_width="@dimen/margin_10"
+                    android:layout_height="@dimen/margin_10"
+                    android:layout_gravity="center_vertical"
+                    app:actualImageScaleType="focusCrop"
+                    app:failureImage="@mipmap/huoqutupianmoshi"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/huoqutupianmoshi"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:progressBarAutoRotateInterval="3000"
+                    app:progressBarImage="@drawable/progressbar"
+                    app:progressBarImageScaleType="centerInside" />
+                <!--app:roundedCornerRadius="5dp" />-->
+                <!--app:fadeDuration="3000"-->
+                <!--app:roundAsCircle="true"-->
+                <!--app:roundingBorderColor="#C3B0A9"-->
+                <!--app:roundingBorderWidth="2dp" />-->
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_4"
+                    android:layout_marginRight="@dimen/magin_4"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/littleTextSize" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mMoneyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="@dimen/magin_2"
+                android:layout_marginTop="@dimen/magin_1"
+                android:gravity="center"
+                android:maxLength="8"
+                android:text="￥1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/tightTextSize"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mContentTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_2"
+        android:layout_marginTop="@dimen/magin_2"
+        android:singleLine="true"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/littleTextSize" />
+    <!--android:lineSpacingExtra="@dimen/magin_2"-->
+    <!--android:lines="2"-->
+</LinearLayout>

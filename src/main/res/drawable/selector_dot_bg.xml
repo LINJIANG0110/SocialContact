@@ -1,0 +1,6 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<selector xmlns:android="https://schemas.android.com/apk/res/android">
+    <!-- state_selected : 选择的状态 -->
+    <item android:drawable="@drawable/shape_dot_selected" android:state_selected="true"></item>
+    <item android:drawable="@drawable/shape_dot_unselected"></item>
+</selector>

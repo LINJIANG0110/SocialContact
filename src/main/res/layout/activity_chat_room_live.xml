@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qianyu.communicate.views.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:scrollbars="none"
+    app:rightPadding="130dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mOnLineList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/little_gray"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="在线列表"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_1"
+                android:background="@color/little_gray" />
+
+            <ListView
+                android:id="@+id/mLineRecylerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/white"
+                android:dividerHeight="0dp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/magin_5">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/mHeadImg"
+                        android:layout_width="@dimen/magin_30"
+                        android:layout_height="@dimen/magin_30"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        app:actualImageScaleType="focusCrop"
+                        app:failureImage="@mipmap/wxdl_chushi"
+                        app:failureImageScaleType="centerCrop"
+                        app:placeholderImage="@mipmap/wxdl_chushi"
+                        app:placeholderImageScaleType="centerCrop"
+                        app:progressBarAutoRotateInterval="3000"
+                        app:progressBarImage="@drawable/progressbar"
+                        app:progressBarImageScaleType="centerInside"
+                        app:roundAsCircle="true"
+                        app:roundedCornerRadius="@dimen/magin_2" />
+                    <!--app:fadeDuration="3000"-->
+                    <!--app:roundAsCircle="true"-->
+                    <!--app:roundingBorderColor="#C3B0A9"-->
+                    <!--app:roundingBorderWidth="2dp" />-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/mNameTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/smallTextSize" />
+
+                            <TextView
+                                android:id="@+id/mJobTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:background="@drawable/shape_solid_app_corlor"
+                                android:paddingBottom="@dimen/magin_1"
+                                android:paddingLeft="@dimen/magin_3"
+                                android:paddingRight="@dimen/magin_3"
+                                android:paddingTop="@dimen/magin_1"
+                                android:text="医师"
+                                android:textColor="@color/app_color_old"
+                                android:textSize="@dimen/tightTextSize" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:id="@+id/mLevelTv"
+                                android:layout_width="@dimen/magin_8"
+                                android:layout_height="@dimen/magin_8"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/shape_solid_green" />
+
+                            <TextView
+                                android:id="@+id/mContentTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/magin_5"
+                                android:singleLine="true"
+                                android:text="在线：1"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/littleTextSize" />
+
+                            <TextView
+                                android:id="@+id/mTotalPersonTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/magin_5"
+                                android:singleLine="true"
+                                android:text="累计：1"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/littleTextSize" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/editLogo"
+                        android:layout_width="@dimen/magin_23"
+                        android:layout_height="@dimen/magin_23"
+                        android:layout_marginRight="@dimen/magin_15"
+                        android:src="@mipmap/liaotianshi_bianji" />
+
+                    <ImageView
+                        android:id="@+id/shareLogo"
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:layout_marginRight="@dimen/magin_15"
+                        android:src="@mipmap/liaotianshi_fenxiang" />
+
+                    <ImageView
+                        android:id="@+id/endLiveLogo"
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:layout_marginRight="@dimen/magin_5"
+                        android:layout_marginTop="@dimen/magin_2"
+                        android:src="@mipmap/liaotianshi_guanbi2" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/magin_0.1"
+                    android:background="@color/little_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/magin_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:text="话题："
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        android:id="@+id/mTopicTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <LinearLayout
+                        android:id="@+id/mTopicLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/mFrameLL1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_5">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/mHeadImg1"
+                                android:layout_width="@dimen/magin_30"
+                                android:layout_height="@dimen/magin_30"
+                                app:actualImageScaleType="focusCrop"
+                                app:failureImage="@mipmap/wxdl_chushi"
+                                app:failureImageScaleType="centerCrop"
+                                app:placeholderImage="@mipmap/wxdl_chushi"
+                                app:placeholderImageScaleType="centerCrop"
+                                app:progressBarAutoRotateInterval="3000"
+                                app:progressBarImage="@drawable/progressbar"
+                                app:progressBarImageScaleType="centerInside"
+                                app:roundAsCircle="true"
+                                app:roundedCornerRadius="@dimen/magin_2" />
+                            <!--app:fadeDuration="3000"-->
+                            <!--app:roundAsCircle="true"-->
+                            <!--app:roundingBorderColor="#C3B0A9"-->
+                            <!--app:roundingBorderWidth="2dp" />-->
+                            <ImageView
+                                android:layout_width="@dimen/magin_15"
+                                android:layout_height="@dimen/magin_15"
+                                android:layout_gravity="bottom|right"
+                                android:src="@mipmap/fensi_jinpai" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/mFrameLL2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_5">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/mHeadImg2"
+                                android:layout_width="@dimen/magin_30"
+                                android:layout_height="@dimen/magin_30"
+                                app:actualImageScaleType="focusCrop"
+                                app:failureImage="@mipmap/wxdl_chushi"
+                                app:failureImageScaleType="centerCrop"
+                                app:placeholderImage="@mipmap/wxdl_chushi"
+                                app:placeholderImageScaleType="centerCrop"
+                                app:progressBarAutoRotateInterval="3000"
+                                app:progressBarImage="@drawable/progressbar"
+                                app:progressBarImageScaleType="centerInside"
+                                app:roundAsCircle="true"
+                                app:roundedCornerRadius="@dimen/magin_2" />
+                            <!--app:fadeDuration="3000"-->
+                            <!--app:roundAsCircle="true"-->
+                            <!--app:roundingBorderColor="#C3B0A9"-->
+                            <!--app:roundingBorderWidth="2dp" />-->
+                            <ImageView
+                                android:layout_width="@dimen/magin_15"
+                                android:layout_height="@dimen/magin_15"
+                                android:layout_gravity="bottom|right"
+                                android:src="@mipmap/fensi_yinpai" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/mFrameLL3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_5">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/mHeadImg3"
+                                android:layout_width="@dimen/magin_30"
+                                android:layout_height="@dimen/magin_30"
+                                app:actualImageScaleType="focusCrop"
+                                app:failureImage="@mipmap/wxdl_chushi"
+                                app:failureImageScaleType="centerCrop"
+                                app:placeholderImage="@mipmap/wxdl_chushi"
+                                app:placeholderImageScaleType="centerCrop"
+                                app:progressBarAutoRotateInterval="3000"
+                                app:progressBarImage="@drawable/progressbar"
+                                app:progressBarImageScaleType="centerInside"
+                                app:roundAsCircle="true"
+                                app:roundedCornerRadius="@dimen/magin_2" />
+                            <!--app:fadeDuration="3000"-->
+                            <!--app:roundAsCircle="true"-->
+                            <!--app:roundingBorderColor="#C3B0A9"-->
+                            <!--app:roundingBorderWidth="2dp" />-->
+                            <ImageView
+                                android:layout_width="@dimen/magin_15"
+                                android:layout_height="@dimen/magin_15"
+                                android:layout_gravity="bottom|right"
+                                android:src="@mipmap/fensi_tongpai" />
+                        </FrameLayout>
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_12"
+                            android:layout_height="@dimen/magin_12"
+                            android:layout_marginLeft="@dimen/magin_5"
+                            android:src="@mipmap/wo_jiantouyou" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/mFrameLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/chat_room_bg">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.qianyu.communicate.jzvd.JZVideoPlayerStandard
+                            android:id="@+id/jz_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:visibility="gone" />
+
+                        <FrameLayout
+                            android:id="@+id/fl_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="#333542"
+                            android:visibility="gone">
+
+                            <include layout="@layout/layout_web_content" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ListView
+                                android:id="@+id/mRecylerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:divider="@color/white"
+                                android:dividerHeight="0dp" />
+
+                            <LinearLayout
+                                android:id="@+id/mOnLineLL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="@dimen/magin_60"
+                                android:background="@drawable/shape_big_cornor_right"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingBottom="@dimen/magin_1"
+                                android:paddingLeft="@dimen/magin_2"
+                                android:paddingRight="@dimen/magin_8"
+                                android:paddingTop="@dimen/magin_1">
+
+                                <ImageView
+                                    android:layout_width="@dimen/margin_10"
+                                    android:layout_height="@dimen/margin_10"
+                                    android:src="@mipmap/liaotianshi_zaixianren" />
+
+                                <TextView
+                                    android:id="@+id/mOnLineTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/tightTextSize" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|bottom"
+                                android:layout_marginBottom="@dimen/magin_20"
+                                android:gravity="right"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/shape_big_cornor_left"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="@dimen/magin_2"
+                                    android:paddingLeft="@dimen/magin_5"
+                                    android:paddingRight="@dimen/magin_5"
+                                    android:paddingTop="@dimen/magin_2"
+                                    android:visibility="gone">
+
+                                    <com.facebook.drawee.view.SimpleDraweeView
+                                        android:id="@+id/mHeadImgVoice"
+                                        android:layout_width="@dimen/magin_30"
+                                        android:layout_height="@dimen/magin_30"
+                                        app:actualImageScaleType="focusCrop"
+                                        app:failureImage="@mipmap/wxdl_chushi"
+                                        app:failureImageScaleType="centerCrop"
+                                        app:placeholderImage="@mipmap/wxdl_chushi"
+                                        app:placeholderImageScaleType="centerCrop"
+                                        app:progressBarAutoRotateInterval="3000"
+                                        app:progressBarImage="@drawable/progressbar"
+                                        app:progressBarImageScaleType="centerInside"
+                                        app:roundAsCircle="true"
+                                        app:roundedCornerRadius="@dimen/magin_2" />
+                                    <!--app:fadeDuration="3000"-->
+                                    <!--app:roundAsCircle="true"-->
+                                    <!--app:roundingBorderColor="#C3B0A9"-->
+                                    <!--app:roundingBorderWidth="2dp" />-->
+                                    <ImageView
+                                        android:layout_width="@dimen/magin_20"
+                                        android:layout_height="@dimen/magin_20"
+                                        android:layout_marginLeft="@dimen/magin_2"
+                                        android:src="@mipmap/liaotianshi_lianxiankai" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_20"
+                                    android:background="@drawable/shape_big_cornor_left_red"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="@dimen/magin_2"
+                                    android:paddingLeft="@dimen/magin_5"
+                                    android:paddingRight="@dimen/magin_5"
+                                    android:paddingTop="@dimen/magin_2"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/magin_5"
+                                        android:text="tianji.soshuo 来了"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/smallTextSize" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_gift_parent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginBottom="@dimen/magin_20"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/margin_10" />
+                                <!--<LinearLayout-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginTop="@dimen/magin_80"-->
+                                <!--android:background="@drawable/shape_big_cornor_left"-->
+                                <!--android:gravity="center_vertical"-->
+                                <!--android:visibility="gone"-->
+                                <!--android:orientation="horizontal"-->
+                                <!--android:paddingBottom="@dimen/magin_2"-->
+                                <!--android:paddingLeft="@dimen/magin_5"-->
+                                <!--android:paddingRight="@dimen/magin_5"-->
+                                <!--android:paddingTop="@dimen/magin_2">-->
+
+                                <!--<com.facebook.drawee.view.SimpleDraweeView-->
+                                <!--android:id="@+id/mHeadImgGift"-->
+                                <!--android:layout_width="@dimen/magin_30"-->
+                                <!--android:layout_height="@dimen/magin_30"-->
+                                <!--app:actualImageScaleType="focusCrop"-->
+                                <!--app:failureImage="@mipmap/wxdl_chushi"-->
+                                <!--app:failureImageScaleType="centerCrop"-->
+                                <!--app:placeholderImage="@mipmap/wxdl_chushi"-->
+                                <!--app:placeholderImageScaleType="centerCrop"-->
+                                <!--app:progressBarAutoRotateInterval="3000"-->
+                                <!--app:progressBarImage="@drawable/progressbar"-->
+                                <!--app:progressBarImageScaleType="centerInside"-->
+                                <!--app:roundAsCircle="true"-->
+                                <!--app:roundedCornerRadius="@dimen/magin_2" />-->
+                                <!--&lt;!&ndash;app:fadeDuration="3000"&ndash;&gt;-->
+                                <!--&lt;!&ndash;app:roundAsCircle="true"&ndash;&gt;-->
+                                <!--&lt;!&ndash;app:roundingBorderColor="#C3B0A9"&ndash;&gt;-->
+                                <!--&lt;!&ndash;app:roundingBorderWidth="2dp" />&ndash;&gt;-->
+                                <!--<LinearLayout-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginLeft="@dimen/magin_5"-->
+                                <!--android:orientation="vertical">-->
+
+                                <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:text="tianji.moshuo"-->
+                                <!--android:textColor="@color/chat_color_nv"-->
+                                <!--android:textSize="@dimen/littleTextSize" />-->
+
+                                <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginTop="@dimen/magin_5"-->
+                                <!--android:text="给主播送了"-->
+                                <!--android:textColor="@color/text_black"-->
+                                <!--android:textSize="@dimen/littleTextSize" />-->
+                                <!--</LinearLayout>-->
+
+                                <!--<com.facebook.drawee.view.SimpleDraweeView-->
+                                <!--android:id="@+id/mGiftImg"-->
+                                <!--android:layout_width="@dimen/magin_30"-->
+                                <!--android:layout_height="@dimen/magin_30"-->
+                                <!--app:actualImageScaleType="focusCrop"-->
+                                <!--app:failureImage="@drawable/pictures_no2"-->
+                                <!--app:failureImageScaleType="centerCrop"-->
+                                <!--app:placeholderImage="@drawable/pictures_no2"-->
+                                <!--app:placeholderImageScaleType="centerCrop"-->
+                                <!--app:progressBarAutoRotateInterval="3000"-->
+                                <!--app:progressBarImage="@drawable/progressbar"-->
+                                <!--app:progressBarImageScaleType="centerInside" />-->
+                                <!--&lt;!&ndash;app:roundedCornerRadius="@dimen/magin_2"&ndash;&gt;-->
+                                <!--&lt;!&ndash;app:fadeDuration="3000"&ndash;&gt;-->
+                                <!--&lt;!&ndash;app:roundAsCircle="true"&ndash;&gt;-->
+                                <!--&lt;!&ndash;app:roundingBorderColor="#C3B0A9"&ndash;&gt;-->
+                                <!--&lt;!&ndash;app:roundingBorderWidth="2dp" />&ndash;&gt;-->
+                                <!--<com.qianyu.communicate.StrokeTextView-->
+                                <!--android:id="@+id/gift_num"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_gravity="center_vertical"-->
+                                <!--android:layout_marginLeft="@dimen/magin_2"-->
+                                <!--android:layout_marginRight="@dimen/magin_2"-->
+                                <!--android:text="x 1"-->
+                                <!--android:textColor="#FEEF32"-->
+                                <!--android:textSize="30sp"-->
+                                <!--app:innnerColor="#FEEF32"-->
+                                <!--app:outerColor="#FEEF32" />-->
+                                <!--</LinearLayout>-->
+
+                                <ImageView
+                                    android:id="@+id/mWendaLogo"
+                                    android:layout_width="@dimen/magin_30"
+                                    android:layout_height="@dimen/magin_30"
+                                    android:layout_marginRight="@dimen/magin_8"
+                                    android:layout_marginBottom="@dimen/magin_15"
+                                    android:src="@mipmap/liaotianshi_wenda"/>
+                            </LinearLayout>
+
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/mBootomLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:visibility="gone">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/mPlayImg"
+                            android:layout_width="@dimen/magin_30"
+                            android:layout_height="@dimen/magin_30"
+                            app:actualImageScaleType="focusCrop"
+                            app:failureImage="@mipmap/wxdl_chushi"
+                            app:failureImageScaleType="centerCrop"
+                            app:placeholderImage="@mipmap/wxdl_chushi"
+                            app:placeholderImageScaleType="centerCrop"
+                            app:progressBarAutoRotateInterval="3000"
+                            app:progressBarImage="@drawable/progressbar"
+                            app:progressBarImageScaleType="centerInside"
+                            app:roundAsCircle="true"
+                            app:roundedCornerRadius="@dimen/magin_2" />
+                        <!--app:fadeDuration="3000"-->
+                        <!--app:roundAsCircle="true"-->
+                        <!--app:roundingBorderColor="#C3B0A9"-->
+                        <!--app:roundingBorderWidth="2dp" />-->
+                        <ImageView
+                            android:layout_width="@dimen/magin_15"
+                            android:layout_height="@dimen/magin_15"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/liaotianshi_zanting" />
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom">
+
+                        <EditText
+                            android:id="@+id/et_sendmessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="35dip"
+                            android:background="@null"
+                            android:hint="说点什么吧..."
+                            android:imeOptions="actionSend"
+                            android:maxLines="3"
+                            android:minHeight="40dp"
+                            android:paddingBottom="3dp"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="1dp"
+                            android:paddingTop="3dp"
+                            android:textColor="@color/text_black"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_face"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:id="@+id/iv_face_normal"
+                                android:layout_width="@dimen/magin_30"
+                                android:layout_height="@dimen/magin_30"
+                                android:layout_margin="1dip"
+                                android:scaleType="fitCenter"
+                                android:src="@mipmap/siliao_biaoqing"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/iv_face_checked"
+                                android:layout_width="@dimen/magin_30"
+                                android:layout_height="@dimen/magin_30"
+                                android:layout_margin="1dip"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ease_chatting_biaoqing_btn_enable"
+                                android:visibility="invisible" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btn_more"
+                        android:layout_width="@dimen/magin_30"
+                        android:layout_height="@dimen/magin_30"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:background="@drawable/ease_type_select_btn" />
+
+                    <TextView
+                        android:id="@+id/btn_send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:background="@drawable/ease_chat_send_btn_selector"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/magin_5"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_10"
+                        android:paddingTop="@dimen/magin_5"
+                        android:text="@string/button_send"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/middleTextSize"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/magin_0.1"
+                    android:background="@color/little_gray" />
+
+                <LinearLayout
+                    android:id="@+id/liveFuncLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_40"
+                    android:layout_marginRight="@dimen/magin_40"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/magin_5"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/mVideoLL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/magin_5">
+
+                        <ImageView
+                            android:id="@+id/videoLogo"
+                            android:layout_width="@dimen/magin_28"
+                            android:layout_height="@dimen/magin_28"
+                            android:src="@mipmap/liaotianshi_zhuanshipin" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_3"
+                            android:text="视频"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/magin_5"
+                        android:visibility="gone">
+                        <!--android:id="@+id/mJoinSpeakLL"-->
+
+                        <ImageView
+                            android:id="@+id/joinSpeakLogo"
+                            android:layout_width="@dimen/magin_20"
+                            android:layout_height="@dimen/magin_25"
+                            android:src="@mipmap/liaotianshi_lianmaiguanli" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="连麦"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/mLessonLL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/magin_5">
+
+                        <ImageView
+                            android:id="@+id/lessonImg"
+                            android:layout_width="@dimen/magin_20"
+                            android:layout_height="@dimen/magin_25"
+                            android:src="@mipmap/liaotianshi_kejian" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:text="文档"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mJoinSpeakLL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/magin_5">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_25"
+                            android:layout_height="@dimen/magin_25"
+                            android:src="@mipmap/liaotianshi_tupian" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:text="图片"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mTakePhotoLL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/magin_5">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_25"
+                            android:layout_height="@dimen/magin_25"
+                            android:src="@mipmap/liaotian_paizhao" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:text="拍照"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lessonsLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/magin_5"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/magin_5">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_25"
+                            android:layout_height="@dimen/magin_25"
+                            android:src="@mipmap/yunduan_shiping" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:text="视频"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/magin_5">
+
+                        <ImageView
+                            android:id="@+id/iv_photo"
+                            android:layout_width="@dimen/magin_25"
+                            android:layout_height="@dimen/magin_25"
+                            android:src="@mipmap/liaotianshi_tupian" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:text="图片"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/magin_5">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_25"
+                            android:layout_height="@dimen/magin_25"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:src="@mipmap/liaotianshi_yinpin" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:text="音频"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/magin_5">
+
+                        <ImageView
+                            android:id="@+id/iv_file"
+                            android:layout_width="@dimen/magin_25"
+                            android:layout_height="@dimen/magin_25"
+                            android:src="@mipmap/qunduan_ppt" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:text="文件"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/emotionContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.qianyu.communicate.views.DragViewGroup
+                android:id="@+id/mVideoFL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_80"
+                android:layout_gravity="right"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/stream_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/stream_layout_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|bottom"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/mCoseVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="@dimen/magin_5"
+                    android:background="@mipmap/shipin_baiseguanbi"
+                    android:visibility="gone" />
+                <!--android:paddingBottom="@dimen/margin_10"-->
+                <!--android:paddingLeft="@dimen/margin_10"-->
+                <!--android:paddingRight="@dimen/magin_5"-->
+                <!--android:paddingTop="@dimen/magin_5"-->
+
+                <ImageView
+                    android:id="@+id/mFullVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/magin_5"
+                    android:background="@mipmap/liaotianshi_shipingfangda"
+                    android:visibility="gone" />
+                <!--android:paddingBottom="@dimen/margin_10"-->
+                <!--android:paddingLeft="@dimen/margin_10"-->
+                <!--android:paddingRight="@dimen/magin_5"-->
+                <!--android:paddingTop="@dimen/magin_5"-->
+
+            </com.qianyu.communicate.views.DragViewGroup>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</com.qianyu.communicate.views.SlidingMenu>

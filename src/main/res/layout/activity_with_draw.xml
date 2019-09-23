@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/little_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/magin_50"
+            android:layout_height="@dimen/magin_50"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/magin_50"
+            android:src="@mipmap/tixian_qianbao" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/canWithDrawMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/hugeTextSize_" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/magin_50"
+            android:text="可提现金额"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingBottom="@dimen/magin_20"
+            android:paddingTop="@dimen/magin_20"
+            android:text="提现到："
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_0.1"
+            android:background="@color/little_gray" />
+
+        <RelativeLayout
+            android:id="@+id/aliPayRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_30"
+                    android:layout_height="@dimen/magin_30"
+                    android:src="@mipmap/tixian_zhifubao" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_5"
+                    android:text="支付宝"
+                    android:textColor="@color/text_black" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/aliPayLogo"
+                android:layout_width="@dimen/magin_15"
+                android:layout_height="@dimen/magin_15"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/wxdl_xuanze" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_0.1"
+            android:background="@color/little_gray" />
+
+        <RelativeLayout
+            android:id="@+id/wxPayRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="@dimen/margin_10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_30"
+                    android:layout_height="@dimen/magin_30"
+                    android:src="@mipmap/tixian_weixin" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_5"
+                    android:text="微信"
+                    android:textColor="@color/text_black" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/wxPayLogo"
+                android:layout_width="@dimen/magin_15"
+                android:layout_height="@dimen/magin_15"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/wxdl_xuanzehui" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_0.1"
+            android:visibility="gone"
+            android:background="@color/little_gray" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/withDraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/magin_50"
+        android:background="@drawable/app_color_selector"
+        android:gravity="center"
+        android:padding="@dimen/magin_8"
+        android:text="提现"
+        android:textColor="@color/white"
+        android:textSize="@dimen/largeTextSize" />
+</LinearLayout>

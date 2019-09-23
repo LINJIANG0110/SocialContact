@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_color_little"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
+
+            <EditText
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mFamilyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_50"
+                android:layout_marginRight="@dimen/magin_50"
+                android:layout_marginTop="@dimen/magin_30"
+                android:background="@drawable/shape_cornor_white"
+                android:gravity="center"
+                android:hint="给群起个名字吧"
+                android:padding="@dimen/magin_8"
+                android:maxLength="9"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mFamilyCreated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/magin_50"
+                android:descendantFocusability="blocksDescendants"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/app_color_selector"
+                    android:gravity="center"
+                    android:padding="@dimen/magin_6"
+                    android:text="创建"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium_text_size" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="clip_vertical">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推荐家族"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mChangeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="换一批"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/smallTextSize" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecylerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

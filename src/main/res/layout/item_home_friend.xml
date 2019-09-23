@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/contentLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/magin_5">
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mHeadImg"
+                    android:layout_width="@dimen/magin_60"
+                    android:layout_height="@dimen/magin_60"
+                    app:actualImageScaleType="focusCrop"
+                    app:failureImage="@mipmap/fang_zhengtouxiang"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/fang_zhengtouxiang"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:progressBarAutoRotateInterval="3000"
+                    app:progressBarImage="@drawable/progressbar"
+                    app:progressBarImageScaleType="centerInside"
+                    app:roundedCornerRadius="@dimen/magin_5" />
+                <!--app:fadeDuration="3000"-->
+                <!--app:roundAsCircle="true"-->
+                <!--app:roundingBorderColor="#C3B0A9"-->
+                <!--app:roundingBorderWidth="2dp" />-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/mNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/middleTextSize" />
+
+                        <LinearLayout
+                            android:id="@+id/ageSexLL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_5"
+                            android:background="@drawable/shape_cornor_pink"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/magin_1"
+                            android:paddingLeft="@dimen/magin_2"
+                            android:paddingRight="@dimen/magin_2"
+                            android:paddingTop="@dimen/magin_1">
+
+                            <ImageView
+                                android:id="@+id/sexLogo"
+                                android:layout_width="@dimen/margin_10"
+                                android:layout_height="@dimen/margin_10"
+                                android:src="@mipmap/ic_launcher" />
+
+                            <TextView
+                                style="@style/style_text_style_pingfang_changgui"
+                                android:id="@+id/mAgeTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/magin_2"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/tightTextSize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/mContentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/magin_15"
+                        android:singleLine="true"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/mDistanceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <ImageView
+                        android:id="@+id/mRemindLogo"
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:layout_marginTop="@dimen/magin_15"
+                        android:src="@mipmap/ic_launcher"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mDeleteTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/colorRed"
+                android:gravity="center"
+                android:paddingLeft="@dimen/magin_20"
+                android:paddingRight="@dimen/magin_20"
+                android:text="@string/delete"
+                android:textColor="@color/white"
+                android:textSize="@dimen/middleTextSize" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_1"
+        android:background="@color/little_gray" />
+</LinearLayout>
+

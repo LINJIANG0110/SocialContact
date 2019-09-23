@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/little_gray"
+    android:gravity="center_vertical"
+    android:padding="@dimen/magin_15"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mContentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总收入"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/middleTextSize" />
+
+    <ImageView
+        android:layout_width="@dimen/magin_20"
+        android:layout_height="@dimen/magin_20"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:src="@mipmap/coin1" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mCoinTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_5"
+        android:text="999"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/middleTextSize" />
+
+    <ImageView
+        android:layout_width="@dimen/magin_20"
+        android:layout_height="@dimen/magin_20"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:src="@mipmap/wallet1" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mFuBaoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_5"
+        android:text="999"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/middleTextSize" />
+
+    <ImageView
+        android:layout_width="@dimen/magin_20"
+        android:layout_height="@dimen/magin_20"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:src="@mipmap/diamond1" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mDiamondTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_5"
+        android:text="999"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/middleTextSize" />
+</LinearLayout>

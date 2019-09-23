@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/chat_room_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mChatRoomLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/magin_2"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/magin_2"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/magin_5">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mHeadImg"
+                    android:layout_width="@dimen/magin_30"
+                    android:layout_height="@dimen/magin_30"
+                    app:actualImageScaleType="focusCrop"
+                    app:failureImage="@mipmap/wxdl_chushi"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/wxdl_chushi"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:progressBarAutoRotateInterval="3000"
+                    app:progressBarImage="@drawable/progressbar"
+                    app:progressBarImageScaleType="centerInside"
+                    app:roundAsCircle="true"
+                    app:roundedCornerRadius="@dimen/magin_2" />
+                <!--app:fadeDuration="3000"-->
+                <!--app:roundAsCircle="true"-->
+                <!--app:roundingBorderColor="#C3B0A9"-->
+                <!--app:roundingBorderWidth="2dp" />-->
+                <ImageView
+                    android:id="@+id/userRole"
+                    android:layout_width="@dimen/magin_12"
+                    android:layout_height="@dimen/magin_12"
+                    android:visibility="gone"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="-8dp"
+                    android:src="@mipmap/manager" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mUserLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="99"
+                    android:visibility="gone"
+                    android:maxLength="2"
+                    android:gravity="center"
+                    android:layout_gravity="right|bottom"
+                    android:textColor="@color/white"
+                    android:textSize="6sp"
+                    android:background="@drawable/blue_round_bg"/>
+            </FrameLayout>
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/addressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_2"
+                android:visibility="gone"
+                android:maxLength="2"
+                android:text="发生点发生点"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/littleTextSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/magin_5">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/nickNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="水电费水电费是"
+                    android:textColor="@color/chat_color_nv"
+                    android:textSize="@dimen/littleTextSize" />
+
+                <ImageView
+                    android:layout_width="@dimen/magin_15"
+                    android:layout_height="@dimen/magin_15"
+                    android:layout_marginLeft="@dimen/magin_5"
+                    android:src="@mipmap/zaixian_guanli"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_5"
+                android:background="@drawable/chat_room_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" @梦逍遥"
+                    android:textColor="@color/chat_color_nv"
+                    android:textSize="@dimen/middleTextSize"
+                    android:visibility="gone" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/text"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:text="水电费水电费水电费是"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <ImageView
+                    android:id="@+id/mTextLogo"
+                    android:layout_width="@dimen/magin_30"
+                    android:layout_height="@dimen/magin_30"
+                    android:layout_marginLeft="@dimen/magin_2"
+                    android:src="@mipmap/enter"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mStatusLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/magin_5"
+        android:layout_marginTop="@dimen/magin_5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/mPraiseLogo"
+            android:layout_width="@dimen/magin_12"
+            android:layout_height="@dimen/magin_15"
+            android:layout_marginRight="@dimen/magin_5"
+            android:layout_marginTop="@dimen/magin_1"
+            android:src="@drawable/praise_logo" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mStatusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="萌小妖已成为管理员"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mRecylerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/magin_20"
+        android:background="@drawable/shape_cornor_white_"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/markLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/magin_20"
+            android:paddingRight="@dimen/magin_20"
+            android:paddingTop="@dimen/margin_10">
+
+            <ImageView
+                android:id="@+id/markLogo"
+                android:layout_width="@dimen/magin_18"
+                android:layout_height="@dimen/magin_18"
+                android:src="@mipmap/xiangqing_jubao" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_5"
+                android:text="举报"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/middleTextSize" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_1"
+            android:background="@color/little_gray" />
+
+        <LinearLayout
+            android:id="@+id/blackLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/magin_20"
+            android:paddingRight="@dimen/magin_20"
+            android:paddingTop="@dimen/margin_10">
+
+            <ImageView
+                android:id="@+id/blackLogo"
+                android:layout_width="@dimen/magin_20"
+                android:layout_height="@dimen/magin_20"
+                android:src="@mipmap/xiangqing_lahei" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_5"
+                android:text="拉黑"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/middleTextSize" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_1"
+            android:visibility="gone"
+            android:background="@color/little_gray" />
+
+        <LinearLayout
+            android:id="@+id/deleteLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_10"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/magin_20"
+            android:paddingRight="@dimen/magin_20"
+            android:paddingTop="@dimen/margin_10">
+
+            <ImageView
+                android:id="@+id/deleteLogo"
+                android:layout_width="@dimen/magin_20"
+                android:layout_height="@dimen/magin_20"
+                android:src="@mipmap/sjdl_shanchu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_5"
+                android:text="删除好友"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/middleTextSize" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

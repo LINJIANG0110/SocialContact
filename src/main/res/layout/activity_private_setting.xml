@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/little_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <RelativeLayout
+        android:id="@+id/avoidFriendRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:padding="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="拒绝任何人添加好友"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/avoidFriendLogo"
+            android:layout_width="@dimen/magin_60"
+            android:layout_height="@dimen/magin_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/shezhi_guanbi" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <RelativeLayout
+        android:id="@+id/avoidStrangersChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="拒绝陌生人私聊消息"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/avoidStrangersLogo"
+            android:layout_width="@dimen/magin_60"
+            android:layout_height="@dimen/magin_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/shezhi_dakai" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <RelativeLayout
+        android:id="@+id/blackNameRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/adapter_select"
+        android:padding="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="黑名单"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:layout_width="@dimen/magin_15"
+            android:layout_height="@dimen/magin_15"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/wo_jiantouyou" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+
+</LinearLayout>

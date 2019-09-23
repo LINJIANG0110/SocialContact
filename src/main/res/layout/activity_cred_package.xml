@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qianyu.communicate.activity.CRedPackageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/red_package">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="@dimen/magin_40"
+            android:layout_height="@dimen/magin_40"
+            android:paddingBottom="13dip"
+            android:paddingRight="13dip"
+            android:paddingTop="13dip"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="接龙红包"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置成语"
+            android:textColor="@color/tv_black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="5dp"
+            android:background="@mipmap/jie"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/et_chengyu"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="0px"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="如“风和日丽”"
+            android:textColor="@color/tv_black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:background="@mipmap/close"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="小伙伴接龙红包"
+            android:textColor="@color/tv_gray"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_refresh"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="65dp"
+            android:background="@mipmap/refresh" />
+
+        <TextView
+            android:id="@+id/tv_refresh"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_refresh"
+            android:text="随机成语"
+            android:textColor="@color/red_package"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红包个数"
+            android:textColor="@color/tv_black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_num"
+            android:inputType="number"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="0px"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="输入红包个数"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:textColor="@color/tv_black"
+            android:textSize="15sp" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个"
+            android:textColor="@color/tv_black"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总金额"
+            android:textColor="@color/tv_black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_money"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="0px"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:inputType="number"
+            android:gravity="right|center_vertical"
+            android:hint="输入金额"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:textColor="@color/tv_black"
+            android:textSize="15sp" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="钻石"
+            android:textColor="@color/tv_black"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/red_package"
+        android:text="塞钱"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</LinearLayout>

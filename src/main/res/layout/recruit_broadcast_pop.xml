@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/magin_50"
+        android:background="@drawable/shape_cornor_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/magin_20"
+        android:paddingRight="@dimen/magin_20"
+        android:paddingTop="@dimen/margin_10">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="群召唤"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize2" />
+
+        <EditText
+            android:id="@+id/mCallET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_80"
+            android:layout_marginTop="@dimen/magin_20"
+            android:background="@drawable/shape_solid_little_gray_"
+            android:gravity="left"
+            android:hint="本群美女帅哥土豪多多，欢迎大家来玩，点击立即进入，即可传送！"
+            android:padding="@dimen/magin_5"
+            android:textColorHint="@color/text_black"
+            android:textColor="@color/black"
+            android:textSize="@dimen/smallTextSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_20"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mCancelTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="取消"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize2" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_10">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mSureTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/middleTextSize2" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_10"
+                        android:layout_height="@dimen/margin_10"
+                        android:src="@mipmap/diamond1" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/littleTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

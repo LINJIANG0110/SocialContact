@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_cornor_white"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/mCancelTv"
+            android:layout_width="@dimen/magin_30"
+            android:layout_height="@dimen/magin_30"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:src="@mipmap/close" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="您已成功加入北京是一家"
+            android:textColor="@color/work_yellow"
+            android:textSize="@dimen/largeTextSize" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_30"
+            android:layout_marginRight="@dimen/magin_30"
+            android:layout_marginTop="@dimen/magin_30"
+            android:background="@drawable/shape_cornor_work_green"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_20"
+                android:layout_marginRight="@dimen/magin_20"
+                android:text="参加群任务"
+                android:textColor="@color/white"
+                android:textSize="@dimen/largeTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_1"
+                android:layout_marginBottom="@dimen/magin_5"
+                android:layout_marginTop="@dimen/magin_5"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_20"
+                android:layout_marginRight="@dimen/magin_20"
+                android:text="可获得海量金币"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mEnterGroupTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_30"
+            android:layout_marginRight="@dimen/magin_30"
+            android:layout_marginTop="@dimen/magin_20"
+            android:background="@drawable/shape_cornor_work_yellow"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="进群聊天"
+            android:textColor="@color/white"
+            android:textSize="@dimen/largeTextSize" />
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/adapter_select"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/magin_2"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:maxLines="2"
+            android:text="什么是真气运行？真气运行要怎么练？"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize_"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mHeadImg"
+                android:layout_width="@dimen/magin_30"
+                android:layout_height="@dimen/magin_30"
+                app:actualImageScaleType="focusCrop"
+                app:failureImage="@mipmap/fang_zhengtouxiang"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@mipmap/fang_zhengtouxiang"
+                app:placeholderImageScaleType="centerCrop"
+                app:progressBarAutoRotateInterval="3000"
+                app:progressBarImage="@drawable/progressbar"
+                app:progressBarImageScaleType="centerInside"
+                app:roundedCornerRadius="@dimen/magin_5" />
+            <!--app:fadeDuration="3000"-->
+            <!--app:roundAsCircle="true"-->
+            <!--app:roundingBorderColor="#C3B0A9"-->
+            <!--app:roundingBorderWidth="2dp" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_8"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="16"
+                    android:text="梦逍遥"
+                    android:textColor="@color/name_color"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mContentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magin_5"
+                    android:lineSpacingExtra="@dimen/magin_2"
+                    android:text="即使转载自己也重新编辑下吧？如果重新编辑就更好了。老师能不能优先回答一下？"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/smallTextSize_" />
+
+                <FrameLayout
+                    android:id="@+id/mAnsweredFL"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/magin_2"
+                    android:background="@drawable/circle_detail"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/mAnsweredTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="@dimen/magin_2"
+                        android:text="主播回答：嗯！真气运行学时甘肃省名中医李少波教授以《黄帝内经》“全真导气”理论为基础，博采古代各家行气摄生之精华，经多年躬身实践。悉心研修、临床应用、科学总结儿创立的。"
+                        android:textColor="@color/text_black"
+                        android:layout_marginTop="@dimen/magin_5"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:textSize="@dimen/smallTextSize_" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/mCommentLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/magin_1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/magin_20"
+                        android:paddingRight="@dimen/magin_20"
+                        android:paddingTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/praiseLogo"
+                            android:layout_width="@dimen/magin_18"
+                            android:layout_height="@dimen/magin_18"
+                            android:src="@mipmap/liaotianshi_zaixianren" />
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/mShareTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_5"
+                            android:text="123"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize_" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mShareLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/commentLogo"
+                            android:layout_width="@dimen/magin_15"
+                            android:layout_height="@dimen/magin_15"
+                            android:layout_marginTop="@dimen/magin_4"
+                            android:src="@mipmap/dongtai_pinlun" />
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/mCommentTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_5"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="123"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize_" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_5"
+        android:background="#e1f3f4f8" />
+</LinearLayout>

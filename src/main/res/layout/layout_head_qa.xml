@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mHeadLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_120"
+            android:background="@drawable/wenda_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mHeadImg"
+                    android:layout_width="@dimen/magin_60"
+                    android:layout_height="@dimen/magin_60"
+                    app:actualImageScaleType="focusCrop"
+                    app:failureImage="@mipmap/fang_zhengtouxiang"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/fang_zhengtouxiang"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:progressBarAutoRotateInterval="3000"
+                    app:progressBarImage="@drawable/progressbar"
+                    app:progressBarImageScaleType="centerInside"
+                    app:roundedCornerRadius="@dimen/magin_4" />
+                <!--app:fadeDuration="3000"-->
+                <!--app:roundAsCircle="true"-->
+                <!--app:roundingBorderColor="#C3B0A9"-->
+                <!--app:roundingBorderWidth="2dp" />-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/mNickName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="梦逍遥"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/middleTextSize_" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/mGoodATTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/magin_5"
+                        android:maxLines="2"
+                        android:text="擅长：皮肤科、健康养生、真气运行。"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/middleTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mAskQuesTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/magin_15"
+                android:background="@drawable/shape_cornor_white"
+                android:paddingBottom="@dimen/magin_3"
+                android:paddingLeft="@dimen/magin_8"
+                android:paddingRight="@dimen/magin_8"
+                android:paddingTop="@dimen/magin_3"
+                android:text="向TA提问"
+                android:textColor="@color/work_yellow"
+                android:textSize="@dimen/middleTextSize" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_10"
+            >
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mHisQATv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ta的问答（12）"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize"/>
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mAnsweredTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="已回答4条"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

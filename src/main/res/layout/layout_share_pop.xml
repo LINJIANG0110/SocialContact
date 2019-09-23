@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_half_cornor_white"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_10">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/magin_60"
+            android:layout_height="@dimen/magin_1"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@color/little_gray" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享至站外"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+
+        <View
+            android:layout_width="@dimen/magin_60"
+            android:layout_height="@dimen/magin_1"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:background="@color/little_gray" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/magin_20"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/qqShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/magin_50"
+                android:layout_height="@dimen/magin_50"
+                android:layout_gravity="center"
+                android:src="@mipmap/fenxiang_qq" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/wxShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/magin_50"
+                android:layout_height="@dimen/magin_50"
+                android:layout_gravity="center"
+                android:src="@mipmap/fenxiang_weixin" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/sinaShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/magin_50"
+                android:layout_height="@dimen/magin_50"
+                android:layout_gravity="center"
+                android:src="@mipmap/dl_weibo" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/circleShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/magin_50"
+                android:layout_height="@dimen/magin_50"
+                android:layout_gravity="center"
+                android:src="@mipmap/fenxiang_pengyouquan" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/cancelShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/magin_40"
+        android:text="取消分享"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/middleTextSize" />
+</LinearLayout>

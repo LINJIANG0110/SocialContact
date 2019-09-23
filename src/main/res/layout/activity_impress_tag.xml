@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/tagHintTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/magin_80"
+        android:text="@string/tagHint"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize" />
+    <net.neiquan.applibrary.flowtag.FlowTagLayout
+        android:id="@+id/tagFlowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_20"
+        android:layout_marginRight="@dimen/magin_20"
+        android:layout_marginTop="@dimen/magin_20" />
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/diyTagTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/magin_5"
+        android:background="@drawable/shape_cornor_dashed"
+        android:visibility="gone"
+        android:gravity="right"
+        android:layout_marginTop="@dimen/magin_20"
+        android:paddingBottom="@dimen/magin_4"
+        android:paddingLeft="@dimen/magin_8"
+        android:paddingRight="@dimen/magin_8"
+        android:paddingTop="@dimen/magin_4"
+        android:singleLine="true"
+        android:text="+自定义标签"
+        android:layout_marginLeft="@dimen/magin_25"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize" />
+</LinearLayout>

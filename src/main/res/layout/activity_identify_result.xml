@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+
+    <ImageView
+        android:id="@+id/mStatusImg"
+        android:layout_width="@dimen/magin_100"
+        android:layout_height="@dimen/magin_100"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/magin_50"
+        android:src="@drawable/shenheyitongguo_export" />
+
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mStatusTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="认证信息已通过审核，可以体验更多功能了哦！"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mFailTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/magin_40"
+        android:text="重新认证信息"
+        android:visibility="gone"
+        android:padding="@dimen/margin_10"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/smallTextSize" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/mEnsureTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/magin_70"
+        android:descendantFocusability="blocksDescendants"
+        android:visibility="visible"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/app_color_selector"
+            android:gravity="center"
+            android:padding="@dimen/magin_8"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/middleTextSize" />
+    </android.support.v7.widget.CardView>
+</LinearLayout>

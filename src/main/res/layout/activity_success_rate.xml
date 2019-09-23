@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <com.qianyu.communicate.views.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_1"
+                android:background="@color/little_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_60"
+                    android:layout_height="@dimen/magin_60"
+                    android:src="@mipmap/chargeadd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/magin_5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="充值加成"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/middleTextSize" />
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/addTable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_cornor_line"
+                            android:paddingBottom="@dimen/magin_5"
+                            android:paddingLeft="@dimen/magin_15"
+                            android:paddingRight="@dimen/magin_15"
+                            android:paddingTop="@dimen/magin_5"
+                            android:text="加成表"
+                            android:textColor="@color/app_color"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/goCharge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:background="@drawable/shape_cornor_app_corlor"
+                            android:paddingBottom="@dimen/magin_5"
+                            android:paddingLeft="@dimen/magin_15"
+                            android:paddingRight="@dimen/magin_15"
+                            android:paddingTop="@dimen/magin_5"
+                            android:text="去充值"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/littleTextSize" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/magin_2"
+                        android:text="充值满50元，即可+2%成功率加成（有效期1天）"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_60"
+                    android:layout_height="@dimen/magin_60"
+                    android:src="@mipmap/rankadd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/magin_5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="排名加成"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/middleTextSize" />
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/rankTable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_cornor_line"
+                            android:paddingBottom="@dimen/magin_5"
+                            android:paddingLeft="@dimen/magin_15"
+                            android:paddingRight="@dimen/magin_15"
+                            android:paddingTop="@dimen/magin_5"
+                            android:text="加成表"
+                            android:textColor="@color/app_color"
+                            android:textSize="@dimen/littleTextSize" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/magin_2"
+                        android:text="提升名次至富豪榜、魅力榜51-100名，成功率+2%"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_60"
+                    android:layout_height="@dimen/magin_60"
+                    android:src="@mipmap/tooladd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/magin_5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="道具加成"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/middleTextSize" />
+
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/toolUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:background="@drawable/shape_cornor_app_corlor"
+                            android:paddingBottom="@dimen/magin_5"
+                            android:paddingLeft="@dimen/magin_15"
+                            android:paddingRight="@dimen/magin_15"
+                            android:paddingTop="@dimen/magin_5"
+                            android:text="去使用"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/littleTextSize" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/magin_2"
+                        android:text="购买使用道具“双倍升级”，技能成功率+10%（有效期24小时）"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_60"
+                    android:layout_height="@dimen/magin_60"
+                    android:src="@mipmap/sourseadd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/magin_5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="资源加成"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/middleTextSize" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/magin_2"
+                        android:text="消耗紫星星对技能进行升级时，升级成功率+15%"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_60"
+                    android:layout_height="@dimen/magin_60"
+                    android:src="@mipmap/coinadd" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/magin_5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="货币加成"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/middleTextSize" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/magin_2"
+                        android:text="升级消耗钻石或元宝，升级成功率+10%"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.qianyu.communicate.views.BounceScrollView>
+</LinearLayout>

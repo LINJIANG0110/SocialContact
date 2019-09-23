@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/magin_5">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mHeadImg"
+        android:layout_width="@dimen/magin_30"
+        android:layout_height="@dimen/magin_30"
+        app:actualImageScaleType="focusCrop"
+        app:failureImage="@mipmap/wxdl_chushi"
+        app:failureImageScaleType="centerCrop"
+        app:placeholderImage="@mipmap/wxdl_chushi"
+        app:placeholderImageScaleType="centerCrop"
+        app:progressBarAutoRotateInterval="3000"
+        app:progressBarImage="@drawable/progressbar"
+        app:progressBarImageScaleType="centerInside"
+        app:roundAsCircle="true" />
+    <!--app:roundedCornerRadius="@dimen/magin_5"-->
+    <!--app:fadeDuration="3000"-->
+    <!--app:roundingBorderColor="#C3B0A9"-->
+    <!--app:roundingBorderWidth="2dp" />-->
+    <com.hyphenate.easeui.widget.SkillLevelView
+        android:id="@+id/mSkillView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_5" />
+</LinearLayout>

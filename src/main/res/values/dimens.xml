@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tightTextSize">8sp</dimen>
+    <dimen name="littleTextSize">10sp</dimen>
+    <dimen name="littleTextSize_">11sp</dimen>
+    <dimen name="smallTextSize">12sp</dimen>
+    <dimen name="smallTextSize_">13sp</dimen>
+    <dimen name="middleTextSize">14sp</dimen>
+    <dimen name="middleTextSize_">15sp</dimen>
+    <dimen name="middleTextSize2">16sp</dimen>
+    <dimen name="largeTextSize">18sp</dimen>
+    <dimen name="hugeTextSize">20sp</dimen>
+    <dimen name="hugeTextSize_">30sp</dimen>
+
+    <dimen name="magin_0.1">0.1dp</dimen>
+    <dimen name="magin_0.5">0.5dp</dimen>
+    <dimen name="magin_0.8">0.8dp</dimen>
+    <dimen name="magin_1">1dp</dimen>
+    <dimen name="magin_2">2dp</dimen>
+    <dimen name="magin_2.2">2.2dp</dimen>
+    <dimen name="magin_3">3dp</dimen>
+    <dimen name="magin_4">4dp</dimen>
+    <dimen name="magin_6">6dp</dimen>
+    <dimen name="magin_12">12dp</dimen>
+    <dimen name="magin_13">13dp</dimen>
+    <dimen name="magin_14">14dp</dimen>
+    <dimen name="magin_15">15dp</dimen>
+    <dimen name="magin_16">16dp</dimen>
+    <dimen name="magin_17">17dp</dimen>
+    <dimen name="magin_18">18dp</dimen>
+    <dimen name="magin_22">22dp</dimen>
+    <dimen name="magin_23">23dp</dimen>
+    <dimen name="magin_25">25dp</dimen>
+    <dimen name="magin_50">50dp</dimen>
+    <dimen name="magin_55">55dp</dimen>
+    <dimen name="magin_60">60dp</dimen>
+    <dimen name="magin_70">70dp</dimen>
+    <dimen name="magin_80">80dp</dimen>
+    <dimen name="magin_85">85dp</dimen>
+    <dimen name="magin_90">90dp</dimen>
+    <dimen name="magin_95">95dp</dimen>
+    <dimen name="magin_100">100dp</dimen>
+    <dimen name="magin_105">105dp</dimen>
+    <dimen name="magin_110">110dp</dimen>
+    <dimen name="magin_120">120dp</dimen>
+    <dimen name="magin_130">130dp</dimen>
+    <dimen name="magin_140">140dp</dimen>
+    <dimen name="magin_150">150dp</dimen>
+    <dimen name="magin_180">180dp</dimen>
+    <dimen name="magin_200">200dp</dimen>
+    <dimen name="magin_220">220dp</dimen>
+    <dimen name="magin_250">250dp</dimen>
+    <dimen name="magin_280">280dp</dimen>
+    <dimen name="magin_300">300dp</dimen>
+    <dimen name="article_post_et_h">100dp</dimen>
+    <dimen name="article_post_delete">50dp</dimen>
+    <dimen name="article_img_margin_top">10dp</dimen>
+    <dimen name="article_img_dimens">70dp</dimen>
+    <dimen name="paddingLR">15dp</dimen>
+
+    <!--h1-->
+    <dimen name="h1">9sp</dimen>
+    <!--h2-->
+    <dimen name="h2">10sp</dimen>
+    <!--h3-->
+    <dimen name="h3">11sp</dimen>
+    <!--h4-->
+    <dimen name="h4">12sp</dimen>
+    <!--h5-->
+    <dimen name="h5">13sp</dimen>
+    <!--h6-->
+    <dimen name="h6">14sp</dimen>
+    <!--h7-->
+    <dimen name="h7">15sp</dimen>
+    <!--h8-->
+    <dimen name="h8">16sp</dimen>
+    <!--h9-->
+    <dimen name="h9">17sp</dimen>
+    <!--h10-->
+    <dimen name="h10">18sp</dimen>
+    <!--h11-->
+    <dimen name="h11">19sp</dimen>
+    <dimen name="jz_start_button_w_h_normal">45dp</dimen>
+    <dimen name="jz_start_button_w_h_fullscreen">62dp</dimen>
+
+</resources>

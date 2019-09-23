@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_wrap_line_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="玫瑰花"
+            android:singleLine="true"
+            android:gravity="center"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/giftBeautfyLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="经验"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/giftExprience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:singleLine="true"
+                        android:text="+9"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/smallTextSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="魅力"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/giftBeautfy"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:text="+9"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/smallTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/giftBeautfyAddLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="魅力加成"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/giftBeautfyAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:text="+0.01%"
+                        android:singleLine="true"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/smallTextSize" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/magin_60"
+                android:layout_height="@dimen/magin_60"
+                android:layout_gravity="center"
+                app:actualImageScaleType="focusCrop"
+                app:failureImage="@mipmap/fang_zhengtouxiang"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@mipmap/fang_zhengtouxiang"
+                app:placeholderImageScaleType="centerCrop"
+                app:progressBarAutoRotateInterval="3000"
+                app:progressBarImage="@drawable/progressbar"
+                app:progressBarImageScaleType="centerInside" />
+            <!--app:roundedCornerRadius="@dimen/magin_4"-->
+            <!--app:fadeDuration="3000"-->
+            <!--app:roundAsCircle="true"-->
+            <!--app:roundingBorderColor="#C3B0A9"-->
+            <!--app:roundingBorderWidth="2dp" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/costLogo"
+                android:layout_width="@dimen/magin_15"
+                android:layout_height="@dimen/magin_15"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/magin_1"
+                android:src="@mipmap/wallet1" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mMoneyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_5"
+                android:text="9"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/chosenLogo"
+        android:layout_width="@dimen/magin_20"
+        android:layout_height="@dimen/magin_20"
+        android:layout_gravity="bottom|right"
+        android:src="@mipmap/chongzhi_xuanze" />
+</FrameLayout>

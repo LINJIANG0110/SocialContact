@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <com.qianyu.communicate.views.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/magin_40"
+                android:text="性别"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/middleTextSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_20"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/manSexFL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/wxdl_nan" />
+
+                        <ImageView
+                            android:id="@+id/manChoseLogo"
+                            android:layout_width="@dimen/magin_12"
+                            android:layout_height="@dimen/magin_12"
+                            android:layout_gravity="right|bottom"
+                            android:src="@mipmap/wxdl_xuanze" />
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/womanSexFL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/wxdl_nv" />
+
+                        <ImageView
+                            android:id="@+id/womanChoseLogo"
+                            android:layout_width="@dimen/magin_12"
+                            android:layout_height="@dimen/magin_12"
+                            android:layout_gravity="right|bottom"
+                            android:src="@mipmap/wxdl_xuanze"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/unKnowSexFL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/sy_xuanze_buxian" />
+
+                        <ImageView
+                            android:id="@+id/unKnowChoseLogo"
+                            android:layout_width="@dimen/magin_12"
+                            android:layout_height="@dimen/magin_12"
+                            android:layout_gravity="right|bottom"
+                            android:src="@mipmap/wxdl_xuanze"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/magin_40"
+                android:text="活动时间"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/middleTextSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_15"
+                android:layout_marginRight="@dimen/magin_15"
+                android:layout_marginTop="@dimen/magin_20"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/m15MinutesTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_little_cornor_gray"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_10"
+                    android:text="15分钟"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mOneHourTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_little_cornor_gray"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_10"
+                    android:text="1小时"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mOneDayTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_little_cornor_gray"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_10"
+                    android:text="1天"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mThreeDayTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_solid_app_corlor_"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_10"
+                    android:text="3天"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/middleTextSize" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_8"
+                android:layout_marginTop="@dimen/magin_40"
+                android:background="@color/little_gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:visibility="gone"
+                android:background="@color/little_gray" />
+
+            <RelativeLayout
+                android:id="@+id/mAgeRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/magin_15">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/age"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/mAgeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/magin_5"
+                        android:gravity="right"
+                        android:hint="请选择年龄"
+                        android:text="18-40+"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_30"
+                        android:visibility="gone"
+                        android:layout_height="@dimen/magin_30"
+                        android:src="@mipmap/sy_rili" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.guyj.BidirectionalSeekBar
+                android:id="@+id/mSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/magin_15"
+                android:layout_marginRight="@dimen/magin_15"
+                app:ball_left_solid_color="@color/white"
+                app:ball_left_stroke_color="@color/app_color"
+                app:ball_radius_size="8dp"
+                app:ball_right_solid_color="@color/white"
+                app:ball_right_stroke_color="@color/app_color"
+                app:ball_stroke_size="2dp"
+                app:pb_height="5dp"
+                app:pb_within_color="@color/app_color"
+                app:pb_without_color="@color/little_gray"
+                app:text_left_num="18"
+                app:text_min_unit="1"
+                app:text_right_num="40" />
+            <!--app:ball_left_drawable="@mipmap/ic_launcher"-->
+            <!--app:ball_right_drawable="@mipmap/ic_launcher"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_15"
+                android:layout_marginRight="@dimen/magin_15">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/smallTextSize" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="40+"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/smallTextSize" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:background="@color/little_gray" />
+
+            <RelativeLayout
+                android:id="@+id/mStarRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/magin_15">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/jobTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="星座"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_toRightOf="@+id/jobTv"
+                    android:gravity="center|right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/mStarTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/magin_5"
+                        android:gravity="right"
+                        android:hint="请选择星座"
+                        android:singleLine="true"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_12"
+                        android:layout_height="@dimen/magin_12"
+                        android:src="@mipmap/wo_jiantouyou" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:background="@color/little_gray" />
+
+        </LinearLayout>
+    </com.qianyu.communicate.views.BounceScrollView>
+</LinearLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/app_color_select"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/magin_15"
+            android:paddingLeft="@dimen/magin_30"
+            android:paddingRight="@dimen/magin_30"
+            android:paddingTop="@dimen/magin_15">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大转盘"
+                android:textColor="@color/oval_light_blue"
+                android:textSize="@dimen/middleTextSize" />
+
+            <ImageView
+                android:layout_width="@dimen/magin_40"
+                android:layout_height="@dimen/magin_40"
+                android:layout_marginTop="@dimen/magin_15"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/magin_15"
+            android:paddingTop="@dimen/magin_15">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在家族内大转盘5次!"
+                android:textColor="@color/text_gray"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:textSize="@dimen/smallTextSize" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/magin_25"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="奖励"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/smallTextSize" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="x5000"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/tightTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/magin_5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一套技能系统"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/tightTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/magin_5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="家族积分15"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/tightTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/magin_15"
+            android:paddingRight="@dimen/magin_5"
+            android:paddingTop="@dimen/magin_15">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(14/10)"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/middleTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_30"
+                android:background="@drawable/shape_solid_app_corlor"
+                android:paddingBottom="@dimen/magin_2"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingTop="@dimen/magin_2"
+                android:text="领取"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_5"
+        android:background="@color/little_gray" />
+</LinearLayout>

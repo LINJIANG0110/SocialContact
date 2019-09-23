@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/little_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <RelativeLayout
+        android:id="@+id/msgVoiceNotify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="消息声音通知"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/msgVoiceLogo"
+            android:layout_width="@dimen/magin_60"
+            android:layout_height="@dimen/magin_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/shezhi_dakai" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <RelativeLayout
+        android:id="@+id/msgShakeNotify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="消息震动提醒"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/msgShakeLogo"
+            android:layout_width="@dimen/magin_60"
+            android:layout_height="@dimen/magin_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/shezhi_dakai" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <RelativeLayout
+        android:id="@+id/msgNotify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="消息通知"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/msgNotifyLogo"
+            android:layout_width="@dimen/magin_60"
+            android:layout_height="@dimen/magin_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/shezhi_dakai" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <RelativeLayout
+        android:id="@+id/avoidDisturbNotify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="免打扰通知"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/avoidDisturbLogo"
+            android:layout_width="@dimen/magin_60"
+            android:layout_height="@dimen/magin_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/shezhi_dakai" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/smallTextSize"
+        android:textColor="@color/text_gray"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:text="开启后，在晚上22:00到8:00的时间段不会收到消息通知，收到消息时不会震动或发出声音。"/>
+
+</LinearLayout>

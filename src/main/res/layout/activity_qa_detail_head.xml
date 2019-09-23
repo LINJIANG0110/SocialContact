@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/adapter_select"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="什么是真气运行？真气运行要怎么练？"
+            android:textColor="@color/text_black"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:textSize="@dimen/middleTextSize_" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mHeadImg"
+                android:layout_width="@dimen/magin_40"
+                android:layout_height="@dimen/magin_40"
+                app:actualImageScaleType="focusCrop"
+                app:failureImage="@mipmap/fang_zhengtouxiang"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@mipmap/fang_zhengtouxiang"
+                app:placeholderImageScaleType="centerCrop"
+                app:progressBarAutoRotateInterval="3000"
+                app:progressBarImage="@drawable/progressbar"
+                app:progressBarImageScaleType="centerInside"
+                app:roundedCornerRadius="@dimen/magin_5" />
+            <!--app:fadeDuration="3000"-->
+            <!--app:roundAsCircle="true"-->
+            <!--app:roundingBorderColor="#C3B0A9"-->
+            <!--app:roundingBorderWidth="2dp" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_8"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="16"
+                    android:text="梦逍遥"
+                    android:textColor="@color/name_color"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="05-25 20:50"
+                    android:layout_marginTop="@dimen/magin_5"
+                    android:textSize="@dimen/smallTextSize"
+                    android:textColor="@color/text_gray"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mContentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/magin_2"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="即使转载自己也重新编辑下吧？如果重新编辑就更好了。老师能不能优先回答一下？"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize_" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_5"
+        android:background="#e1f3f4f8"/>
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mReplyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_black"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:textSize="@dimen/smallTextSize_"
+        android:text="回复(2)"/>
+</LinearLayout>

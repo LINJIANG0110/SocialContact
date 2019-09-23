@@ -1,0 +1,145 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.qianyu.communicate"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 9
+        versionName "1.0.8"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        flavorDimensions "versionCode"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            ndk {
+                // 需要将 x86 架构过滤掉
+                abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+            }
+
+            // 自定义输出配置
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为 千语_v1.0_wandoujia.apk
+                        def fileName = "千语_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                    }
+                }
+            }
+        }
+
+        debug {
+
+            ndk {
+                // 需要将 x86 架构过滤掉
+                abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+            }
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("android.keystore")
+            storePassword "neiquan"
+            keyAlias "android.keystore"
+            keyPassword "neiquan"
+        }
+        debug {
+            storeFile file("android.keystore")
+            storePassword "neiquan"
+            keyAlias "android.keystore"
+            keyPassword "neiquan"
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    productFlavors {
+        qianyu {}
+        qh360 {}
+        baidu {}
+        tencent {}
+        ali {}
+        huawei {}
+        vivo {}
+        oppo {}
+        meizu {}
+        xiaomi {}
+        lenovo {}
+        samsung {}
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    dexOptions {
+        javaMaxHeapSize "8g"
+    }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile project(':applibrary')
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.facebook.rebound:rebound:0.3.8'
+    //baseAdapter  用于recylerview item懒加载
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.0'
+    //    compile 'com.android.support:cardview-v7:26.0.0-alpha1'
+    compile 'com.parse:parse-android:1.13.1'
+    implementation files('libs/com.springsource.org.apache.commons.httpclient-3.1.0.jar')
+    implementation files('libs/httpmime-4.2.2.jar')
+    compile 'com.github.kaxi4it:BidirectionalSeekBar:1.0'
+    implementation files('libs/BukaSDK4Android_2.0_249.jar')
+    implementation files('libs/reyunsdk.jar')
+    // 沉浸式状态栏
+    implementation 'spa.lyh.cn:immersion-sdk:1.0.5'
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0-beta05'// buka使用
+    // 新增轮播图
+    implementation 'com.github.donkingliang:CustomBanner:1.1.3'
+    // 新增轮播图
+    implementation 'com.youth.banner:banner:1.4.9'
+    // 仿微信图库选图
+    compile 'com.github.lovetuzitong:MultiImageSelector:1.2'
+    compile 'com.kuyue:utils:1.0.8'
+    // 编辑器
+    implementation 'jp.wasabeef:richeditor-android:1.2.2'
+    // 底部弹窗
+    implementation 'com.github.CodingEnding:PopupLayout:v1.0'
+    // recycleview适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.25'
+}
+//gcm推送 需要注册
+//apply plugin: 'com.google.gms.google-services'

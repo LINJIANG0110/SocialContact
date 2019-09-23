@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--&lt;!&ndash; 阴影部分 最下面一层 &ndash;&gt;-->
+    <!--<item>-->
+        <!--<shape android:shape="rectangle">-->
+            <!--<gradient-->
+                <!--android:endColor="@color/setting_bg_gradient"-->
+                <!--android:gradientRadius="100%p"-->
+                <!--android:startColor="@color/setting_selected_color"-->
+                <!--android:type="radial" />-->
+            <!--<corners android:radius="@dimen/magin_1" />-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--&lt;!&ndash; 背景部分 &ndash;&gt;-->
+    <!--&lt;!&ndash; 形象的表达：bottom left ... 类似于设置 margin &ndash;&gt;-->
+    <!--<item-->
+        <!--android:bottom="@dimen/magin_1"-->
+        <!--android:left="@dimen/magin_1"-->
+        <!--android:right="@dimen/magin_1"-->
+        <!--android:top="@dimen/magin_1">-->
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#FF93F0D3" />
+            <!--<stroke-->
+                <!--android:width="@dimen/magin_1.5"-->
+                <!--android:color="@color/setting_border_color" />-->
+            <gradient
+                android:endColor="#FF7EE0DB"
+                android:angle="270"
+                android:startColor="#FF93F0D3"
+                android:type="linear" />
+        </shape>
+    <!--</item>-->
+<!--</layer-list>-->

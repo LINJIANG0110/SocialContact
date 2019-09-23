@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/magin_250"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_little_cornor_little_gray"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.qianyu.communicate.views.YuanJiaoImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_80"
+                android:scaleType="fitXY"
+                android:src="@drawable/guard_top" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="押镖结算通知！"
+                android:textColor="@color/white"
+                android:textSize="@dimen/middleTextSize" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mGuardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/magin_20"
+            android:lineSpacingExtra="@dimen/magin_3"
+            android:text="老实交代分离式的解放路第三方老实交代分离式的解放路第三方老实交代分离式的解放路第三方老实交代分离式的解放路第三方"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_1"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@color/little_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mAskHelpTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="取消"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mUpdateLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="确认"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/middleTextSize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

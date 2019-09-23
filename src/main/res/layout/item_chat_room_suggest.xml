@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/adapter_select"
+    android:orientation="vertical"
+    android:padding="@dimen/magin_5">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mHeadImg"
+            android:layout_width="@dimen/magin_220"
+            android:layout_height="@dimen/magin_220"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/huoqutupianmoshi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/huoqutupianmoshi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside" />
+        <!--app:roundedCornerRadius="@dimen/magin_5"-->
+        <!--app:fadeDuration="3000"-->
+        <!--app:roundAsCircle="true"-->
+        <!--app:roundingBorderColor="#C3B0A9"-->
+        <!--app:roundingBorderWidth="2dp" />-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:background="@mipmap/liaotianshi_hui1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="@dimen/magin_12"
+                    android:layout_height="@dimen/magin_12"
+                    android:layout_margin="@dimen/magin_5"
+                    app:actualImageScaleType="focusCrop"
+                    app:failureImage="@mipmap/huoqutupianmoshi"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/huoqutupianmoshi"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:progressBarAutoRotateInterval="3000"
+                    app:progressBarImage="@drawable/progressbar"
+                    app:progressBarImageScaleType="centerInside" />
+                <!--app:roundedCornerRadius="5dp" />-->
+                <!--app:fadeDuration="3000"-->
+                <!--app:roundAsCircle="true"-->
+                <!--app:roundingBorderColor="#C3B0A9"-->
+                <!--app:roundingBorderWidth="2dp" />-->
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magin_2"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:text="富士康电话费开始动画富士康后方可水电费"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/littleTextSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/magin_2">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mGifLogo"
+                    android:layout_width="@dimen/magin_12"
+                    android:layout_height="@dimen/magin_12"
+                    android:layout_gravity="center_vertical"
+                    app:actualImageScaleType="focusCrop"
+                    app:failureImage="@mipmap/huoqutupianmoshi"
+                    app:failureImageScaleType="centerCrop"
+
+                    app:progressBarAutoRotateInterval="3000"
+                    app:progressBarImage="@drawable/progressbar"
+                    app:progressBarImageScaleType="centerInside" />
+                <!--app:roundedCornerRadius="5dp" />-->
+                <!--app:placeholderImage="@mipmap/huoqutupianmoshi"-->
+                <!--app:placeholderImageScaleType="centerCrop"-->
+                <!--app:fadeDuration="3000"-->
+                <!--app:roundAsCircle="true"-->
+                <!--app:roundingBorderColor="#C3B0A9"-->
+                <!--app:roundingBorderWidth="2dp" />-->
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_5"
+                    android:layout_marginRight="@dimen/magin_5"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/middleTextSize" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mMoneyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="@dimen/magin_5"
+                android:layout_marginTop="@dimen/magin_2"
+                android:maxLength="8"
+                android:text="￥1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/littleTextSize"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mContentTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_5"
+        android:layout_marginTop="@dimen/magin_2"
+        android:singleLine="true"
+        android:text="富士康电话费开始动画富士康后方可水电费"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/smallTextSize_" />
+    <!--android:lineSpacingExtra="@dimen/magin_2"-->
+    <!--android:lines="2"-->
+</LinearLayout>

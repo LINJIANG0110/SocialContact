@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/magin_50"
+        android:background="@drawable/shape_cornor_white"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/magin_20"
+        android:paddingRight="@dimen/magin_20"
+        android:paddingTop="@dimen/magin_20">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mCountDownTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_solid_round"
+            android:paddingLeft="@dimen/magin_12"
+            android:paddingRight="@dimen/magin_12"
+            android:text="5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/hugeTextSize_" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mContentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_20"
+            android:gravity="center"
+            android:text="迷迷糊糊颠倒的灵则邀请你上麦，是否接受？"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize_" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_1"
+            android:layout_marginTop="@dimen/magin_20"
+            android:background="@color/little_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mCancelMikeTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:text="取消"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/middleTextSize_" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mUpMikeTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:text="上麦"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/middleTextSize_" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

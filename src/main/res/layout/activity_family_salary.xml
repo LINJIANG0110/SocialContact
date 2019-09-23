@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qianyu.communicate.views.BounceScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/magin_15">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="本周工资总收入"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/middleTextSize" />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_30"
+                        android:layout_height="@dimen/magin_20"
+                        android:layout_marginLeft="@dimen/magin_20"
+                        android:src="@mipmap/wallet1" />
+
+                    <TextView
+                        android:id="@+id/myFubaoTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="x234"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/middleTextSize" />
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_30"
+                        android:layout_height="@dimen/magin_20"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:src="@mipmap/coin1" />
+
+                    <TextView
+                        android:id="@+id/myCoinTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="x234"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/middleTextSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="#FFFAFBFD"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_10">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="管理工资"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/magin_20"
+                                android:layout_height="@dimen/magin_15"
+                                android:src="@mipmap/wallet1" />
+
+                            <TextView
+                                android:id="@+id/manageFubao"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x234"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/smallTextSize" />
+
+                            <ImageView
+                                android:layout_width="@dimen/magin_20"
+                                android:layout_height="@dimen/magin_15"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:src="@mipmap/coin1" />
+
+                            <TextView
+                                android:id="@+id/manageCoin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x234"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/smallTextSize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/magin_1"
+                        android:layout_height="@dimen/magin_30"
+                        android:background="@color/line_color" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="积分工资"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/magin_20"
+                                android:layout_height="@dimen/magin_15"
+                                android:src="@mipmap/wallet1" />
+
+                            <TextView
+                                android:id="@+id/jifenFubao"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x234"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/smallTextSize" />
+
+                            <ImageView
+                                android:layout_width="@dimen/magin_20"
+                                android:layout_height="@dimen/magin_15"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:src="@mipmap/coin1" />
+
+                            <TextView
+                                android:id="@+id/jifenCoin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="x234"
+                                android:textColor="@color/text_black"
+                                android:textSize="@dimen/smallTextSize" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_10"
+                    android:text="申请管理"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_30"
+                        android:layout_height="@dimen/magin_20"
+                        android:src="@mipmap/patriarch" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="族长"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:maxLines="3"
+                            android:text="提升家族活跃气氛，维护家族稳定"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/magin_15"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="工资："
+                                android:textColor="#FFE5DA88"
+                                android:textSize="@dimen/smallTextSize" />
+
+                            <TextView
+                                android:id="@+id/mOwnerSalaryTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="一周300W金币+138W福利元宝"
+                                android:textColor="#FFE5DA88"
+                                android:textSize="@dimen/smallTextSize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/mOwnerRequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"
+                        android:background="@drawable/shape_cornor_app_corlor"
+                        android:paddingBottom="@dimen/magin_4"
+                        android:paddingLeft="@dimen/magin_15"
+                        android:paddingRight="@dimen/magin_15"
+                        android:paddingTop="@dimen/magin_4"
+                        android:text="申请"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/smallTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_30"
+                        android:layout_height="@dimen/magin_20"
+                        android:src="@mipmap/manager" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="管理员"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:maxLines="3"
+                            android:text="提升家族活跃气氛，协助族长管理家族"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/magin_15"
+                            android:layout_marginTop="@dimen/magin_5"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="工资："
+                                android:textColor="#FFE5DA88"
+                                android:textSize="@dimen/smallTextSize" />
+
+                            <TextView
+                                android:id="@+id/mManagerSalaryTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="一周108W金币+36W福利元宝"
+                                android:textColor="#FFE5DA88"
+                                android:textSize="@dimen/smallTextSize" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/mMangerRequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_cornor_app_corlor"
+                        android:paddingBottom="@dimen/magin_4"
+                        android:paddingLeft="@dimen/magin_15"
+                        android:paddingRight="@dimen/magin_15"
+                        android:paddingTop="@dimen/magin_4"
+                        android:text="申请"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/smallTextSize" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/magin_0.1"
+                    android:background="@color/little_gray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_10"
+                    android:text="家族积分"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_20"
+                    android:maxLines="3"
+                    android:text="每周家族积分越多，奖励越丰厚"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/littleTextSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_20"
+                        android:layout_marginRight="@dimen/magin_20"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/jifen1Logo"
+                                android:layout_width="@dimen/magin_40"
+                                android:layout_height="@dimen/magin_40"
+                                android:src="@mipmap/box3" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/jifen2Logo"
+                                android:layout_width="@dimen/magin_40"
+                                android:layout_height="@dimen/magin_40"
+                                android:src="@mipmap/box1" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/jifen3Logo"
+                                android:layout_width="@dimen/magin_40"
+                                android:layout_height="@dimen/magin_40"
+                                android:layout_gravity="right"
+                                android:src="@mipmap/box2" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/magin_2"
+                        android:layout_marginLeft="@dimen/magin_20"
+                        android:layout_marginRight="@dimen/magin_20"
+                        android:layout_marginTop="@dimen/magin_2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/jifen1State"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="已领取"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:id="@+id/jifen2State"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="查看奖励"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:id="@+id/jifen3State"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="查看奖励"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize" />
+
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/mProgressBar"
+                        style="@style/m_progress_bar_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="@dimen/magin_20"
+                        android:layout_marginRight="@dimen/magin_20"
+                        android:max="3000"
+                        android:progress="1500"
+                        android:secondaryProgress="3000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_20"
+                        android:layout_marginRight="@dimen/magin_20"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <View
+                                android:layout_width="@dimen/magin_1"
+                                android:layout_height="@dimen/margin_10"
+                                android:layout_marginLeft="@dimen/magin_15"
+                                android:background="@color/green" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <View
+                                android:layout_width="@dimen/magin_1"
+                                android:layout_height="@dimen/margin_10"
+                                android:layout_marginLeft="@dimen/magin_15"
+                                android:background="@color/green" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <View
+                                android:layout_width="@dimen/magin_1"
+                                android:layout_height="@dimen/margin_10"
+                                android:layout_gravity="right"
+                                android:layout_marginRight="@dimen/magin_15"
+                                android:background="@color/green" />
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_20"
+                        android:layout_marginRight="@dimen/magin_20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/jifen1Num"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/magin_5"
+                            android:text="500"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:id="@+id/jifen2Num"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="1500"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:id="@+id/jifen3Num"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="3000"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/smallTextSize" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_10"
+                    android:text="积分列表"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/magin_50"
+                    android:descendantFocusability="blocksDescendants">
+                    <!--app:cardCornerRadius="1dp"-->
+                    <!--app:cardElevation="1dp"-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/magin_1"
+                            android:layout_height="match_parent"
+                            android:background="@color/little_gray" />
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/magin_15">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="昵称"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="今日积分"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="本周积分"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+                            </LinearLayout>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/mRecylerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/magin_1"
+                            android:layout_height="match_parent"
+                            android:background="@color/little_gray" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </com.qianyu.communicate.views.BounceScrollView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/mSubmitCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:layout_marginRight="@dimen/magin_20"
+            android:descendantFocusability="blocksDescendants"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/app_color_selector"
+                android:gravity="center"
+                android:padding="@dimen/magin_6"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_text_size" />
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+</LinearLayout>

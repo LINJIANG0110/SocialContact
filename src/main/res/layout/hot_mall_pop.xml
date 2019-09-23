@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/magin_40"
+        android:background="@drawable/shape_cornor_white"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_half_cornor_app_corlor"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="选择购买数量"
+            android:textColor="@color/white"
+            android:textSize="@dimen/middleTextSize" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_20"
+            android:background="@drawable/shape_solide_little_app_color"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/magin_25"
+            android:paddingRight="@dimen/magin_25"
+            android:paddingTop="@dimen/margin_10">
+
+            <ImageView
+                android:id="@+id/mMallImg"
+                android:layout_width="@dimen/magin_35"
+                android:layout_height="@dimen/magin_25"
+                android:src="@mipmap/logo" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mMallName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_5"
+                android:text="蓝卷"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/littleTextSize_" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mMallDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/magin_15"
+            android:gravity="center"
+            android:text="用于幸运转盘抽奖用于幸运转盘抽奖用于幸运转盘抽奖"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/littleTextSize" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/magin_20"
+            android:layout_marginLeft="@dimen/magin_50"
+            android:layout_marginRight="@dimen/magin_50"
+            android:background="@drawable/shape_solid_little_gray"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <EditText
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mMallCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="5"
+                android:paddingLeft="@dimen/magin_30"
+                android:paddingRight="@dimen/magin_30"
+                android:hint="请输入数量"
+                android:text="1"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+
+            <ImageView
+                android:id="@+id/mMallReduce"
+                android:layout_width="@dimen/magin_25"
+                android:layout_height="@dimen/magin_25"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="-3dp"
+                android:src="@mipmap/mallreduce" />
+
+            <ImageView
+                android:id="@+id/mMallAdd"
+                android:layout_width="@dimen/magin_25"
+                android:layout_height="@dimen/magin_25"
+                android:layout_gravity="right"
+                android:layout_marginRight="-10dp"
+                android:layout_marginTop="-3dp"
+                android:src="@mipmap/malladd" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mMallCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_5"
+            android:text="共计花费 10 钻石"
+            android:textColor="@color/oval_light_yellow"
+            android:textSize="@dimen/littleTextSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_0.1"
+            android:layout_marginTop="@dimen/magin_25"
+            android:background="@color/little_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/cancelTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/magin_20"
+                android:text="取消"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/medium_text_size" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/sureTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/magin_20"
+                android:text="购买"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/medium_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

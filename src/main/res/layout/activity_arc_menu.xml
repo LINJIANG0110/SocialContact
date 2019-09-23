@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:paddingTop="@dimen/magin_30"
+    android:paddingBottom="@dimen/magin_30"
+    android:gravity="center"
+    android:orientation="vertical">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mGifLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="@dimen/magin_5"
+        app:actualImageScaleType="focusCrop"
+        app:failureImage="@mipmap/huoqutupianmoshi"
+        app:failureImageScaleType="centerCrop"
+        app:placeholderImage="@mipmap/huoqutupianmoshi"
+        app:placeholderImageScaleType="centerCrop"
+        app:progressBarAutoRotateInterval="3000"
+        app:progressBarImage="@drawable/progressbar"
+        app:progressBarImageScaleType="centerInside"/>
+    <!--app:roundedCornerRadius="5dp" />-->
+    <!--app:fadeDuration="3000"-->
+    <!--app:roundAsCircle="true"-->
+    <!--app:roundingBorderColor="#C3B0A9"-->
+    <!--app:roundingBorderWidth="2dp" />-->
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        android:background="@drawable/dot_round_gray"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/mImg1"
+            android:layout_width="@dimen/magin_50"
+            android:layout_height="@dimen/magin_50"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/mImg2"
+            android:layout_width="@dimen/magin_50"
+            android:layout_height="@dimen/magin_50"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/mImg3"
+            android:layout_width="@dimen/magin_50"
+            android:layout_height="@dimen/magin_50"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/mImg4"
+            android:layout_width="@dimen/magin_50"
+            android:layout_height="@dimen/magin_50"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+
+        <ImageView
+            android:id="@+id/mImg5"
+            android:layout_width="@dimen/magin_50"
+            android:layout_height="@dimen/magin_50"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/mImg6"
+            android:layout_width="@dimen/magin_50"
+            android:layout_height="@dimen/magin_50"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mHeadImg"
+            android:layout_width="@dimen/magin_60"
+            android:layout_height="@dimen/magin_60"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/wxdl_chushi"
+            android:layout_gravity="center"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/wxdl_chushi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundAsCircle="true"
+            app:roundedCornerRadius="@dimen/magin_5" />
+        <!--app:fadeDuration="3000"-->
+        <!--app:roundingBorderColor="#C3B0A9"-->
+        <!--app:roundingBorderWidth="2dp" />-->
+    </FrameLayout>
+</LinearLayout>

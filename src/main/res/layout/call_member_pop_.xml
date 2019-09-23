@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/magin_50"
+        android:background="@drawable/shape_cornor_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/magin_20"
+        android:paddingRight="@dimen/magin_20"
+        android:paddingTop="@dimen/margin_10">
+
+
+        <LinearLayout
+            android:id="@+id/contentLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mHeadImg"
+                android:layout_width="@dimen/magin_60"
+                android:layout_height="@dimen/magin_60"
+                app:actualImageScaleType="focusCrop"
+                app:failureImage="@mipmap/fang_zhengtouxiang"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@mipmap/fang_zhengtouxiang"
+                app:placeholderImageScaleType="centerCrop"
+                app:progressBarAutoRotateInterval="3000"
+                app:progressBarImage="@drawable/progressbar"
+                app:progressBarImageScaleType="centerInside"
+                app:roundAsCircle="true" />
+            <!--app:roundingBorderWidth="2dp"-->
+            <!--app:roundingBorderColor="#C3B0A9"-->
+            <!--app:roundedCornerRadius="@dimen/magin_4"-->
+            <!--app:fadeDuration="3000"-->
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="斯蒂芬斯蒂芬"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/smallTextSize_" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magin_5"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/mNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="胜多负少"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/littleTextSize"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/ageSexLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_cornor_pink"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/magin_1"
+                        android:paddingLeft="@dimen/magin_2"
+                        android:paddingRight="@dimen/magin_2"
+                        android:paddingTop="@dimen/magin_1"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/sexLogo"
+                            android:layout_width="@dimen/margin_10"
+                            android:layout_height="@dimen/margin_10"
+                            android:src="@mipmap/xiangqing_nv1" />
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/mAgeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_2"
+                            android:text="12"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/tightTextSize" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/mLevelTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:background="@drawable/shape_solid_level_color"
+                        android:paddingBottom="@dimen/magin_1"
+                        android:paddingLeft="@dimen/magin_3"
+                        android:paddingRight="@dimen/magin_3"
+                        android:paddingTop="@dimen/magin_1"
+                        android:text="LV34"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tightTextSize"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_0.1"
+            android:background="@color/white" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="附言:"
+            android:layout_gravity="left"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/shape_wrap_line_gray"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mCallET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_solid_little_gray_"
+                android:gravity="left"
+                android:text="族长正在召唤本家族成员回归，点击即可传送。"
+                android:paddingTop="@dimen/magin_5"
+                android:paddingLeft="@dimen/magin_5"
+                android:paddingRight="@dimen/magin_5"
+                android:paddingBottom="@dimen/magin_20"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+
+            <ImageView
+                android:id="@+id/mCallETLogo"
+                android:layout_width="@dimen/margin_12"
+                android:visibility="gone"
+                android:layout_height="@dimen/margin_12"
+                android:layout_marginLeft="@dimen/magin_5"
+                android:src="@mipmap/wodezuopin_bianji" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:layout_marginRight="@dimen/magin_20"
+            android:layout_marginTop="@dimen/magin_20"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mCancelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_solid_app_corlor_"
+                android:gravity="center"
+                android:paddingBottom="@dimen/magin_2"
+                android:paddingLeft="@dimen/magin_20"
+                android:paddingRight="@dimen/magin_20"
+                android:paddingTop="@dimen/magin_2"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smallTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mSureTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_solid_red"
+                android:gravity="center"
+                android:paddingBottom="@dimen/magin_2"
+                android:paddingLeft="@dimen/magin_20"
+                android:paddingRight="@dimen/magin_20"
+                android:paddingTop="@dimen/magin_2"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smallTextSize" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

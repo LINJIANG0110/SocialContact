@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/backFL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_12"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/magin_12"
+            android:layout_height="@dimen/magin_12"
+            android:src="@drawable/all_back" />
+        <!--android:src="@mipmap/wxdl_zuo"-->
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginLeft="@dimen/magin_30"
+        android:layout_marginRight="@dimen/magin_30"
+        android:background="@drawable/phone_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/magin_60"
+            android:layout_height="@dimen/magin_60"
+            android:src="@mipmap/logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:layout_marginRight="@dimen/magin_20"
+            android:layout_marginTop="@dimen/magin_40"
+            android:background="@drawable/shape_little_cornor_little_gray"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/magin_15"
+                android:layout_height="@dimen/magin_15"
+                android:layout_marginLeft="@dimen/magin_15"
+                android:src="@mipmap/sjdl_shoujihao" />
+
+            <EditText
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/phoneET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:maxLength="11"
+                android:inputType="number"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/text_gray"
+                android:textSize="@dimen/littleTextSize" />
+
+            <ImageView
+                android:id="@+id/deletePhoneImg"
+                android:layout_width="@dimen/magin_15"
+                android:visibility="gone"
+                android:layout_height="@dimen/magin_15"
+                android:layout_marginRight="@dimen/magin_15"
+                android:src="@mipmap/sjdl_shanchu" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:layout_marginRight="@dimen/magin_20"
+            android:layout_marginTop="@dimen/magin_20"
+            android:background="@drawable/shape_little_cornor_little_gray"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/magin_15"
+                android:layout_height="@dimen/magin_15"
+                android:layout_marginLeft="@dimen/magin_15"
+                android:src="@mipmap/sjdl_yanzheng" />
+
+            <EditText
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/codeET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:background="@null"
+                android:inputType="number"
+                android:maxLength="6"
+                android:hint="请输入验证码"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/littleTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/codeSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/magin_5"
+                android:paddingBottom="@dimen/magin_2"
+                android:paddingLeft="@dimen/magin_5"
+                android:paddingRight="@dimen/magin_5"
+                android:paddingTop="@dimen/magin_2"
+                android:text="获取验证码"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/littleTextSize" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/loginCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:layout_marginRight="@dimen/magin_20"
+            android:layout_marginTop="@dimen/magin_40"
+            android:descendantFocusability="blocksDescendants"
+            android:visibility="visible"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="2dp">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mLoginTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/app_color_selector"
+                android:gravity="center"
+                android:padding="@dimen/magin_5"
+                android:text="@string/phoneBinding"
+                android:textColor="@color/white"
+                android:textSize="@dimen/middleTextSize_" />
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

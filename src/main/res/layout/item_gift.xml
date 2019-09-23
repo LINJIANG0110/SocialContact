@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/mRideViewLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_big_cornor_blue"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/magin_2"
+            android:paddingLeft="@dimen/magin_3"
+            android:paddingRight="@dimen/magin_3"
+            android:paddingTop="@dimen/magin_2">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mRideName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="王大锤"
+                android:textColor="@color/chat_color_nv"
+                android:textSize="@dimen/littleTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mRideTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="驾驭闪电麒麟上线了！"
+                android:textColor="@color/white"
+                android:textSize="@dimen/littleTextSize" />
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mRideImageView"
+            android:layout_width="@dimen/magin_100"
+            android:layout_height="@dimen/magin_80"
+            android:layout_marginTop="@dimen/margin_10"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/fang_zhengtouxiang"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/fang_zhengtouxiang"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside" />
+        <!--app:roundAsCircle="true"-->
+        <!--app:roundedCornerRadius="@dimen/magin_3"-->
+        <!--app:fadeDuration="3000"-->
+        <!--app:roundingBorderColor="#C3B0A9"-->
+        <!--app:roundingBorderWidth="2dp" />-->
+
+    </LinearLayout>
+</FrameLayout>

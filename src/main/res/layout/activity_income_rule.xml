@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/magin_20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/magin_5"
+            android:layout_height="@dimen/magin_20"
+            android:background="@color/app_color" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="工资收入"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize_" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:layout_marginTop="@dimen/magin_15"
+        android:text="1.成员贡献积分越高，且家族总积分越高，个人获得工资就越高。"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/smallTextSize_" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:layout_marginTop="@dimen/magin_15"
+        android:text="2.家族总积分越高，满足获得工资人数越多，族长工资越高。"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/smallTextSize_" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:layout_marginTop="@dimen/magin_15"
+        android:text="3.工资发放前，请勿变更家族权限或者退出家族，否则将导致您的工资无法正常发放！"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/smallTextSize_" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:layout_marginTop="@dimen/magin_15"
+        android:text="4.家族总积分大于500分且个人积分大于50分开始计算成员工资。"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/smallTextSize_" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_5"
+        android:layout_marginBottom="@dimen/magin_20"
+        android:layout_marginTop="@dimen/magin_20"
+        android:background="@color/chat_room_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/magin_5"
+            android:layout_height="@dimen/magin_20"
+            android:background="@color/app_color" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="积分规则"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize_" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:layout_marginTop="@dimen/magin_15"
+        android:text="1.个人家族贡献积分每日活的上限为40分，每周获得上限为150分。"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/smallTextSize_" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:layout_marginTop="@dimen/magin_15"
+        android:text="2.每个设备仅两个ID获得积分。"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/smallTextSize_" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:layout_marginTop="@dimen/magin_15"
+        android:text="3.家族累计周积分未达到50分的用户无工资。"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/smallTextSize_" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:layout_marginTop="@dimen/magin_15"
+        android:text="4.家族积分未达到500分，所有成员没有工资。"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/smallTextSize_" />
+</LinearLayout>

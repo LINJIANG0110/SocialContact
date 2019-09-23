@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qianyu.communicate.activity.RedpackageActivity">
+
+    <RelativeLayout
+        android:id="@+id/rely_start"
+        android:layout_width="300dp"
+        android:layout_height="460dp"
+        android:layout_gravity="center"
+        android:background="@mipmap/system_red">
+
+        <LinearLayout
+            android:id="@+id/llay_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_close"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_fengmian"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:actualImageScaleType="focusCrop"
+                app:failureImage="@mipmap/logo"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@mipmap/logo"
+                app:placeholderImageScaleType="centerCrop"
+                app:progressBarAutoRotateInterval="3000"
+                app:progressBarImage="@drawable/progressbar"
+                app:progressBarImageScaleType="centerInside"
+                app:roundAsCircle="true"
+                app:roundedCornerRadius="@dimen/magin_12" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="千千的红包"
+                android:textColor="@color/huangjin"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_money"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llay_top"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="恭喜发财，大吉大利"
+            android:textColor="@color/huangjin"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_detaile"
+            android:visibility="gone"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="查看领取详情 >"
+            android:textColor="@color/huangjin_tmd"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</FrameLayout>

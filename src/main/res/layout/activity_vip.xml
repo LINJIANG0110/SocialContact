@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/vip_bg">
+
+        <FrameLayout
+            android:id="@+id/backFL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_10">
+
+            <ImageView
+                android:layout_width="@dimen/magin_20"
+                android:layout_height="@dimen/magin_20"
+                android:src="@mipmap/ic_launcher" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_10"
+            android:text="@string/vipTitle"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/largeTextSize" />
+    </RelativeLayout>
+
+    <com.qianyu.communicate.views.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/vip_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/magin_20">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:layout_marginTop="@dimen/magin_20"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/silverPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:text="￥30/月"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/smallTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_80"
+                            android:layout_height="@dimen/magin_80"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/goldPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:text="￥168/月"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/smallTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:layout_marginTop="@dimen/magin_20"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:id="@+id/superPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:text="￥648/月"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/smallTextSize" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/silverFL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/silverTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_cornor_line"
+                        android:paddingBottom="@dimen/magin_4"
+                        android:paddingLeft="@dimen/magin_20"
+                        android:paddingRight="@dimen/magin_20"
+                        android:paddingTop="@dimen/magin_4"
+                        android:text="@string/silverNoble"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/middleTextSize" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/goldFL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/goldTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_cornor_app_corlor"
+                        android:paddingBottom="@dimen/magin_4"
+                        android:paddingLeft="@dimen/magin_20"
+                        android:paddingRight="@dimen/magin_20"
+                        android:paddingTop="@dimen/magin_4"
+                        android:text="@string/goldNoble"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/middleTextSize" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/superFL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/superTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_cornor_line"
+                        android:paddingBottom="@dimen/magin_4"
+                        android:paddingLeft="@dimen/magin_20"
+                        android:paddingRight="@dimen/magin_20"
+                        android:paddingTop="@dimen/magin_4"
+                        android:text="@string/superNoble"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/middleTextSize" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/magin_20"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="每日领取"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="金币3000个"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:id="@+id/dayTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="蓝券一张"
+                            android:textColor="@color/oval_light_yellow"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="钻石礼包"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="每天15钻石共计"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:id="@+id/diamondTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="450钻石"
+                            android:textColor="@color/oval_light_yellow"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="技能幸运星"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="升级技能获得"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:id="@+id/skillTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="1.5倍幸运值"
+                            android:textColor="@color/oval_light_yellow"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="尊贵展示"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="在聊天室展示"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:id="@+id/vipTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="VIP标志"
+                            android:textColor="@color/oval_light_yellow"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="抽将特权"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="每天免费领取"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:id="@+id/luckyTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="蓝券5张"
+                            android:textColor="@color/oval_light_yellow"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="私聊特权"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="每天随意私聊"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/smallTextSize" />
+
+                        <TextView
+                            android:id="@+id/chatTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/magin_2"
+                            android:text="陌生人20次"
+                            android:textColor="@color/oval_light_yellow"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.qianyu.communicate.views.BounceScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/openMemberShip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/magin_20"
+        android:layout_marginRight="@dimen/magin_20"
+        android:descendantFocusability="blocksDescendants"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+        <!--android:background="@drawable/btn_login_select"-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_color_selector"
+            android:gravity="center"
+            android:padding="@dimen/magin_8"
+            android:text="开通黄金贵族"
+            android:textColor="@color/white"
+            android:textSize="@dimen/largeTextSize" />
+    </android.support.v7.widget.CardView>
+</LinearLayout>

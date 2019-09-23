@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333542"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <!--<CheckBox-->
+        <!--android:id="@+id/checkbox"-->
+        <!--android:layout_width="@dimen/magin_20"-->
+        <!--android:layout_height="@dimen/magin_20"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:background="@drawable/checkbox"-->
+        <!--android:button="@null"-->
+        <!--android:checked="false" />-->
+
+    <ImageView
+        android:id="@+id/checkbox"
+        android:layout_width="@dimen/magin_20"
+        android:layout_height="@dimen/magin_20"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/check_false"
+        android:button="@null"
+        android:checked="false" />
+</RelativeLayout>

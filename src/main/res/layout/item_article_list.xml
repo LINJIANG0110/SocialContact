@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/adapter_select"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/magin_15">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/magin_2"
+                android:maxLines="2"
+                android:text="【摘要】目的了解医学院校成教大学生的心理健康情况，为成教学生心理健康工作提供参考依据。方法采用大学生心理健康问卷（UPI）对391名首都医科大学成教本科新生进行调查"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize_"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mContentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:maxLines="2"
+                android:lineSpacingExtra="@dimen/magin_2"
+                android:text="即使转载自己也重新编辑下吧？如果重新编辑就更好了。如果可以😊😊！！"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize_" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mCommentPraiseTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:singleLine="true"
+                android:text="22,434 赞同 · 231 评论"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_gravity="center"
+            android:id="@+id/mHeadImg"
+            android:layout_width="@dimen/magin_80"
+            android:layout_height="@dimen/magin_80"
+            android:layout_marginLeft="@dimen/magin_25"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/fang_zhengtouxiang"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/fang_zhengtouxiang"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundedCornerRadius="@dimen/magin_5" />
+        <!--app:fadeDuration="3000"-->
+        <!--app:roundAsCircle="true"-->
+        <!--app:roundingBorderColor="#C3B0A9"-->
+        <!--app:roundingBorderWidth="2dp" />-->
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_5"
+        android:background="#e1f3f4f8" />
+</LinearLayout>

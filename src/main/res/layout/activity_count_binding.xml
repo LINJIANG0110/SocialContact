@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/little_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <RelativeLayout
+        android:id="@+id/mPhoneRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/adapter_select"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/magin_20"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机绑定"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mPhoneTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+
+            <ImageView
+                android:layout_width="@dimen/magin_12"
+                android:layout_height="@dimen/magin_12"
+                android:layout_marginLeft="@dimen/magin_2"
+                android:src="@mipmap/wo_jiantouyou" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <RelativeLayout
+        android:id="@+id/mWXRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/adapter_select"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/magin_20"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信绑定"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mWxTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+
+            <ImageView
+                android:layout_width="@dimen/magin_12"
+                android:layout_height="@dimen/magin_12"
+                android:layout_marginLeft="@dimen/magin_2"
+                android:src="@mipmap/wo_jiantouyou" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <RelativeLayout
+        android:id="@+id/mQQRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/magin_20"
+        android:background="@drawable/adapter_select"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QQ绑定"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mQQTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+
+            <ImageView
+                android:layout_width="@dimen/magin_12"
+                android:layout_height="@dimen/magin_12"
+                android:layout_marginLeft="@dimen/magin_2"
+                android:src="@mipmap/wo_jiantouyou" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:visibility="gone"
+        android:background="@color/little_gray" />
+
+    <RelativeLayout
+        android:id="@+id/mSinaRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/magin_20"
+        android:visibility="gone"
+        android:background="@drawable/adapter_select"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_10">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新浪微博绑定"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mSinaTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+
+            <ImageView
+                android:layout_width="@dimen/magin_15"
+                android:layout_height="@dimen/magin_15"
+                android:layout_marginLeft="@dimen/magin_2"
+                android:src="@mipmap/wo_jiantouyou" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+</LinearLayout>

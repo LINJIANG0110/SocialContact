@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llayroot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="330dp"
+        android:layout_marginLeft="@dimen/magin_50"
+        android:layout_marginRight="@dimen/magin_50"
+        android:background="@drawable/xinbanben_"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mDetailTv"
+            android:layout_width="@dimen/magin_120"
+            android:layout_height="@dimen/magin_85"
+            android:layout_marginTop="@dimen/magin_95"
+            android:layout_gravity="center_horizontal"
+            android:text="1.APP启动速度性能提升                                   2.增加视频连续播放提示                                  3.离线缓存细节体验优化"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+
+        <View
+            android:id="@+id/mEnsureTv"
+            android:layout_width="@dimen/magin_80"
+            android:layout_height="@dimen/magin_80"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/magin_15" />
+
+        <View
+            android:id="@+id/mCancelTv"
+            android:layout_width="@dimen/magin_80"
+            android:layout_height="@dimen/magin_30"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/magin_20" />
+    </LinearLayout>
+
+</LinearLayout>
+

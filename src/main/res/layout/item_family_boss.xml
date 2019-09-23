@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRootLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/magin_5">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mHeadImg"
+        android:layout_width="@dimen/magin_40"
+        android:layout_height="@dimen/magin_40"
+        app:actualImageScaleType="focusCrop"
+        app:failureImage="@mipmap/fang_zhengtouxiang"
+        app:failureImageScaleType="centerCrop"
+        app:placeholderImage="@mipmap/fang_zhengtouxiang"
+        app:placeholderImageScaleType="centerCrop"
+        app:progressBarAutoRotateInterval="3000"
+        app:progressBarImage="@drawable/progressbar"
+        app:progressBarImageScaleType="centerInside"
+        app:roundedCornerRadius="@dimen/magin_3" />
+    <!--app:fadeDuration="3000"-->
+    <!--app:roundAsCircle="true"-->
+    <!--app:roundingBorderColor="#C3B0A9"-->
+    <!--app:roundingBorderWidth="2dp" />-->
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:singleLine="true"
+        android:text="美人鱼的嫁衣"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/smallTextSize" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mStateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:singleLine="true"
+        android:text="不可召唤"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/smallTextSize" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mNumTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/magin_5"
+        android:singleLine="true"
+        android:text="(0/88)"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize" />
+
+
+</LinearLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/magin_3"
+        android:paddingLeft="@dimen/magin_15"
+        android:visibility="gone"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/magin_3">
+
+        <ImageView
+            android:layout_width="@dimen/magin_15"
+            android:layout_height="@dimen/magin_15"
+            android:src="@mipmap/fensi_msg" />
+        <com.qianyu.communicate.views.MarqueeView
+            android:id="@+id/mv_bar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/margin_10"
+            app:mvAnimDuration="1000"
+            app:mvInterval="3000"
+            app:mvTextColor="@color/white"
+            app:mvTextSize="@dimen/smallTextSize"/>
+    </LinearLayout>
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        android:id="@+id/smartTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:stl_clickable="true"
+        app:stl_defaultTabBackground="?attr/selectableItemBackground"
+        app:stl_defaultTabTextAllCaps="false"
+        app:stl_defaultTabTextColor="@color/viewpage_selector_slide_title"
+        app:stl_defaultTabTextHorizontalPadding="10dp"
+        app:stl_defaultTabTextSize="16sp"
+        app:stl_distributeEvenly="true"
+        app:stl_dividerColor="@color/text_gray"
+        app:stl_dividerThickness="0px"
+        app:stl_drawDecorationAfterTab="false"
+        app:stl_indicatorColor="@color/app_color"
+        app:stl_indicatorCornerRadius="2dp"
+        app:stl_indicatorGravity="bottom"
+        app:stl_indicatorInFront="false"
+        app:stl_indicatorInterpolation="smart"
+        app:stl_indicatorThickness="2dp"
+        app:stl_indicatorWidth="auto"
+        app:stl_indicatorWithoutPadding="true"
+        app:stl_overlineColor="@color/app_color"
+        app:stl_overlineThickness="0dp"
+        app:stl_titleOffset="14dp"
+        app:stl_underlineColor="@color/text_gray"
+        app:stl_underlineThickness="0px" />
+    <!--stl_indicatorThickness  变成滑动快-->
+    <!--stl_distributeEvenly  这个属性是true那么tab平分-->
+    <!--stl_indicatorInterpolation indecator线的长度是固定还是随着拉伸变得  linear固定-->
+    <!--stl_indicatorWithoutPadding  indecator线是否充满整个tab-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:padding="@dimen/magin_5">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="榜单结束倒计时："
+            android:layout_marginLeft="@dimen/magin_5"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09小时14分30秒"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:id="@+id/contionbutionRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/little_gray"
+        android:paddingBottom="@dimen/magin_5"
+        android:paddingLeft="@dimen/magin_15"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/magin_5">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mHeadImg"
+            android:layout_width="@dimen/magin_40"
+            android:layout_height="@dimen/magin_40"
+            android:layout_centerVertical="true"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/wxdl_chushi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/wxdl_chushi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundAsCircle="true"
+            app:roundedCornerRadius="@dimen/magin_5" />
+        <!--app:fadeDuration="3000"-->
+        <!--app:roundingBorderColor="#C3B0A9"-->
+        <!--app:roundingBorderWidth="2dp" />-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_toRightOf="@+id/mHeadImg"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/upOrDowTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本场未上榜"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/contributionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_5"
+                android:text="本场贡献0葫芦"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mSendGiftTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/magin_5"
+            android:background="@drawable/app_color_selector"
+            android:paddingBottom="@dimen/magin_5"
+            android:paddingLeft="@dimen/magin_15"
+            android:paddingRight="@dimen/magin_15"
+            android:paddingTop="@dimen/magin_5"
+            android:text="去送礼"
+            android:textColor="@color/white"
+            android:textSize="@dimen/middleTextSize" />
+    </RelativeLayout>
+</LinearLayout>

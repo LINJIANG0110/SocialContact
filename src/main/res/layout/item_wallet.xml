@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/magin_5">
+
+    <LinearLayout
+        android:id="@+id/walletLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_cornor_white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="@dimen/magin_30"
+            android:layout_height="@dimen/magin_30"
+            android:layout_marginTop="@dimen/margin_10"
+            android:src="@mipmap/diamond1" />
+
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mCoinNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_2"
+            android:text="123"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/largeTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mCoinPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/magin_5"
+            android:text="售价 11323"
+            android:textColor="@color/text_gray"
+            android:layout_marginBottom="@dimen/magin_5"
+            android:textSize="@dimen/middleTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mCoinEffect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:singleLine="true"
+            android:text="技能升级加成10%  24小时"
+            android:textColor="@color/oval_light_yellow"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/chosenLogo"
+        android:layout_width="@dimen/magin_20"
+        android:visibility="gone"
+        android:layout_height="@dimen/magin_20"
+        android:layout_gravity="bottom|right"
+        android:src="@mipmap/chongzhi_xuanze" />
+</FrameLayout>

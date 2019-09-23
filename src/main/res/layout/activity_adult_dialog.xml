@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="@dimen/magin_280"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_cornor_white_8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_20"
+                android:layout_marginRight="@dimen/magin_20"
+                android:layout_marginTop="@dimen/magin_20"
+                android:lineSpacingExtra="@dimen/magin_5"
+                android:text="为呵护未成年人健康成长，千语特别推出青少年模式，该模式下部分时段内无法使用千语。请监护人主动选择，并设置监护密码。"
+                android:textColor="#29aff1"
+                android:textSize="@dimen/middleTextSize" />
+
+            <LinearLayout
+                android:id="@+id/goAdultModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/magin_30"
+                android:layout_marginTop="@dimen/magin_30"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="进入青少年模式>"
+                    android:textColor="@color/btn_red"
+                    android:textSize="@dimen/middleTextSize" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mEnsureTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_big_cornor_blue2"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/magin_8"
+                android:paddingLeft="@dimen/magin_40"
+                android:paddingRight="@dimen/magin_40"
+                android:paddingTop="@dimen/magin_8"
+                android:text="我知道了"
+                android:textColor="@color/white"
+                android:textSize="@dimen/middleTextSize2" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/noShowHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/magin_20"
+                android:text="@string/adult"
+                android:textColor="#FFA6B4B5"
+                android:textSize="@dimen/smallTextSize" />
+
+        </LinearLayout>
+
+        <com.qianyu.communicate.views.RoundImageView
+            android:layout_width="@dimen/magin_80"
+            android:layout_height="@dimen/magin_80"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-40dp"
+            android:src="@mipmap/logo"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</FrameLayout>

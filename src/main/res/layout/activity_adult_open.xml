@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_40"
+        android:layout_marginRight="@dimen/magin_40"
+        android:layout_marginTop="@dimen/magin_40"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/magin_5"
+            android:layout_height="@dimen/magin_5"
+            android:layout_marginTop="@dimen/magin_5"
+            android:background="@drawable/dot_round_black" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:lineSpacingExtra="@dimen/magin_2"
+            android:text="在青少年模式中，每日晚22时至次日早6时期间无法使用千语。"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_40"
+        android:layout_marginRight="@dimen/magin_40"
+        android:layout_marginTop="@dimen/magin_20"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/magin_5"
+            android:layout_height="@dimen/magin_5"
+            android:layout_marginTop="@dimen/magin_5"
+            android:background="@drawable/dot_round_black" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:lineSpacingExtra="@dimen/magin_2"
+            android:text="开启青少年模式自动为你开启使用时间锁，时间锁为120分钟。单日使用时长超过触发时间，时间到期之后无法进行任何操作，由监护人输入密码后才能继续使用。"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_40"
+        android:layout_marginRight="@dimen/magin_40"
+        android:layout_marginTop="@dimen/magin_20"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/magin_5"
+            android:layout_height="@dimen/magin_5"
+            android:layout_marginTop="@dimen/magin_5"
+            android:background="@drawable/dot_round_black" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:lineSpacingExtra="@dimen/magin_2"
+            android:text="开启青少年模式，需先设置独立密码，如忘记密码可通过邮件申述重置密码。"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_40"
+        android:layout_marginRight="@dimen/magin_40"
+        android:layout_marginTop="@dimen/magin_20"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/magin_5"
+            android:layout_height="@dimen/magin_5"
+            android:layout_marginTop="@dimen/magin_5"
+            android:background="@drawable/dot_round_black" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:lineSpacingExtra="@dimen/magin_2"
+            android:text="青少年模式是千语为促进青少年健康成长作出的尝试，请监护人主动选择，并设置监护密码。"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/openAdultModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/magin_70"
+        android:background="@drawable/shape_cornor_adult_blue"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/magin_8"
+        android:paddingLeft="@dimen/magin_50"
+        android:paddingRight="@dimen/magin_50"
+        android:paddingTop="@dimen/magin_8"
+        android:text="开启青少年模式"
+        android:textColor="@color/white"
+        android:textSize="@dimen/middleTextSize" />
+</LinearLayout>

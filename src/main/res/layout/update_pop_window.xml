@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_60"
+        android:layout_marginRight="@dimen/magin_60">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_cornor_white"
+            android:orientation="vertical">
+
+            <com.qianyu.communicate.views.YuanJiaoImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_80"
+                android:scaleType="fitXY"
+                android:src="@drawable/xinbanben" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mDetailTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_20"
+                android:layout_marginRight="@dimen/magin_20"
+                android:layout_marginTop="@dimen/magin_20"
+                android:text="1.APP启动速度性能提升                                   2.增加视频连续播放提示                                  3.离线缓存细节体验优化"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_0.1"
+                android:layout_marginTop="@dimen/magin_40"
+                android:background="@color/little_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mCancelTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/magin_15"
+                    android:text="暂不升级"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mEnsureTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/magin_15"
+                    android:text="立即升级"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/middleTextSize" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/magin_25"
+            android:layout_height="@dimen/magin_25"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="@dimen/magin_30"
+            android:layout_marginRight="-10dp"
+            android:src="@mipmap/newlogo" />
+    </FrameLayout>
+</LinearLayout>
+

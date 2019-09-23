@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_userhead"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_horizontal"
+        app:actualImageScaleType="focusCrop"
+        app:failureImage="@mipmap/fang_zhengtouxiang"
+        app:failureImageScaleType="centerCrop"
+        app:placeholderImage="@mipmap/fang_zhengtouxiang"
+        app:placeholderImageScaleType="centerCrop"
+        app:progressBarAutoRotateInterval="3000"
+        app:progressBarImage="@drawable/progressbar"
+        app:progressBarImageScaleType="centerInside"
+        app:roundAsCircle="true"
+        app:roundedCornerRadius="@dimen/magin_4" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_username"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textColor="@color/tv_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username"
+            android:text="19:37:00"
+            android:textColor="@color/tv_gray"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_idiom"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/tv_time"
+            android:background="@drawable/llay_yuanjiaobiankuang_red"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="守株待兔"
+            android:textColor="@color/red_package"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_resmoney"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="@color/tv_black"
+            android:textSize="15sp" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="钻石"
+            android:textColor="@color/tv_black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_40"
+        android:layout_marginRight="@dimen/magin_40"
+        android:layout_marginTop="@dimen/magin_50"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+86"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:layout_marginRight="@dimen/magin_5"
+            android:visibility="gone"
+            android:src="@mipmap/wxdl_xiala" />
+
+        <View
+            android:layout_width="@dimen/magin_1"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/magin_5"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:layout_marginTop="@dimen/magin_5"
+            android:background="@color/line_color" />
+
+        <EditText
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mPhoneEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入您的手机号码..."
+            android:padding="@dimen/magin_5"
+            android:inputType="number"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/mDeleteLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@mipmap/sjdl_shanchu" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_1"
+        android:layout_marginLeft="@dimen/magin_40"
+        android:layout_marginRight="@dimen/magin_40"
+        android:background="@color/little_gray" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/sendCodeCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_40"
+        android:layout_marginRight="@dimen/magin_40"
+        android:layout_marginTop="@dimen/magin_50"
+        android:descendantFocusability="blocksDescendants"
+        android:visibility="visible"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/app_color_selector"
+            android:gravity="center"
+            android:padding="@dimen/magin_8"
+            android:text="发送验证码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/middleTextSize" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_40"
+        android:layout_marginRight="@dimen/magin_40"
+        android:layout_marginTop="@dimen/magin_15"
+        android:text="根据《中华人民共和国网络安全法》要求，实用信息发布、即时通讯等互联网服务需进行身份证信息验证。为保障您的实用体验，建议您尽快完成手机绑定验证，感谢您的支持和理解。"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize" />
+</LinearLayout>

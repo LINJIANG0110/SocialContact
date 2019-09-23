@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mHeadImg"
+    android:layout_width="@dimen/magin_40"
+    android:layout_height="@dimen/magin_40"
+    android:layout_gravity="center"
+    app:actualImageScaleType="focusCrop"
+    app:failureImage="@mipmap/fang_zhengtouxiang"
+    app:failureImageScaleType="centerCrop"
+    app:placeholderImage="@mipmap/fang_zhengtouxiang"
+    app:placeholderImageScaleType="centerCrop"
+    app:progressBarAutoRotateInterval="3000"
+    app:progressBarImage="@drawable/progressbar"
+    app:progressBarImageScaleType="centerInside"
+    app:roundedCornerRadius="@dimen/magin_5"/>
+    <!--app:fadeDuration="3000"-->
+    <!--app:roundAsCircle="true"-->
+    <!--app:roundingBorderColor="#C3B0A9"-->
+    <!--app:roundingBorderWidth="2dp" />-->

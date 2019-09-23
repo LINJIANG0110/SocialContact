@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mMoneyTv"
+        android:layout_width="@dimen/magin_70"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/shape_cornor_line_red"
+        android:paddingTop="@dimen/magin_5"
+        android:layout_marginTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/magin_5"
+        android:paddingLeft="@dimen/magin_15"
+        android:paddingRight="@dimen/magin_15"
+        android:text="2元"
+        android:textSize="@dimen/middleTextSize"
+        android:textColor="@color/colorRed" />
+</LinearLayout>

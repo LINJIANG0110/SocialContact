@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/magin_30">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_half_cornor_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/magin_15">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="赠送给"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mHeadImg"
+                android:layout_width="@dimen/magin_40"
+                android:layout_height="@dimen/magin_40"
+                android:layout_marginLeft="@dimen/margin_10"
+                app:actualImageScaleType="focusCrop"
+                app:failureImage="@mipmap/wxdl_chushi"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@mipmap/wxdl_chushi"
+                app:placeholderImageScaleType="centerCrop"
+                app:progressBarAutoRotateInterval="3000"
+                app:progressBarImage="@drawable/progressbar"
+                app:progressBarImageScaleType="centerInside"
+                app:roundAsCircle="true"
+                app:roundedCornerRadius="@dimen/magin_5" />
+            <!--app:fadeDuration="3000"-->
+            <!--app:roundingBorderColor="#C3B0A9"-->
+            <!--app:roundingBorderWidth="2dp" />-->
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mNameTv"
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <LinearLayout
+                        android:id="@+id/ageSexLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:background="@drawable/shape_cornor_pink"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/magin_2"
+                        android:paddingRight="@dimen/magin_2">
+
+                        <ImageView
+                            android:id="@+id/sexLogo"
+                            android:layout_width="@dimen/margin_10"
+                            android:layout_height="@dimen/margin_10"
+                            android:src="@mipmap/xiangqing_nv1" />
+
+                        <TextView
+                            android:id="@+id/mAgeTv"
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_2"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/tightTextSize" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/mLevelTv"
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:background="@drawable/shape_solid_level_color"
+                        android:paddingLeft="@dimen/magin_3"
+                        android:paddingRight="@dimen/magin_3"
+                        android:text="LV0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/tightTextSize" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/mIdTv"
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magin_5"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/smallTextSize" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/mNormalGiftLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:background="#ffffff" />
+
+                <LinearLayout
+                    android:id="@+id/ll_dot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/viewpager"
+                    android:layout_marginTop="@dimen/magin_5"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/chargeLL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_10">
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="余额:"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/middleTextSize" />
+
+                        <ImageView
+                            android:id="@+id/remainLogo"
+                            android:layout_width="@dimen/magin_15"
+                            android:layout_height="@dimen/magin_15"
+                            android:layout_marginLeft="@dimen/magin_4"
+                            android:src="@mipmap/coin1" />
+
+                        <TextView
+                            android:id="@+id/remainMoney"
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_4"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/middleTextSize" />
+
+                        <ImageView
+                            android:id="@+id/addNum"
+                            android:layout_width="@dimen/magin_15"
+                            android:layout_height="@dimen/magin_15"
+                            android:layout_marginLeft="@dimen/magin_4"
+                            android:src="@mipmap/wo_chongzhi" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/magin_5"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/mGiftLL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_cornor_left1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/magin_5"
+                            android:paddingLeft="@dimen/magin_20"
+                            android:paddingRight="@dimen/magin_20"
+                            android:paddingTop="@dimen/magin_5"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="@dimen/margin_10"
+                                android:layout_height="@dimen/margin_10"
+                                android:src="@mipmap/liwu_jiantoushang" />
+
+                            <TextView
+                                android:id="@+id/sendNum"
+                                style="@style/style_text_style_pingfang_changgui"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/magin_2"
+                                android:text="1"
+                                android:textColor="@color/app_color" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/mWalletTv"
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_cornor_line"
+                            android:paddingBottom="@dimen/magin_3"
+                            android:paddingLeft="@dimen/magin_15"
+                            android:paddingRight="@dimen/magin_15"
+                            android:paddingTop="@dimen/magin_3"
+                            android:text="福宝"
+                            android:textColor="@color/app_color"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <TextView
+                            android:id="@+id/mCoinTv"
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_5"
+                            android:layout_marginRight="@dimen/magin_5"
+                            android:background="@drawable/shape_solid_app_corlor_"
+                            android:paddingBottom="@dimen/magin_3"
+                            android:paddingLeft="@dimen/magin_15"
+                            android:paddingRight="@dimen/magin_15"
+                            android:paddingTop="@dimen/magin_3"
+                            android:text="金币"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/littleTextSize" />
+
+                        <TextView
+                            android:id="@+id/mDiamondTv"
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_cornor_line"
+                            android:paddingBottom="@dimen/magin_3"
+                            android:paddingLeft="@dimen/magin_15"
+                            android:paddingRight="@dimen/magin_15"
+                            android:paddingTop="@dimen/magin_3"
+                            android:text="钻石"
+                            android:textColor="@color/app_color"
+                            android:textSize="@dimen/littleTextSize" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mDiamondGiftLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_10"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="选择送礼个数"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/middleTextSize" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/magin_5"
+                    android:text="送礼有几率获得单价10—500倍金币返现哦"
+                    android:textColor="@color/oval_light_yellow"
+                    android:textSize="@dimen/smallTextSize" />
+
+                <ImageView
+                    android:id="@+id/yijianzhongqing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magin_20"
+                    android:src="@mipmap/yijianzhongqing" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magin_5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/tianchangdijiu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/magin_5"
+                            android:src="@mipmap/tianchangdijiu" />
+
+                        <ImageView
+                            android:id="@+id/woaini"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/magin_15"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:src="@mipmap/woaini" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/yishengyishi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/yishengyishi" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/shiquanshimei"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_5"
+                            android:src="@mipmap/shiquanshimei" />
+
+                        <ImageView
+                            android:id="@+id/qinqin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_15"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:src="@mipmap/qinqin" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magin_5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/xiangni"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/xiangni" />
+
+                    <ImageView
+                        android:id="@+id/yaobaobao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_15"
+                        android:src="@mipmap/yaobaobao" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

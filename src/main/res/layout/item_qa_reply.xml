@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mAnsweredTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/magin_6"
+        android:lineSpacingExtra="@dimen/magin_2"
+        android:text="主播回答：嗯！真气运行学时甘肃省名中医李少波教授以《黄帝内经》“全真导气”理论为基础，博采古代各家行气摄生之精华，经多年躬身实践。悉心研修、临床应用、科学总结儿创立的。"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/smallTextSize_" />
+
+    <View
+        android:id="@+id/mViewLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:visibility="gone"
+        android:background="#E8E8E6" />
+</LinearLayout>

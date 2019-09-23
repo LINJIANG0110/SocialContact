@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRootLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/margin_10"
+    android:paddingLeft="@dimen/magin_20"
+    android:paddingRight="@dimen/margin_10"
+    android:paddingTop="@dimen/margin_10">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/mHeadImg"
+        android:layout_width="@dimen/magin_50"
+        android:layout_height="@dimen/magin_50"
+        app:actualImageScaleType="focusCrop"
+        app:failureImage="@mipmap/fang_zhengtouxiang"
+        app:failureImageScaleType="centerCrop"
+        app:placeholderImage="@mipmap/fang_zhengtouxiang"
+        app:placeholderImageScaleType="centerCrop"
+        app:progressBarAutoRotateInterval="3000"
+        app:progressBarImage="@drawable/progressbar"
+        app:progressBarImageScaleType="centerInside"
+        app:roundedCornerRadius="@dimen/magin_3" />
+    <!--app:fadeDuration="3000"-->
+    <!--app:roundAsCircle="true"-->
+    <!--app:roundingBorderColor="#C3B0A9"-->
+    <!--app:roundingBorderWidth="2dp" />-->
+    <ImageView
+        android:id="@+id/headLogo"
+        android:layout_width="@dimen/magin_15"
+        android:layout_height="@dimen/magin_15"
+        android:layout_marginLeft="-8dp"
+        android:src="@mipmap/manager" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/magin_5"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:text="美人鱼的嫁衣"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/middleTextSize" />
+
+    <ImageView
+        android:layout_width="@dimen/magin_20"
+        android:layout_height="@dimen/magin_20"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/mTimeLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="@dimen/magin_20"
+            android:layout_height="@dimen/magin_20"
+            android:src="@mipmap/time" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:text="5分钟前"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mOperateLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/powerManage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_solid_app_corlor"
+            android:paddingBottom="@dimen/magin_3"
+            android:paddingLeft="@dimen/magin_15"
+            android:paddingRight="@dimen/magin_15"
+            android:paddingTop="@dimen/magin_3"
+            android:text="权限"
+            android:textColor="@color/white"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mDeleteTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_solid_red"
+            android:paddingBottom="@dimen/magin_3"
+            android:paddingLeft="@dimen/magin_15"
+            android:paddingRight="@dimen/magin_15"
+            android:paddingTop="@dimen/magin_3"
+            android:text="删除"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+
+</LinearLayout>

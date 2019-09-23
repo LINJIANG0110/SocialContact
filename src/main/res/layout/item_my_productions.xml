@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/punishTa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/magin_5"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/magin_5"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/adapter_select"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mHeadImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/magin_150"
+                    app:actualImageScaleType="focusCrop"
+                    app:failureImage="@mipmap/huoqutupianmoshi"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/huoqutupianmoshi"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:progressBarAutoRotateInterval="3000"
+                    android:visibility="gone"
+                    app:progressBarImage="@drawable/progressbar"
+                    app:progressBarImageScaleType="centerInside" />
+                <!--app:fadeDuration="3000"-->
+                <!--app:roundAsCircle="true"-->
+                <!--app:roundingBorderColor="#C3B0A9"-->
+                <!--app:roundingBorderWidth="2dp" />-->
+
+                <com.qianyu.communicate.jzvd.JZVideoPlayerStandard
+                    android:id="@+id/jz_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/magin_200"
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/magin_30"
+                    android:visibility="gone"
+                    android:background="@mipmap/zuopin_hui4">
+
+                    <TextView
+                        android:id="@+id/mTitleName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/magin_5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/smallTextSize" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/playLogo"
+                    android:layout_width="@dimen/magin_40"
+                    android:layout_height="@dimen/magin_40"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@mipmap/liulanlishi_bofang" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:background="@mipmap/liaotianshi_hui1"
+                    android:padding="@dimen/magin_5">
+
+                    <TextView
+                        android:id="@+id/mTimeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/littleTextSize" />
+
+                    <TextView
+                        android:id="@+id/mTotalTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/littleTextSize" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/magin_5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_15"
+                        android:layout_height="@dimen/magin_15"
+                        android:src="@mipmap/liulanlishi_bofangliang" />
+
+                    <TextView
+                        android:id="@+id/mPlayCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/littleTextSize" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mEditLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/editLogo"
+                        android:layout_width="@dimen/magin_15"
+                        android:layout_height="@dimen/magin_15"
+                        android:src="@mipmap/wodezuopin_bianji" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:gravity="center"
+                        android:text="编辑"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/littleTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mDeleteLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_15"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/deleteLogo"
+                        android:layout_width="@dimen/magin_15"
+                        android:layout_height="@dimen/magin_15"
+                        android:src="@mipmap/liulanlishi_shanchu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:gravity="center"
+                        android:text="删除"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/littleTextSize" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

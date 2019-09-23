@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "494764373297",
+    "firebase_url": "https://shenqimingyi.firebaseio.com",
+    "project_id": "shenqimingyi",
+    "storage_bucket": "shenqimingyi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494764373297:android:317db3334707d17c",
+        "android_client_info": {
+          "package_name": "com.qianyu.communicate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494764373297-bo7mbqrdtnerdeavnqo9nvdom52j8t4e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh6YsF4A_QZo6z0C9T_GRXyRC5Qc1dzks"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

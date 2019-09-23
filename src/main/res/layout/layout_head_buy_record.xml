@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/mContentTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize"
+        android:background="@color/little_gray"
+        android:text="共0个项目"
+        android:padding="@dimen/margin_10"/>
+</LinearLayout>

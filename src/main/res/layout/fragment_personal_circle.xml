@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/magin_5"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/magin_15"
+        android:paddingRight="@dimen/magin_15"
+        android:paddingTop="@dimen/margin_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="动态（24）"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/magin_15"
+                android:layout_height="@dimen/magin_15"
+                android:src="@mipmap/xiangqing_beizhu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_2"
+                android:text="发布"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/middleTextSize" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <net.neiquan.applibrary.wight.RefreshLayout
+        android:id="@+id/refesh_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/mRecylerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/magin_5" />
+    </net.neiquan.applibrary.wight.RefreshLayout>
+</LinearLayout>

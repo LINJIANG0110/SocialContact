@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_20"
+        android:layout_marginTop="@dimen/magin_20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前拥有福宝"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:layout_width="@dimen/magin_18"
+            android:layout_height="@dimen/magin_18"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:src="@mipmap/wallet1" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/currentFuBow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="220"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_20"
+        android:layout_marginTop="@dimen/magin_5"
+        android:text="福宝可用于赠送礼物，升级技能"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_5"
+        android:layout_marginTop="@dimen/magin_20"
+        android:background="@color/little_gray" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/magin_20"
+        android:text="获取方式"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/middleTextSize" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/little_gray" />
+
+    <LinearLayout
+        android:id="@+id/toBeManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <ImageView
+            android:layout_width="@dimen/magin_30"
+            android:layout_height="@dimen/magin_30"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:src="@mipmap/addroom" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成为聊天室管理员挣工资"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_5"
+                android:text="每周完成管理员任务，每周六晚8点即可领取超多福宝"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_cornor_app_corlor"
+            android:gravity="center"
+            android:padding="@dimen/magin_5"
+            android:text="加入聊天室"
+            android:textColor="@color/white"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/little_gray" />
+
+    <LinearLayout
+        android:id="@+id/shareTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <ImageView
+            android:layout_width="@dimen/magin_30"
+            android:layout_height="@dimen/magin_30"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:src="@mipmap/gotask" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="每日任务"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_5"
+                android:text="每天完成任务，即可领取福宝"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_cornor_blue_"
+            android:gravity="center"
+            android:padding="@dimen/magin_5"
+            android:text="     前 往     "
+            android:textColor="@color/white"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/little_gray" />
+
+    <LinearLayout
+        android:id="@+id/getFuBag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <ImageView
+            android:layout_width="@dimen/magin_30"
+            android:layout_height="@dimen/magin_30"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:src="@mipmap/getfubao" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_20"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="抢福袋获得"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_5"
+                android:text="每周抢家族福袋，可获得大量福宝，每天可以抢10次"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_cornor_blue_"
+            android:gravity="center"
+            android:padding="@dimen/magin_5"
+            android:text="     前 往     "
+            android:textColor="@color/white"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/little_gray" />
+</LinearLayout>

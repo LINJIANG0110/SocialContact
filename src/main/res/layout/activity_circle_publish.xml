@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/little_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <com.qianyu.communicate.views.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/magin_15">
+
+            <EditText
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mContentET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top|left"
+                android:hint="输入要发布的内容.."
+                android:paddingBottom="@dimen/margin_10"
+                android:maxLength="150"
+                android:paddingTop="@dimen/magin_5"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/text_gray"
+                android:textSize="@dimen/middleTextSize" />
+
+            <com.qianyu.communicate.views.MyRecylerView
+                android:id="@+id/mRecylerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/magin_40" />
+        </LinearLayout>
+    </com.qianyu.communicate.views.BounceScrollView>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <net.neiquan.applibrary.wight.RefreshLayout
+            android:id="@+id/refesh_ly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/head_view"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+        </net.neiquan.applibrary.wight.RefreshLayout>
+
+        <ImageView
+            android:id="@+id/mFloatActionBtn"
+            android:layout_width="@dimen/magin_30"
+            android:layout_height="@dimen/magin_30"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/magin_20"
+            android:layout_marginRight="@dimen/margin_10"
+            android:src="@mipmap/dongtai_dingduan" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_1"
+        android:background="@color/little_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/mChosenTv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:singleLine="true"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            android:id="@+id/mPlayTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/magin_5"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:background="@drawable/shape_solid_app_corlor_"
+            android:paddingBottom="@dimen/magin_5"
+            android:paddingLeft="@dimen/magin_20"
+            android:paddingRight="@dimen/magin_20"
+            android:paddingTop="@dimen/magin_5"
+            android:text="播放"
+            android:textColor="@color/white"
+            android:textSize="@dimen/smallTextSize" />
+    </LinearLayout>
+</LinearLayout>

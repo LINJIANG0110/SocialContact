@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.qianyu.communicate.views.banner.Banner
+        android:id="@+id/mChatRoomBanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_60" />
+
+    <LinearLayout
+        android:id="@+id/mSuggestLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/magin_2"
+            android:layout_marginLeft="@dimen/magin_2"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/magin_25"
+                android:layout_height="@dimen/magin_25"
+                android:src="@mipmap/liaotianshi_tuijian" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_5"
+                android:text="@string/recomend"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mSuggestRecylerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_8"
+        android:layout_marginTop="@dimen/magin_8"
+        android:background="#e1f3f4f8" />
+
+    <LinearLayout
+        android:id="@+id/mOtherLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/magin_5"
+        android:layout_marginLeft="@dimen/magin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/magin_16"
+            android:layout_height="@dimen/magin_16"
+            android:layout_marginLeft="@dimen/magin_2"
+            android:src="@mipmap/liaotianshi_qita" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="@string/others"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+
+    </LinearLayout>
+
+</LinearLayout>

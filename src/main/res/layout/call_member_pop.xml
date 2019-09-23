@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/magin_50"
+        android:background="@drawable/shape_cornor_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_10"
+        android:paddingLeft="@dimen/magin_20"
+        android:paddingRight="@dimen/magin_20"
+        android:paddingTop="@dimen/margin_10">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/mHeadImg"
+                app:actualImageScaleType="focusCrop"
+                app:failureImage="@mipmap/fang_zhengtouxiang"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@mipmap/fang_zhengtouxiang"
+                app:placeholderImageScaleType="centerCrop"
+                app:progressBarAutoRotateInterval="3000"
+                app:progressBarImage="@drawable/progressbar"
+                app:progressBarImageScaleType="centerInside"
+                app:roundedCornerRadius="@dimen/magin_5"
+                android:layout_width="@dimen/magin_40"
+                android:layout_height="@dimen/magin_40" />
+            <!--app:fadeDuration="3000"-->
+            <!--app:roundAsCircle="true"-->
+            <!--app:roundingBorderColor="#C3B0A9"-->
+            <!--app:roundingBorderWidth="2dp" />-->
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="红人馆陌上花开"
+                android:textColor="@color/colorRed_"
+                android:textSize="@dimen/middleTextSize" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_1"
+            android:layout_marginTop="@dimen/magin_5"
+            android:background="@color/little_gray" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="族长正在召唤本家族成员回归，点击即可传送"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@drawable/shape_wrap_line_gray"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mCallET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="点击可编辑修改"
+                android:padding="@dimen/magin_5"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/smallTextSize" />
+
+            <ImageView
+                android:id="@+id/mCallETLogo"
+                android:layout_width="@dimen/margin_12"
+                android:layout_height="@dimen/margin_12"
+                android:layout_marginLeft="@dimen/magin_5"
+                android:src="@mipmap/wodezuopin_bianji" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/magin_1"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/little_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mCancelTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="取消"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/largeTextSize" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mSureTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:text="确定"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/largeTextSize" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

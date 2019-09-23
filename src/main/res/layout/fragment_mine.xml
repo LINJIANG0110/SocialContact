@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qianyu.communicate.views.SScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="255dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--设置普通指示器 -->
+            <com.donkingliang.banner.CustomBanner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:indicatorGravity="RIGHT"
+                app:indicatorInterval="5dp"
+                app:indicatorSelectRes="@drawable/point_bg_focus"
+                app:indicatorStyle="ORDINARY"
+                app:indicatorUnSelectRes="@drawable/point_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="#20000000"
+                android:gravity="bottom|right"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/viewpagertext"
+                    android:layout_width="0dp"
+                    android:layout_height="35dip"
+                    android:layout_weight="8"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dip"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+                <!--用来动态添加轮播小点-->
+                <LinearLayout
+                    android:id="@+id/lldot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="450dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <include layout="@layout/include_mine_layout" />
+
+        <LinearLayout
+            android:id="@+id/mHeadLL"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="195dp"
+            android:background="@drawable/llay_yuanjiaobeijing_white"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mHeadImg"
+            android:layout_width="@dimen/magin_50"
+            android:layout_height="@dimen/magin_50"
+            android:layout_marginLeft="@dimen/magin_30"
+            android:layout_marginTop="170dp"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/wxdl_chushi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/wxdl_chushi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundAsCircle="true"
+            app:roundedCornerRadius="@dimen/magin_5" />
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="35dp"
+            android:background="@mipmap/mine_edit"
+            android:padding="10dp" />
+    </FrameLayout>
+</com.qianyu.communicate.views.SScrollView>
+
+
+    <!--</FrameLayout>-->
+

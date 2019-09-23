@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mRootViewLL"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/loginCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/magin_2"
+        android:descendantFocusability="blocksDescendants"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:id="@+id/mRootLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_cornor_white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:id="@+id/mRootFL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/little_gray">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mSkillLogo"
+                    android:layout_width="@dimen/magin_60"
+                    android:layout_height="@dimen/magin_50"
+                    android:layout_margin="@dimen/magin_5"
+                    app:actualImageScaleType="focusCrop"
+                    android:layout_gravity="center"
+                    app:failureImage="@mipmap/fang_zhengtouxiang"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/fang_zhengtouxiang"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:progressBarAutoRotateInterval="3000"
+                    app:progressBarImage="@drawable/progressbar"
+                    app:progressBarImageScaleType="centerInside"
+                    app:roundedCornerRadius="@dimen/magin_4" />
+                <!--app:fadeDuration="3000"-->
+                <!--app:roundAsCircle="true"-->
+                <!--app:roundingBorderColor="#C3B0A9"-->
+                <!--app:roundingBorderWidth="2dp" />-->
+            </FrameLayout>
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mSkillContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="胡言乱语"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/tightTextSize" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

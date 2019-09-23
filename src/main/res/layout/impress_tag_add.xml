@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/addImpressTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/magin_5"
+        android:background="@drawable/shape_cornor_dashed"
+        android:gravity="right"
+        android:paddingBottom="@dimen/magin_4"
+        android:paddingLeft="@dimen/magin_8"
+        android:paddingRight="@dimen/magin_8"
+        android:paddingTop="@dimen/magin_4"
+        android:singleLine="true"
+        android:text="+印象标签"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/smallTextSize" />
+</LinearLayout>

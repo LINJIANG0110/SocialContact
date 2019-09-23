@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/magin_200"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_cornor_white_"
+        android:orientation="horizontal"
+        android:padding="@dimen/magin_15">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/magin_30"
+                android:layout_height="@dimen/magin_30"
+                android:src="@mipmap/coin1" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mCoinTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="57W"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/magin_30"
+                android:layout_height="@dimen/magin_30"
+                android:src="@mipmap/wallet1" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:id="@+id/mFuBaoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="57W"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/middleTextSize2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/magin_30"
+        android:layout_height="@dimen/magin_30"
+        android:src="@drawable/shape_reverse_triangle" />
+</LinearLayout>

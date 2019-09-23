@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mTagTv"
+    style="@style/style_text_style_pingfang_changgui"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/magin_5"
+    android:background="@drawable/shape_cornor_gray_label"
+    android:gravity="right"
+    android:paddingBottom="@dimen/magin_2"
+    android:paddingLeft="@dimen/magin_5"
+    android:paddingRight="@dimen/magin_5"
+    android:paddingTop="@dimen/magin_2"
+    android:singleLine="true"
+    android:textColor="@color/text_black"
+    android:textSize="@dimen/smallTextSize" />

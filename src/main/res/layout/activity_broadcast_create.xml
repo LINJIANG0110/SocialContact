@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222127"
+    android:orientation="vertical"
+    tools:context="com.qianyu.communicate.activity.BroadcastCreateActivity">
+
+    <com.zxc.layout.autolayout.view.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rely_title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/icon_close" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_fengmian"
+                android:layout_width="@dimen/magin_120"
+                android:layout_height="@dimen/magin_120"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"
+                app:actualImageScaleType="focusCrop"
+                app:failureImage="@mipmap/fang_zhengtouxiang"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@mipmap/fang_zhengtouxiang"
+                app:placeholderImageScaleType="centerCrop"
+                app:progressBarAutoRotateInterval="3000"
+                app:progressBarImage="@drawable/progressbar"
+                app:progressBarImageScaleType="centerInside"
+                app:roundedCornerRadius="@dimen/magin_12" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_fengmian"
+                android:text="房间标题"
+                android:textColor="#80ffffff"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:maxLines="2"
+                android:maxLength="12"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_hint"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/iv_fengmian"
+                android:background="@null"
+                android:text="听歌"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_class_hint"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="选择分类"
+            android:textColor="#80ffffff"
+            android:textSize="14sp" />
+
+        <net.neiquan.applibrary.flowtag.FlowTagLayout
+            android:id="@+id/tagFlowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginLeft="@dimen/magin_40"
+            android:layout_marginRight="@dimen/magin_40"
+            android:layout_marginTop="10dp" />
+    </com.zxc.layout.autolayout.view.AutoLinearLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="260dp"
+        android:layout_height="46dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/llay_yuanjiaobeijing_zise"
+        android:text="创建房间"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</LinearLayout>

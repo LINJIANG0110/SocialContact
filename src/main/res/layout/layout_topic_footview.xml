@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_pl"
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="评论"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rlly_evalue_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mHeadImg_1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/gift_bg"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/wxdl_chushi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/wxdl_chushi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+
+            app:progressBarImageScaleType="centerInside"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/tvName_1"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/mHeadImg_1"
+            android:text="夏天里的橘子酱"
+            android:textColor="@color/text_gray2"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/mTimeTv1"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:text="十分钟前"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            android:id="@+id/tvTitle_1"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName_1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/mHeadImg_1"
+            android:text="看过书单后是一个口味的人"
+            android:textColor="@color/tv_black_s"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.5"
+        android:layout_marginTop="15dp"
+        android:background="@color/line_color"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlly_evalue_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mHeadImg_2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/gift_bg"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/wxdl_chushi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/wxdl_chushi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/tvName_2"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/mHeadImg_2"
+            android:text="raeraelinlin"
+            android:textColor="@color/text_gray2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mTimeTv2"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:text="十分钟前"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            android:id="@+id/tvTitle_2"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName_2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/mHeadImg_2"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="被讨厌的勇气，可以影响我一生，你需要的价值观，关于平等，自由自身价值都可以被讨厌的勇气，可以影响我一生，你需要的价值观，关于平等，自由自身价值都可以"
+            android:textColor="@color/tv_black_s"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_allevalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="16dp"
+        android:text="查看全部0条评论"
+        android:textColor="@color/tv_gray"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/llaySetevalue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/gift_bg"
+            app:actualImageScaleType="focusCrop"
+            app:failureImage="@mipmap/wxdl_chushi"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@mipmap/wxdl_chushi"
+            app:placeholderImageScaleType="centerCrop"
+            app:progressBarAutoRotateInterval="3000"
+            app:progressBarImage="@drawable/progressbar"
+            app:progressBarImageScaleType="centerInside"
+            app:roundAsCircle="true" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/llay_yuanjiaobiankuang_gray"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="添加评论..."
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayZanMain"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/llay_yuanjiaobeijing_ql"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:id="@+id/ivZanMain"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="1dp"
+            android:background="@mipmap/topic_zan_true_a" />
+
+        <TextView
+            android:id="@+id/tvZanMain"
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="赞同 0"
+            android:textColor="@color/btn_blue"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

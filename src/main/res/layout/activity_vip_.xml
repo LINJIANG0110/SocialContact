@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/vip_bg">
+
+        <FrameLayout
+            android:id="@+id/backFL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_10">
+
+            <ImageView
+                android:layout_width="@dimen/magin_20"
+                android:layout_height="@dimen/magin_20"
+                android:src="@mipmap/ic_launcher" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_10"
+            android:text="@string/vipTitle"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/largeTextSize" />
+    </RelativeLayout>
+
+    <com.qianyu.communicate.views.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/vip_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/magin_20">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:layout_marginTop="@dimen/magin_20"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/silverPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:text="￥30/月"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/smallTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_80"
+                            android:layout_height="@dimen/magin_80"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/goldPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:text="￥168/月"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/smallTextSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_10">
+
+                        <ImageView
+                            android:layout_width="@dimen/magin_60"
+                            android:layout_height="@dimen/magin_60"
+                            android:layout_marginTop="@dimen/magin_20"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/superPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:text="￥648/月"
+                            android:textColor="@color/text_black"
+                            android:textSize="@dimen/smallTextSize" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/silverFL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/silverTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_cornor_line"
+                        android:paddingBottom="@dimen/magin_4"
+                        android:paddingLeft="@dimen/magin_20"
+                        android:paddingRight="@dimen/magin_20"
+                        android:paddingTop="@dimen/magin_4"
+                        android:text="@string/silverNoble"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/middleTextSize" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/goldFL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/goldTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_cornor_app_corlor"
+                        android:paddingBottom="@dimen/magin_4"
+                        android:paddingLeft="@dimen/magin_20"
+                        android:paddingRight="@dimen/magin_20"
+                        android:paddingTop="@dimen/magin_4"
+                        android:text="@string/goldNoble"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/middleTextSize" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/superFL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/superTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/shape_cornor_line"
+                        android:paddingBottom="@dimen/magin_4"
+                        android:paddingLeft="@dimen/magin_20"
+                        android:paddingRight="@dimen/magin_20"
+                        android:paddingTop="@dimen/magin_4"
+                        android:text="@string/superNoble"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/middleTextSize" />
+                </FrameLayout>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecylerView"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/magin_20"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.qianyu.communicate.views.BounceScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/openMemberShip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/magin_20"
+        android:layout_marginRight="@dimen/magin_20"
+        android:descendantFocusability="blocksDescendants"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+        <!--android:background="@drawable/btn_login_select"-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_color_selector"
+            android:gravity="center"
+            android:padding="@dimen/magin_8"
+            android:text="开通黄金贵族"
+            android:textColor="@color/white"
+            android:textSize="@dimen/largeTextSize" />
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipChildren="false"
+    android:orientation="vertical">
+    <!--android:fitsSystemWindows="true"-->
+    <FrameLayout
+        android:id="@+id/framLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:background="@color/little_gray" />
+
+    <LinearLayout
+        android:id="@+id/mainTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/banner_indicate"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tab_talent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onTabClicked"
+            android:orientation="vertical"
+            android:padding="@dimen/magin_4">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_30"
+                    android:layout_height="@dimen/magin_30"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/magin_2"
+                    android:src="@mipmap/tubiao_sy1" />
+
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mShopCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/magin_6"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/shape_cornor_green_num"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/magin_1"
+                    android:paddingLeft="@dimen/magin_4"
+                    android:paddingRight="@dimen/magin_4"
+                    android:paddingTop="@dimen/magin_1"
+                    android:text="999"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tightTextSize"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chatRoom"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/littleTextSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_how"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onTabClicked"
+            android:orientation="vertical"
+            android:padding="@dimen/magin_4">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/main_shopImg"
+                    android:layout_width="@dimen/magin_30"
+                    android:layout_height="@dimen/magin_30"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/magin_2"
+                    android:src="@mipmap/tubiao_lb2" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/magin_8"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/shape_cornor_green_num"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/magin_1"
+                    android:paddingLeft="@dimen/magin_4"
+                    android:paddingRight="@dimen/magin_4"
+                    android:paddingTop="@dimen/magin_1"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tightTextSize"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/main_shopTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/main_shopImg"
+                android:layout_alignStart="@+id/main_shopImg"
+                android:layout_below="@+id/main_shopImg"
+                android:text="@string/find"
+                style="@style/style_text_style_pingfang_changgui"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/littleTextSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onTabClicked"
+            android:orientation="vertical"
+            android:padding="@dimen/magin_4">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_30"
+                    android:layout_height="@dimen/magin_30"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/magin_2"
+                    android:src="@mipmap/tubiao_xx1" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mDotRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/magin_8"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/shape_cornor_green_num"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/magin_1"
+                    android:paddingLeft="@dimen/magin_4"
+                    android:paddingRight="@dimen/magin_4"
+                    android:paddingTop="@dimen/magin_1"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tightTextSize"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/message"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/littleTextSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onTabClicked"
+            android:orientation="vertical"
+            android:padding="@dimen/magin_4">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/magin_28"
+                    android:layout_height="@dimen/magin_28"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/magin_2"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/magin_2"
+                    android:src="@mipmap/tubiao_wo1" />
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:id="@+id/mFriendCount"
+                    android:layout_width="@dimen/margin_10"
+                    android:layout_height="@dimen/margin_10"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/magin_8"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/shape_cornor_green_num"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tightTextSize"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/me"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/littleTextSize" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

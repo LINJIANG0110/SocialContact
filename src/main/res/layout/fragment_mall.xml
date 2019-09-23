@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginRight="@dimen/magin_15"
+        android:layout_marginTop="@dimen/magin_15"
+        android:background="@drawable/shape_solid_little_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/magin_2">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:src="@drawable/em_search_bar_icon_normal" />
+
+        <EditText
+            style="@style/style_text_style_pingfang_changgui"
+            android:id="@+id/mSearchEt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/magin_5"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入用户ID查询"
+            android:imeOptions="actionSearch"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/text_black"
+            android:textColorHint="@color/text_gray"
+            android:textSize="@dimen/smallTextSize" />
+
+
+    </LinearLayout>
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        android:id="@+id/smartTabLayout"
+        app:stl_clickable="true"
+        app:stl_defaultTabBackground="?attr/selectableItemBackground"
+        app:stl_defaultTabTextAllCaps="false"
+        app:stl_defaultTabTextColor="@color/viewpage_selector_slide_title"
+        app:stl_defaultTabTextHorizontalPadding="10dp"
+        app:stl_defaultTabTextSize="16sp"
+        app:stl_distributeEvenly="true"
+        app:stl_dividerColor="@color/text_gray"
+        app:stl_dividerThickness="0px"
+        app:stl_drawDecorationAfterTab="false"
+        app:stl_indicatorColor="@color/app_color"
+        app:stl_indicatorCornerRadius="2dp"
+        app:stl_indicatorGravity="bottom"
+        app:stl_indicatorInFront="false"
+        app:stl_indicatorInterpolation="smart"
+        app:stl_indicatorThickness="2dp"
+        app:stl_indicatorWidth="auto"
+        app:stl_indicatorWithoutPadding="true"
+        app:stl_overlineColor="@color/app_color"
+        app:stl_overlineThickness="0dp"
+        app:stl_titleOffset="14dp"
+        app:stl_underlineColor="@color/text_gray"
+        app:stl_underlineThickness="0px"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+    <!--stl_indicatorThickness  变成滑动快-->
+    <!--stl_distributeEvenly  这个属性是true那么tab平分-->
+    <!--stl_indicatorInterpolation indecator线的长度是固定还是随着拉伸变得  linear固定-->
+    <!--stl_indicatorWithoutPadding  indecator线是否充满整个tab-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/little_gray" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

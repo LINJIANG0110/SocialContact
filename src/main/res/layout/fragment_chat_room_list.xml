@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/status_view"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+        <!--android:descendantFocusability="blocksDescendants" 解决列表嵌套进入页面自动上滑bug-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/status_view"
+            android:background="@color/head_bg"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_10"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/mLocationLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/magin_5"
+                    android:layout_marginTop="@dimen/magin_5"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_20"
+                        android:layout_height="@dimen/magin_20"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/mLocationTv"
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:text="北京"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/middleTextSize" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/magin_5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/wenda_xinfeng" />
+
+                    <View
+                        android:layout_width="@dimen/magin_8"
+                        android:layout_height="@dimen/magin_8"
+                        android:layout_gravity="right"
+                        android:background="@drawable/shape_cornor_red" />
+                </FrameLayout>
+
+                <TextView
+                    style="@style/style_text_style_pingfang_changgui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/chatRoom"
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/mSearchFL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/magin_5"
+                    android:paddingBottom="@dimen/magin_2"
+                    android:paddingLeft="@dimen/magin_15"
+                    android:paddingRight="@dimen/magin_5"
+                    android:paddingTop="@dimen/magin_2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/liulanlishi_sousuo" />
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/magin_5"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10">
+
+                <FrameLayout
+                    android:id="@+id/mUnReadFL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/wenda" />
+                    <!--wenda_xinfeng-->
+                    <View
+                        android:id="@+id/mUnReadDot"
+                        android:layout_width="@dimen/magin_8"
+                        android:layout_height="@dimen/magin_8"
+                        android:layout_gravity="right"
+                        android:background="@drawable/shape_cornor_red"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/mSearchLL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/magin_15"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_big_cornor_gray"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/magin_5"
+                    android:paddingLeft="@dimen/magin_8"
+                    android:paddingRight="@dimen/magin_8"
+                    android:paddingTop="@dimen/magin_5">
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_15"
+                        android:layout_height="@dimen/magin_15"
+                        android:src="@mipmap/liulanlishi_sousuo" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_5"
+                        android:text="搜索聊天室"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/mHistoryLogo"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="@dimen/magin_15"
+                    android:src="@mipmap/record" />
+                <!--wo_liulanlishi_-->
+                <ImageView
+                    android:id="@+id/mClassifyLogo"
+                    android:layout_width="@dimen/magin_25"
+                    android:layout_height="@dimen/magin_25"
+                    android:layout_marginLeft="@dimen/magin_13"
+                    android:src="@mipmap/xinzengliaotianshi" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/little_gray" />
+
+            <net.neiquan.applibrary.wight.RefreshLayout
+                android:id="@+id/refesh_ly"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/head_view"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.jcodecraeer.xrecyclerview.XRecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+            </net.neiquan.applibrary.wight.RefreshLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="@dimen/magin_20"
+        android:background="@drawable/shape_big_cornor_left_"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/magin_0.8"
+        android:paddingLeft="@dimen/magin_0.8"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingTop="@dimen/magin_0.8"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/mFloatActionBtn"
+            android:layout_width="@dimen/magin_40"
+            android:layout_height="@dimen/magin_40"
+            android:layout_gravity="right|bottom"
+            android:src="@mipmap/liaotianshi_chuangjian" />
+    </LinearLayout>
+
+
+</FrameLayout>

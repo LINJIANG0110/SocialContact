@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/punishTa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/magin_5"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginTop="@dimen/magin_5"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/mHeadImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/magin_150"
+                    android:visibility="gone"
+                    app:actualImageScaleType="focusCrop"
+                    app:failureImage="@mipmap/huoqutupianmoshi"
+                    app:failureImageScaleType="centerCrop"
+                    app:placeholderImage="@mipmap/huoqutupianmoshi"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:progressBarAutoRotateInterval="3000"
+                    app:progressBarImage="@drawable/progressbar"
+                    app:progressBarImageScaleType="centerInside" />
+                <!--app:fadeDuration="3000"-->
+                <!--app:roundAsCircle="true"-->
+                <!--app:roundingBorderColor="#C3B0A9"-->
+                <!--app:roundingBorderWidth="2dp" />-->
+
+                <com.qianyu.communicate.jzvd.JZVideoPlayerStandard
+                    android:id="@+id/jz_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/magin_200" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/magin_30"
+                    android:background="@mipmap/zuopin_hui4"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/mTitleName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/magin_5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/smallTextSize" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/palyLogo"
+                    android:layout_width="@dimen/magin_40"
+                    android:layout_height="@dimen/magin_40"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/liulanlishi_bofang"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@mipmap/liaotianshi_hui1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/magin_5"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:id="@+id/mTotalTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/littleTextSize" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/magin_5">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/magin_15"
+                        android:layout_height="@dimen/magin_15"
+                        android:src="@mipmap/liulanlishi_bofangliang" />
+
+                    <TextView
+                        android:id="@+id/mPlayCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_2"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/littleTextSize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/mTimeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/littleTextSize" />
+
+                    <TextView
+                        android:id="@+id/mMoneyTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/magin_5"
+                        android:text="免费"
+                        android:textSize="@dimen/smallTextSize"
+                        android:visibility="gone"
+                        android:textColor="@color/text_black"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/little_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <EditText
+        style="@style/style_text_style_pingfang_changgui"
+        android:id="@+id/questContent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_180"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="请输入您要反馈的问题"
+        android:padding="@dimen/magin_20"
+        android:textColorHint="@color/text_gray"
+        android:textSize="@dimen/middleTextSize" />
+
+    <TextView
+        style="@style/style_text_style_pingfang_changgui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/magin_5"
+        android:paddingLeft="@dimen/magin_20"
+        android:paddingTop="@dimen/magin_5"
+        android:text="问题类型（必选）"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/medium_text_size" />
+
+    <RelativeLayout
+        android:id="@+id/consultRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/magin_15"
+        android:paddingLeft="@dimen/magin_20"
+        android:paddingRight="@dimen/magin_20"
+        android:paddingTop="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="咨询"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/consultLogo"
+            android:layout_width="@dimen/magin_15"
+            android:layout_height="@dimen/magin_15"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/wxdl_xuanze" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:backgroundTint="@color/little_gray" />
+
+    <RelativeLayout
+        android:id="@+id/reportRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/magin_15"
+        android:paddingLeft="@dimen/magin_20"
+        android:paddingRight="@dimen/magin_20"
+        android:paddingTop="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投诉"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/reportLogo"
+            android:layout_width="@dimen/magin_15"
+            android:layout_height="@dimen/magin_15"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/wxdl_xuanzehui" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:backgroundTint="@color/little_gray" />
+
+    <RelativeLayout
+        android:id="@+id/suggestRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/magin_15"
+        android:paddingLeft="@dimen/magin_20"
+        android:paddingRight="@dimen/magin_20"
+        android:paddingTop="@dimen/magin_15">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建议"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/middleTextSize" />
+
+        <ImageView
+            android:id="@+id/suggestLogo"
+            android:layout_width="@dimen/magin_15"
+            android:layout_height="@dimen/magin_15"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/wxdl_xuanzehui" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_0.1"
+        android:backgroundTint="@color/little_gray" />
+
+    <LinearLayout
+        android:id="@+id/mCustomQQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="点击联系客服（QQ ：2575764746）"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/magin_5"
+            android:text="反馈一个BUG并被采纳给10个钻石"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/littleTextSize" />
+    </LinearLayout>
+
+</LinearLayout>

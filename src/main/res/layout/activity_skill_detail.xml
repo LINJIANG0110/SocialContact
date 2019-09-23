@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_head_view" />
+
+    <com.qianyu.communicate.views.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/magin_1"
+                android:background="@color/little_gray" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecylerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/magin_5"
+                android:visibility="visible" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:descendantFocusability="blocksDescendants"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/magin_20"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/skillLogo"
+                            android:layout_width="@dimen/magin_80"
+                            android:layout_height="@dimen/magin_70"
+                            android:layout_gravity="center"
+                            app:actualImageScaleType="focusCrop"
+                            app:failureImage="@mipmap/fang_zhengtouxiang"
+                            app:failureImageScaleType="centerCrop"
+                            app:placeholderImage="@mipmap/fang_zhengtouxiang"
+                            app:placeholderImageScaleType="centerCrop"
+                            app:progressBarAutoRotateInterval="3000"
+                            app:progressBarImage="@drawable/progressbar"
+                            app:progressBarImageScaleType="centerInside"
+                            app:roundedCornerRadius="@dimen/magin_4" />
+                        <!--app:fadeDuration="3000"-->
+                        <!--app:roundAsCircle="true"-->
+                        <!--app:roundingBorderColor="#C3B0A9"-->
+                        <!--app:roundingBorderWidth="2dp" />-->
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_20"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/skillName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/hugeTextSize" />
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/skillLevel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/magin_5"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+                            </LinearLayout>
+
+                            <com.hyphenate.easeui.widget.SkillLevelView
+                                android:id="@+id/skillStars"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/magin_5" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/currentEffect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/middleTextSize" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/upEffect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/magin_2"
+                        android:text="升级效果：把对方禁言3分钟"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/middleTextSize"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_20"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="熟练度"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/middleTextSize" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_2"
+                            android:layout_marginTop="@dimen/magin_4"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/style_text_style_pingfang_changgui"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="（熟练度累计满时，升级100%成功）"
+                                android:textColor="@color/text_gray"
+                                android:textSize="@dimen/littleTextSize" />
+
+                            <ProgressBar
+                                android:id="@+id/mProgressBar"
+                                style="@style/m_progress_bar_style"
+                                android:layout_width="250dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="@dimen/magin_5"
+                                android:layout_marginTop="@dimen/magin_2"
+                                android:progress="0"
+                                android:secondaryProgress="100" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/practiseHint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="@dimen/magin_5"
+                        android:layout_marginTop="@dimen/magin_5"
+                        android:text="@string/hitRateHint"
+                        android:textColor="@color/oval_light_yellow"
+                        android:textSize="@dimen/littleTextSize" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_20"
+                        android:layout_marginTop="@dimen/magin_5"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="消耗  "
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/middleTextSize" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/magin_5"
+                            android:layout_marginRight="@dimen/magin_20"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:id="@+id/expendChosen1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/shape_blue_dashed"
+                                    android:padding="@dimen/magin_5">
+
+                                    <ImageView
+                                        android:id="@+id/expendLogo1"
+                                        android:layout_width="@dimen/magin_30"
+                                        android:layout_height="@dimen/magin_30"
+                                        android:src="@drawable/sun" />
+                                </FrameLayout>
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/expendNum1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:singleLine="true"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/successRate1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:text="成功率 +10%"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1
+"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:id="@+id/expendChosen2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/magin_5">
+
+                                    <ImageView
+                                        android:id="@+id/expendLogo2"
+                                        android:layout_width="@dimen/magin_30"
+                                        android:layout_height="@dimen/magin_30"
+                                        android:src="@drawable/moon" />
+                                </FrameLayout>
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/expendNum2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:singleLine="true"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/successRate2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:text="成功率 +10%"
+                                    android:visibility="gone"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:visibility="gone"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:id="@+id/expendChosen3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/magin_5">
+
+                                    <ImageView
+                                        android:id="@+id/expendLogo3"
+                                        android:layout_width="@dimen/magin_30"
+                                        android:layout_height="@dimen/magin_30"
+                                        android:src="@drawable/star" />
+                                </FrameLayout>
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/expendNum3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:text="X 3455"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/successRate3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:text="成功率 +10%"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magin_20"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/style_text_style_pingfang_changgui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="手续费"
+                            android:textColor="@color/text_gray"
+                            android:textSize="@dimen/middleTextSize" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/magin_20"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:id="@+id/costChosen3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/shape_blue_dashed"
+                                    android:padding="@dimen/magin_5">
+
+                                    <ImageView
+                                        android:id="@+id/costLogo3"
+                                        android:layout_width="@dimen/magin_30"
+                                        android:layout_height="@dimen/magin_30"
+                                        android:src="@mipmap/diamond1" />
+                                </FrameLayout>
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/costNum3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:singleLine="true"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/costRate3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:text="成功率 +10%"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:id="@+id/costChosen2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/magin_5">
+
+                                    <ImageView
+                                        android:id="@+id/costLogo2"
+                                        android:layout_width="@dimen/magin_30"
+                                        android:layout_height="@dimen/magin_30"
+                                        android:src="@mipmap/coin1" />
+                                </FrameLayout>
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/costNum2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:singleLine="true"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/costRate2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:text="成功率 +10%"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:id="@+id/costChosen1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/magin_5">
+
+                                    <ImageView
+                                        android:id="@+id/costLogo1"
+                                        android:layout_width="@dimen/magin_30"
+                                        android:layout_height="@dimen/magin_30"
+                                        android:src="@mipmap/wallet1" />
+                                </FrameLayout>
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/costNum1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:singleLine="true"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                                <TextView
+                                    style="@style/style_text_style_pingfang_changgui"
+                                    android:id="@+id/costRate1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/magin_2"
+                                    android:text="成功率 +10%"
+                                    android:visibility="gone"
+                                    android:textColor="@color/text_black"
+                                    android:textSize="@dimen/smallTextSize" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/currentSuccessRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:background="@drawable/shape_cornor_transp_"
+                        android:paddingBottom="@dimen/magin_2"
+                        android:paddingLeft="@dimen/magin_8"
+                        android:paddingRight="@dimen/magin_8"
+                        android:visibility="gone"
+                        android:paddingTop="@dimen/magin_2"
+                        android:text="当前成功率：120%"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/basicSuccessRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/magin_2"
+                        android:visibility="gone"
+                        android:text="基础成功概率：100%"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/smallTextSize" />
+
+                    <TextView
+                        style="@style/style_text_style_pingfang_changgui"
+                        android:id="@+id/successRateHint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/magin_5"
+                        android:layout_marginTop="@dimen/magin_2"
+                        android:text="@string/successRateHint"
+                        android:textColor="@color/oval_light_yellow"
+                        android:textSize="@dimen/littleTextSize" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </com.qianyu.communicate.views.BounceScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/levelUpNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/magin_20"
+        android:layout_marginRight="@dimen/magin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        android:descendantFocusability="blocksDescendants"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp">
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/app_color_selector"
+            android:gravity="center"
+            android:padding="@dimen/magin_8"
+            android:text="立即升级"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium_text_size" />
+    </android.support.v7.widget.CardView>
+</LinearLayout>

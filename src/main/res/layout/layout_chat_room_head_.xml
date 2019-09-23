@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.qianyu.communicate.views.banner.Banner
+        android:id="@+id/mChatRoomBanner"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/magin_8"
+        android:layout_height="128dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/magin_5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/mPreViewLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin_10"
+            android:background="@drawable/adapter_select"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/magin_25"
+                android:layout_height="@dimen/magin_25"
+                android:src="@mipmap/myfamily" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的家族"
+                android:layout_marginTop="@dimen/magin_5"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/mMasterLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin_10"
+            android:gravity="center"
+            android:background="@drawable/adapter_select"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/magin_25"
+                android:layout_height="@dimen/magin_25"
+                android:src="@mipmap/task" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="任务"
+                android:layout_marginTop="@dimen/magin_5"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/mRankListLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/margin_10"
+            android:gravity="center"
+            android:background="@drawable/adapter_select"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/magin_25"
+                android:layout_height="@dimen/magin_25"
+                android:src="@mipmap/activity" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="活动"
+                android:layout_marginTop="@dimen/magin_5"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/mComplicatedLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:background="@drawable/adapter_select"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/magin_25"
+                android:layout_height="@dimen/magin_25"
+                android:src="@mipmap/rank" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="排行榜"
+                android:layout_marginTop="@dimen/magin_5"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_8"
+        android:layout_marginTop="@dimen/magin_3"
+        android:background="#e1f3f4f8" />
+
+    <LinearLayout
+        android:id="@+id/mSuggestLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/magin_2"
+            android:layout_marginLeft="@dimen/magin_2"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/magin_25"
+                android:layout_height="@dimen/magin_25"
+                android:src="@mipmap/liaotianshi_tuijian" />
+
+            <TextView
+                style="@style/style_text_style_pingfang_changgui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/magin_5"
+                android:text="@string/recomend"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/smallTextSize" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mSuggestRecylerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/magin_8"
+        android:layout_marginTop="@dimen/magin_8"
+        android:background="#e1f3f4f8" />
+
+    <LinearLayout
+        android:id="@+id/mOtherLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/magin_5"
+        android:layout_marginLeft="@dimen/magin_15"
+        android:layout_marginTop="@dimen/margin_10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/magin_16"
+            android:layout_height="@dimen/magin_16"
+            android:layout_marginLeft="@dimen/magin_2"
+            android:src="@mipmap/liaotianshi_qita" />
+
+        <TextView
+            style="@style/style_text_style_pingfang_changgui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="@string/others"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/smallTextSize" />
+
+    </LinearLayout>
+
+</LinearLayout>
