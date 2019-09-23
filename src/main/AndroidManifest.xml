@@ -817,10 +817,6 @@
         <activity
             android:name=".activity.TopicAllActivity"
             android:launchMode="singleTask" />
-        <activity
-            android:name=".activity.TopicEvalueDialog"
-            android:launchMode="singleTask"
-            android:theme="@style/AlertDialog" />
         <activity android:name=".activity.TopicNewsActivity" />
     </application>
 

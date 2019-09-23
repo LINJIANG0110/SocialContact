@@ -1,7 +1,6 @@
 package com.qianyu.communicate.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
@@ -11,16 +10,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.reflect.TypeToken;
-import com.hys.utils.ToastUtils;
 import com.qianyu.communicate.R;
 import com.qianyu.communicate.adapter.TopicDelAdapter;
 import com.qianyu.communicate.base.BaseListActivity;
 import com.qianyu.communicate.base.MyBaseAdapter;
-import com.qianyu.communicate.entity.TopicBean;
 import com.qianyu.communicate.entity.TopicDelBean;
 import com.qianyu.communicate.event.EventBuss;
 import com.qianyu.communicate.http.NetUtils;
-import com.qianyu.communicate.utils.Tools;
 
 import net.neiquan.okhttp.NetCallBack;
 import net.neiquan.okhttp.ResultModel;
@@ -38,7 +34,7 @@ import butterknife.ButterKnife;
 import tv.buka.other.Gson;
 
 /**
- * 话题查看全部回答
+ * 话题查看全部回答列表
  */
 public class TopicAllActivity extends BaseListActivity {
     TopicDelAdapter delAdapter;
@@ -54,7 +50,6 @@ public class TopicAllActivity extends BaseListActivity {
             public void onItemClick(View view, List data, int position) {
                 delData = adapter.data;
                 String commentId = delData.get(position).commentId;
-                Log.e("传入的commentId", commentId);
                 startActivity(new Intent(TopicAllActivity.this, TopicDelActivity.class)
                         .putExtra("topicTitle", topicTitle)
                         .putExtra("topicId", topicId)
@@ -91,7 +86,6 @@ public class TopicAllActivity extends BaseListActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(result);
                     JSONArray data = jsonObject.getJSONArray("data");
-                    Log.e("data", data + "");
                     if (data.length() > 0) {
                         List<TopicDelBean> tempData = new Gson().fromJson(data + "", new TypeToken<List<TopicDelBean>>() {
                         }.getType());
@@ -105,7 +99,6 @@ public class TopicAllActivity extends BaseListActivity {
                             }
                             adapter.append(tempData);
                             delData = adapter.data;
-                            // delData.addAll(tempData);
                             if (tempData == null || tempData.size() < PAEG_SIZE) {
                                 if (pageNum == 0 && (tempData == null || tempData.size() == 0)) {
                                     mRefeshLy.showEmptyView();
@@ -146,8 +139,7 @@ public class TopicAllActivity extends BaseListActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        Log.e("onNewIntent", "11");
-        // 回调
+        // android:launchMode="singleTask" 回调
         topicId = getIntent().getStringExtra("topicId");
         topicTitle = getIntent().getStringExtra("topicTitle");
         onRefresh();

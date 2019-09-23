@@ -14,22 +14,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gyf.immersionbar.ImmersionBar;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMConversation;
+import com.hyphenate.chat.EMConversation.EMConversationType;
 import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.EaseConstant;
-import com.hyphenate.easeui.domain.EaseUser;
+import com.hyphenate.easeui.model.EaseAtMessageHelper;
+import com.hyphenate.easeui.ui.EaseConversationListFragment;
+import com.hyphenate.util.NetUtils;
 import com.qianyu.chatuidemo.Constant;
 import com.qianyu.chatuidemo.db.InviteMessgeDao;
 import com.qianyu.communicate.R;
 import com.qianyu.communicate.activity.LookMeActivity;
 import com.qianyu.communicate.activity.MainActivity;
 import com.qianyu.communicate.event.EventBuss;
-import com.hyphenate.chat.EMClient;
-import com.hyphenate.chat.EMConversation;
-import com.hyphenate.chat.EMConversation.EMConversationType;
-import com.hyphenate.easeui.model.EaseAtMessageHelper;
-import com.hyphenate.easeui.ui.EaseConversationListFragment;
-import com.hyphenate.util.NetUtils;
 import com.qianyu.communicate.utils.Tools;
 
 import org.greenrobot.eventbus.EventBus;
@@ -75,7 +74,6 @@ public class ConversationListFragment extends EaseConversationListFragment {
     @Override
     protected void setUpView() {
         super.setUpView();
-        // register context menu
         registerForContextMenu(conversationListView);
         conversationListView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -113,18 +111,15 @@ public class ConversationListFragment extends EaseConversationListFragment {
                 } else if (TextUtils.equals("13777777777", username)) {
                     startActivity(new Intent(getActivity(), LookMeActivity.class));
                 } else {
-                    // start chat acitivity
                     Intent intent = new Intent(getActivity(), ChatActivity.class);
                     if (conversation.isGroup()) {
                         if (conversation.getType() == EMConversationType.ChatRoom) {
-                            // it's group chat
                             intent.putExtra(Constant.EXTRA_CHAT_TYPE, Constant.CHATTYPE_CHATROOM);
                         } else {
                             intent.putExtra(Constant.EXTRA_CHAT_TYPE, Constant.CHATTYPE_GROUP);
                         }
 
                     }
-                    // it's single chat
                     intent.putExtra(Constant.EXTRA_USER_ID, username);
                     startActivity(intent);
                 }
@@ -150,7 +145,7 @@ public class ConversationListFragment extends EaseConversationListFragment {
         EMGroup group = EMClient.getInstance().groupManager().getGroup(username);
         String tempName = group != null ? group.getGroupName() : username;
         if (tempName.equals("13500000000")) {
-            Log.e("官方客服不可删除","mmmm");
+            // 官方客服不可删除
             return;
         }
         getActivity().getMenuInflater().inflate(R.menu.em_delete_message, menu);
@@ -160,10 +155,10 @@ public class ConversationListFragment extends EaseConversationListFragment {
     public boolean onContextItemSelected(MenuItem item) {
         boolean deleteMessage = false;
         if (item.getItemId() == R.id.delete_message) {
-            Log.e("删除会话和消息", item.getItemId() + "*");
+            // 删除会话和消息
             deleteMessage = true;
         } else if (item.getItemId() == R.id.delete_conversation) {
-            Log.e("删除会话", item.getItemId() + "*");
+            // 删除会话
             deleteMessage = false;
         }
         EMConversation tobeDeleteCons = conversationListView.getItem(((AdapterContextMenuInfo) item.getMenuInfo()).position);

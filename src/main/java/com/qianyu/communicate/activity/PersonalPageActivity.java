@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -13,16 +12,13 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -56,11 +52,9 @@ import com.qianyu.communicate.utils.TimeUtils;
 import com.qianyu.communicate.utils.Tools;
 import com.qianyu.communicate.views.MyRecylerView;
 import com.qianyu.communicate.views.SScrollView;
-import com.qianyu.communicate.views.banner.Banner;
 
 import net.neiquan.applibrary.flowtag.FlowTagLayout;
 import net.neiquan.applibrary.flowtag.OnTagSelectListener;
-import net.neiquan.applibrary.utils.ImageUtil;
 import net.neiquan.applibrary.wight.AlertChooser;
 import net.neiquan.applibrary.wight.AlertDialog;
 import net.neiquan.applibrary.wight.CommonPopupWindow;
@@ -201,44 +195,6 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
     @InjectView(R.id.userOfficial)
     ImageView userOfficial;
 
-//
-//    FrameLayout mHeadFL;
-//    SimpleDraweeView mHeadImg;
-//    FrameLayout mFans1FL;
-//    FrameLayout mFans2FL;
-//    FrameLayout mFans3FL;
-//    SimpleDraweeView mFans1Img;
-//    SimpleDraweeView mFans2Img;
-//    SimpleDraweeView mFans3Img;
-//    SimpleDraweeView mFamilyHeadImg;
-//    TextView mFamilyName;
-//    TextView mFamilyTv;
-//    ImageView addFriendLogo;
-//    LinearLayout familyDetail;
-//    LinearLayout concernLL;
-//    LinearLayout fansRankLL;
-//    TextView mIdNum;
-//    TextView mJobTitle;
-//    TextView mAgeTv;
-//    TextView mLevelTv;
-//    LinearLayout mHisConcernLL;
-//    TextView mIdNumTv;
-//    TextView mLocationTv_;
-//    LinearLayout mIdNumLL;
-//    MyRecylerView mGiftRecylerView;
-//    LinearLayout hisGiftLL;
-//    LinearLayout mCircleLL;
-//    MyRecylerView mCicleRecylerView;
-//    MyRecylerView mSkillRecylerView;
-//    View mHisFansView;
-//    LinearLayout hisFansLL;
-//    TextView mLocationTv;
-//    TextView mSignTv;
-//    TextView mLastLoginTime;
-//    FlowTagLayout mTagFlowLayout;
-//    ImageView zoomView;
-
-
     private String signal = "2";
     private long userId;
     private GiftBgAdapter giftBgAdapter;
@@ -250,7 +206,6 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
 
     @Override
     public int getRootViewId() {
-//        setSystemBarTint_();
         EventBus.getDefault().register(this);
         return R.layout.activity_personal_page;
     }
@@ -267,8 +222,6 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
 
     @Override
     public void setViews() {
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN);  //全屏
         if (getIntent() != null) {
             userId = getIntent().getLongExtra("userId", 0);
             Log.e("接受用户id", userId + "*");
@@ -279,83 +232,7 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
                 mBounceScrollView.mRootView.setOnScrollChangeListener(this);
             }
         }
-//        zoomView = (ImageView) LayoutInflater.from(this).inflate(R.layout.layout_personal_zoom, null);
-//        mBounceScrollView.setZoomView(zoomView);
-//        View contentView = LayoutInflater.from(this).inflate(R.layout.layout_personal_content, null);
-//        mBounceScrollView.setScrollContentView(contentView);
-//        initContentView(contentView);
-//        zoomView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (userinfo != null && userinfo.getUserInfo() != null) {
-//                    AppLog.e("===================mHeadFL=============" + mHeadFL);
-//                    final ArrayList<ImageItem> mImageList = new ArrayList<>();
-//                    mImageList.clear();
-//                    ImageItem imageItem = new ImageItem();
-//                    imageItem.setPath(TextUtils.isEmpty(userinfo.getUserInfo().getHeadUrl()) ? "" : userinfo.getUserInfo().getHeadUrl());
-//                    mImageList.add(imageItem);
-//                    Intent intent3 = new Intent();
-//                    intent3.putExtra(AndroidImagePicker.KEY_PIC_SELECTED_POSITION, 0);
-//                    intent3.setClass(PersonalPageActivity.this, ImagePreviewActivity.class);
-//                    intent3.putParcelableArrayListExtra(ImagePreviewActivity.IMAGEURL, mImageList);
-//                    startActivity(intent3);
-//                }
-//            }
-//        });
     }
-
-    private void initContentView(View contentView) {
-//        mHeadFL = contentView.findViewById(R.id.mHeadFL);
-//        mHeadImg = contentView.findViewById(R.id.mHeadImg);
-//        mFans1FL = contentView.findViewById(R.id.mFans1FL);
-//        mFans2FL = contentView.findViewById(R.id.mFans1FL);
-//        mFans3FL = contentView.findViewById(R.id.mFans1FL);
-//        mFans1Img = contentView.findViewById(R.id.mFans1Img);
-//        mFans2Img = contentView.findViewById(R.id.mFans2Img);
-//        mFans3Img = contentView.findViewById(R.id.mFans3Img);
-//        mFamilyHeadImg = contentView.findViewById(R.id.mFamilyHeadImg);
-//        mFamilyName = contentView.findViewById(R.id.mFamilyName);
-//        mFamilyTv = contentView.findViewById(R.id.mFamilyTv);
-//        addFriendLogo = contentView.findViewById(R.id.addFriendLogo);
-//        familyDetail = contentView.findViewById(R.id.familyDetail);
-//        concernLL = contentView.findViewById(R.id.concernLL);
-//        fansRankLL = contentView.findViewById(R.id.fansRankLL);
-//        mIdNum = contentView.findViewById(R.id.mIdNum);
-//        mJobTitle = contentView.findViewById(R.id.mJobTitle);
-//        mAgeTv = contentView.findViewById(R.id.mAgeTv);
-//        mLevelTv = contentView.findViewById(R.id.mLevelTv);
-//        mHisConcernLL = contentView.findViewById(R.id.mHisConcernLL);
-//        mIdNumTv = contentView.findViewById(R.id.mIdNumTv);
-//        mLocationTv_ = contentView.findViewById(R.id.mLocationTv_);
-//        mIdNumLL = contentView.findViewById(R.id.mIdNumLL);
-//        mGiftRecylerView = contentView.findViewById(R.id.mGiftRecylerView);
-//        hisGiftLL = contentView.findViewById(R.id.hisGiftLL);
-//        mCircleLL = contentView.findViewById(R.id.mCircleLL);
-//        mCicleRecylerView = contentView.findViewById(R.id.mCicleRecylerView);
-//        mSkillRecylerView = contentView.findViewById(R.id.mSkillRecylerView);
-//        mHisFansView = contentView.findViewById(R.id.mHisFansView);
-//        hisFansLL = contentView.findViewById(R.id.hisFansLL);
-//        mLocationTv = contentView.findViewById(R.id.mLocationTv);
-//        mSignTv = contentView.findViewById(R.id.mSignTv);
-//        mLastLoginTime = contentView.findViewById(R.id.mLastLoginTime);
-//        mTagFlowLayout = contentView.findViewById(R.id.mTagFlowLayout);
-//        mHeadLL.setOnClickListener(this);
-//        mHeadFL.setOnClickListener(this);
-//        friendOprate.setOnClickListener(this);
-//        addFriendLogo.setOnClickListener(this);
-//        backFL.setOnClickListener(this);
-//        familyDetail.setOnClickListener(this);
-//        mCircleLL.setOnClickListener(this);
-//        hisGiftLL.setOnClickListener(this);
-//        mHisConcernLL.setOnClickListener(this);
-//        mConcernLL.setOnClickListener(this);
-//        mChatLL.setOnClickListener(this);
-//        hisFansLL.setOnClickListener(this);
-//        mSkillLogo.setOnClickListener(this);
-//        concernLL.setOnClickListener(this);
-//        fansRankLL.setOnClickListener(this);
-    }
-
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void initData() {
@@ -518,7 +395,6 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
             case R.id.mHeadLL:
             case R.id.mHeadFL:
                 if (userinfo != null && userinfo.getUserInfo() != null) {
-                    AppLog.e("===================mHeadFL=============" + mHeadFL);
                     final ArrayList<ImageItem> mImageList = new ArrayList<>();
                     mImageList.clear();
                     ImageItem imageItem = new ImageItem();
@@ -711,7 +587,6 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
 
             @Override
             public void updateUI(Context context, final View view, int position, String data) {
-//                Glide.with(context).load(data).into((ImageView) view);
                 final ImageView mView = (ImageView) view;
                 mView.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 Glide.with(PersonalPageActivity.this)
@@ -780,19 +655,6 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
                     List<UserInfo.UserInfoBean> fanList = userinfo.getFanList();
                     List<UserInfo.GiftListBean> giftList = userinfo.getGiftList();
                     if (userInfo != null) {
-//                        Glide.with(getApplicationContext())
-//                                .load(TextUtils.isEmpty(userInfo.getHeadUrl()) ? "" : userInfo.getHeadUrl())
-//                                .asBitmap()//强制Glide返回一个Bitmap对象
-//                                .into(new SimpleTarget<Bitmap>() {
-//                                    @Override
-//                                    public void onResourceReady(Bitmap bitmap, GlideAnimation<? super Bitmap> glideAnimation) {
-////                                        int width = bitmap.getWidth();
-////                                        int height = bitmap.getHeight();
-////                                        Bitmap zoomImg1 = Tools.zoomImg(bitmap, width>height?height:width, width>height?height:width);
-//                                        Bitmap zoomImg2 = Tools.zoomImg(bitmap, PixelUtil.getScreenWidth(PersonalPageActivity.this)*2/3, PixelUtil.getScreenWidth(PersonalPageActivity.this)*2/3);
-//                                        zoomView.setImageBitmap(zoomImg2);
-//                                    }
-//                                });
                         mHeadImg.setImageURI(TextUtils.isEmpty(userInfo.getHeadUrl()) ? "" : userInfo.getHeadUrl());
                         mUserName.setText(TextUtils.isEmpty(userInfo.getNickName()) ? "" : userInfo.getNickName());
                         mAgeTv.setText(userInfo.getAge() + "岁");
@@ -844,16 +706,10 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
                         switch (fanList.size()) {
                             case 1:
                                 mFans1Img.setImageURI(TextUtils.isEmpty(fanList.get(0).getHeadUrl()) ? "" : fanList.get(0).getHeadUrl());
-//                                mFans1FL.setVisibility(View.VISIBLE);
-//                                mFans2FL.setVisibility(View.INVISIBLE);
-//                                mFans3FL.setVisibility(View.INVISIBLE);
                                 break;
                             case 2:
                                 mFans1Img.setImageURI(TextUtils.isEmpty(fanList.get(0).getHeadUrl()) ? "" : fanList.get(0).getHeadUrl());
                                 mFans2Img.setImageURI(TextUtils.isEmpty(fanList.get(1).getHeadUrl()) ? "" : fanList.get(1).getHeadUrl());
-//                                mFans1FL.setVisibility(View.VISIBLE);
-//                                mFans2FL.setVisibility(View.VISIBLE);
-//                                mFans3FL.setVisibility(View.INVISIBLE);
                                 break;
                             default:
                                 mFans1Img.setImageURI(TextUtils.isEmpty(fanList.get(0).getHeadUrl()) ? "" : fanList.get(0).getHeadUrl());
@@ -861,11 +717,7 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
                                 mFans3Img.setImageURI(TextUtils.isEmpty(fanList.get(2).getHeadUrl()) ? "" : fanList.get(2).getHeadUrl());
                                 break;
                         }
-                    } else {
-//                        hisFansLL.setVisibility(View.GONE);
-//                        mHisFansView.setVisibility(View.GONE);
                     }
-
                 }
             }
 
@@ -884,7 +736,6 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
             @Override
             public void onItemSelect(FlowTagLayout parent, List<Integer> selectedList) {
 //                startActivity(new Intent(getActivity(), ImpressTagActivity.class));
-
 //                for (int i = 0; i < selectedList.size(); i++) {
 //                    AppLog.e("==========setOnTagSelectListener===========" + selectedList.get(i));
 //                    Search data = ((Search) parent.getAdapter().getItem(selectedList.get(i)));
@@ -894,17 +745,6 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
 //                }
             }
         });
-    }
-
-    private void concernOrNot() {
-        User user = MyApplication.getInstance().user;
-        if (user != null) {
-//            Tools.showDialog(this);
-            AppLog.e(user.getUserId() + "=======concernOrNot======" + userId + "==============" + signal);
-        } else {
-            ToastUtil.shortShowToast("请先登录....");
-            startActivity(new Intent(PersonalPageActivity.this, RegistActivity.class));
-        }
     }
 
     private void showFriendOptPopWindow() {
@@ -1039,7 +879,6 @@ public class PersonalPageActivity extends BaseActivity implements View.OnScrollC
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN); //隐藏状态栏
         // TODO: add setContentView(...) invocation
         ButterKnife.inject(this);
         ImmersionBar.with(this)

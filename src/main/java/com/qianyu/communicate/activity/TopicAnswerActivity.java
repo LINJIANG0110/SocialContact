@@ -2,9 +2,7 @@ package com.qianyu.communicate.activity;
 
 import android.Manifest;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -18,8 +16,6 @@ import com.hys.utils.ToastUtils;
 import com.qianyu.communicate.R;
 import com.qianyu.communicate.base.BaseActivity;
 import com.qianyu.communicate.bukaSdk.popwindows.PhotoChoicePop;
-import com.qianyu.communicate.entity.Constellation;
-import com.qianyu.communicate.entity.FriendSelect;
 import com.qianyu.communicate.event.EventBuss;
 import com.qianyu.communicate.http.NetUtils;
 import com.qianyu.communicate.utils.Tools;
@@ -48,8 +44,6 @@ import cn.finalteam.galleryfinal.model.PhotoInfo;
 import cn.finalteam.galleryfinal.permission.AfterPermissionGranted;
 import cn.finalteam.galleryfinal.permission.EasyPermissions;
 import jp.wasabeef.richeditor.RichEditor;
-
-import static com.qianyu.communicate.activity.InfoEditActivity.CAMERA_PERMISSION;
 
 /**
  * 话题回答

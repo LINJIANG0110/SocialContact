@@ -99,16 +99,6 @@ public class WXPayHelper {
             ToastUtil.shortShowToast("请先安装微信客户端");
             return;
         }
-//        req.appId = payInfo.getAppid();
-//        req.partnerId = payInfo.getPartnerid();
-//        req.prepayId = payInfo.getPrepayid();
-//        req.packageValue = "Sign=WXPay";
-//        req.nonceStr = payInfo.getNoncestr();
-//        req.timeStamp = payInfo.getTimestamp() + "";
-////        req.timeStamp = String.valueOf(genTimeStamp());
-//        req.sign = payInfo.getSign();
-//        msgApi.registerApp(Contants.WX_APP_ID);
-//        msgApi.sendReq(req);
 
         req.appId = payInfo.getAppid();
         req.partnerId = payInfo.getMch_id();
@@ -145,12 +135,7 @@ public class WXPayHelper {
         signParams.add(new BasicNameValuePair("timestamp", req.timeStamp));
 
         req.sign = genAppSign(signParams);
-        AppLog.e("=======sign111=======" + req.sign);
         sb.append("sign\n" + req.sign + "\n\n");
-
-//        show.setText(sb.toString());
-
-        Log.e("orion", signParams.toString());
         msgApi.sendReq(req);
 
     }
@@ -191,14 +176,10 @@ public class WXPayHelper {
             packageParams.add(new BasicNameValuePair("total_fee", 1 + ""));
             packageParams.add(new BasicNameValuePair("trade_type", "APP"));
 
-
             String sign = genPackageSign(packageParams);
-            AppLog.e("=======sign222=======" + sign);
             packageParams.add(new BasicNameValuePair("sign", sign));
 
-
             String xmlstring = toXml(packageParams);
-
 
             return new String(xmlstring.toString().getBytes(), "ISO8859-1");
 
@@ -236,12 +217,6 @@ public class WXPayHelper {
     }
 
 
-//    private String genOutTradNo() {
-//        Random random = new Random();
-//        return MD5.getMessageDigest(String.valueOf(random.nextInt(10000)).getBytes());
-//    }
-
-
     /**
      * 生成签名
      */
@@ -258,9 +233,7 @@ public class WXPayHelper {
         sb.append("key=");
         sb.append(Contants.WX_APP_SECRET);
 
-
         String packageSign = MD5.getMessageDigest(sb.toString().getBytes()).toUpperCase();
-        Log.e("orion-packageSign", packageSign);
 
         return packageSign;
     }
@@ -287,7 +260,6 @@ public class WXPayHelper {
             if (dialog != null) {
                 dialog.dismiss();
             }
-            AppLog.e(result + "==========result=======" + result.toString());
             sb.append("prepay_id\n" + result.get("prepay_id") + "\n\n");
             resultunifiedorder = result;
             genPayReq(wxPay);

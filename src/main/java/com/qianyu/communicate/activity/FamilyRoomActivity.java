@@ -29,11 +29,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
 import android.view.animation.BounceInterpolator;
-import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -57,7 +53,6 @@ import com.qianyu.communicate.adapter.SkillBgAdapter;
 import com.qianyu.communicate.adapter.ViewPagerAdapter;
 import com.qianyu.communicate.appliction.MyApplication;
 import com.qianyu.communicate.base.BaseActivity;
-import com.qianyu.communicate.base.BaseWebActivity;
 import com.qianyu.communicate.base.BaseWebActivity_;
 import com.qianyu.communicate.base.MyBaseAdapter;
 import com.qianyu.communicate.bukaSdk.BukaHelper_;
@@ -273,7 +268,6 @@ public class FamilyRoomActivity extends BaseActivity {
         } else if (event.getState() == EventBuss.FAMILY_RECRUIT) {
             initEventMsg();
         } else if (event.getState() == EventBuss.FAMILY_BOSS) {
-            AppLog.e("===========FAMILY_BOSS222============");
             initEventMsg();
         } else if (event.getState() == EventBuss.WORLD_RECRUIT) {
             initEventMsg();
@@ -333,7 +327,6 @@ public class FamilyRoomActivity extends BaseActivity {
                 }
             }
         } else if (event.getState() == EventBuss.FAMILY_EXIT) {
-            AppLog.e("===========FAMILY_BOSS333============");
             bukaHelper.exit();
             finish();
         } else if (event.getState() == EventBuss.FAMILY_EXIT_ENTER) {
@@ -364,14 +357,9 @@ public class FamilyRoomActivity extends BaseActivity {
     @Override
     public void setViews() {
         EventBus.getDefault().register(this);
-        RedPackageBean mBean = new RedPackageBean();
-        mBean.setHongbaoId(1);
-        mBean.setTitle("一心一意");
-        mBean.setWordS("yi");
-        String mJson = new Gson().toJson(mBean);
-        Log.e("test", mJson);
         initUserAndChatRecylerView();
         initEmotions();
+        // 底部评论框
         etSendmessage.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -445,8 +433,7 @@ public class FamilyRoomActivity extends BaseActivity {
                 if (null != userBean.getUserflag() && userBean.getUserflag().equals("0")) {
                     new Handler().postDelayed(new Runnable() {
                         public void run() {
-                            //execute the task
-                            Log.e("传入id",userBean.getGroupId());
+                            Log.e("传入id", userBean.getGroupId());
                             startActivity(new Intent(FamilyRoomActivity.this, SystemRedpackageDialog.class)
                                     .putExtra("groupId", userBean.getGroupId()));
                         }
@@ -483,9 +470,6 @@ public class FamilyRoomActivity extends BaseActivity {
                         bukaHelper.exit();
                         finish();
                         break;
-//                    case 4:
-//                        bukaHelper.play();
-//                        break;
                 }
             }
         });
@@ -521,7 +505,6 @@ public class FamilyRoomActivity extends BaseActivity {
 
             @Override
             public void onRpcListener_(UserBean manager, UserBean userBean, Rpc rpc) {
-                AppLog.e(userBean != null ? userBean.toString() : "" + "===========setOnRpcListener===============" + manager != null ? manager.toString() : "");
                 switch ((int) rpc.getType()) {
                     //禁言
                     case Constant.RPC_FORBID_SPEAK:
@@ -738,7 +721,6 @@ public class FamilyRoomActivity extends BaseActivity {
                     public void onSuccess(String result, String msg, ResultModel model) {
                         mApplyTv.setVisibility(View.GONE);
                         EnterGroup enterGroup = (EnterGroup) model.getModel();
-//                        Intent intent = new Intent(FamilyRoomActivity.this, familyInfo.getGroupId() == 1 ? FamilyCustomerDetailActivity.class : enterGroup.getUserType() >= 4 ? FamilyCustomerDetailActivity.class : FamilyMemberDetailActivity.class);
                         Intent intent = new Intent(FamilyRoomActivity.this, enterGroup.getUserType() >= 4 ? FamilyCustomerDetailActivity.class : FamilyMemberDetailActivity.class);
                         intent.putExtra("family", familyInfo);
                         intent.putExtra("userBean", userBean);
@@ -826,7 +808,6 @@ public class FamilyRoomActivity extends BaseActivity {
         mRideViewLL.post(new Runnable() {
             @Override
             public void run() {
-                AppLog.e("==========onAnimationStart=========" + mRideViewLL.getMeasuredWidth());
                 final ObjectAnimator objectAnimator01 = ObjectAnimator.ofFloat(mRideViewLL, "TranslationX", mRideViewLL.getMeasuredWidth(), 0);
                 objectAnimator01.setDuration(1000);
                 final ObjectAnimator objectAnimator02 = ObjectAnimator.ofFloat(mRideViewLL, "alpha", 1, 0);
@@ -847,7 +828,6 @@ public class FamilyRoomActivity extends BaseActivity {
                         mRideViewLL.clearAnimation();
                         mRideViewLL.setVisibility(View.GONE);
                         ride = false;
-                        AppLog.e("==========onAnimationEnd=========");
                     }
 
                     @Override
@@ -904,12 +884,10 @@ public class FamilyRoomActivity extends BaseActivity {
                 Log.e("saveMsg", result);
                 try {
                     JSONObject jsonObject = new JSONObject(result);
-//                    String data = jsonObject.getString("data");// 老版本直接取data
                     String data = jsonObject.getJSONObject("data").getString("returnMessage");// 通过服务端检验敏感字后返回的文本 需要替换contentJson中的text文本
                     SendCustomMsgBean mBean = new Gson().fromJson(contentJson, SendCustomMsgBean.class);
                     mBean.setText(data);
                     String dataJson = new Gson().toJson(mBean);
-                    Log.e("传入布卡dataJson", dataJson);
                     bukaHelper.chat(null, dataJson);
                     if (data.startsWith("@") && !TextUtils.isEmpty(atPhone) && !TextUtils.equals(atPhone, user.getPhone())) {
                         Tools.groupAtMe("在" + familyInfo.getGroupName() + data, atPhone, familyInfo.getGroupId());
@@ -1001,20 +979,6 @@ public class FamilyRoomActivity extends BaseActivity {
                     if (list != null && list.size() > 0) {
                         mGroupEventLl.setVisibility(View.VISIBLE);
                         final EventRecord.ContentBean contentBean = list.get(0);
-//                        int sendSex = contentBean.getSendSex();
-//                        int acceptSex = contentBean.getAcceptSex();
-//                        if (!TextUtils.isEmpty(contentBean.getEventMsg())) {
-//                            try {
-//                                SpannableString content = Tools.matcherSearchTitle(getResources().getColor(sendSex == 1 ? R.color.chat_color_nan : R.color.chat_color_nv),
-//                                        getResources().getColor(acceptSex == 1 ? R.color.chat_color_nan : R.color.chat_color_nv),
-//                                        contentBean.getEventMsg(), contentBean.getSendNickName(), contentBean.getAcceptNickName());
-//                                mMarQueeView.setText(SpanStringUtils.getEmotionContent_(EmotionUtils.EMOTION_CLASSIC_TYPE, FamilyRoomActivity.this, mMarQueeView, content));
-//                            } catch (Exception e) {
-//                                mMarQueeView.setText(SpanStringUtils.getEmotionContent(EmotionUtils.EMOTION_CLASSIC_TYPE, FamilyRoomActivity.this, mMarQueeView, contentBean.getEventMsg()));
-//                            }
-//                        } else {
-//                            mMarQueeView.setText("");
-//                        }
                         mMarQueeView.setText(TextUtils.isEmpty(contentBean.getEventMsg()) ? "" : Html.fromHtml(contentBean.getEventMsg()));
                     } else {
                         mGroupEventLl.setVisibility(View.GONE);
@@ -1034,20 +998,6 @@ public class FamilyRoomActivity extends BaseActivity {
     private void showWorldEvent(final EventRecord.ContentBean contentBean) {
         mWorldHead.setImageURI(TextUtils.isEmpty(contentBean.getHeadUrl()) ? "" : contentBean.getHeadUrl());
         mWorldMsg.setText(TextUtils.isEmpty(contentBean.getEventMsg()) ? "" : contentBean.getEventMsg());
-//        int sendSex = contentBean.getSendSex();
-//        int acceptSex = contentBean.getAcceptSex();
-//        if (!TextUtils.isEmpty(contentBean.getEventMsg())) {
-//            try {
-//                SpannableString content = Tools.matcherSearchTitle(getResources().getColor(sendSex == 1 ? R.color.chat_color_nan : R.color.chat_color_nv),
-//                        getResources().getColor(acceptSex == 1 ? R.color.chat_color_nan : R.color.chat_color_nv),
-//                        contentBean.getEventMsg(), contentBean.getSendNickName(), contentBean.getAcceptNickName());
-//                mWorldMsg.setText(SpanStringUtils.getEmotionContent_(EmotionUtils.EMOTION_CLASSIC_TYPE, this, mWorldMsg, content));
-//            } catch (Exception e) {
-//                mWorldMsg.setText(SpanStringUtils.getEmotionContent(EmotionUtils.EMOTION_CLASSIC_TYPE, this, mWorldMsg, contentBean.getEventMsg()));
-//            }
-//        } else {
-//            mWorldMsg.setText("");
-//        }
         mWorldMsg.setText(TextUtils.isEmpty(contentBean.getEventMsg()) ? "" : Html.fromHtml(contentBean.getEventMsg()));
         mWorldLogo.setVisibility(TextUtils.isEmpty(contentBean.getPicPath()) ? View.INVISIBLE : View.VISIBLE);
         ImageUtil.loadPicNet(TextUtils.isEmpty(contentBean.getPicPath()) ? "" : contentBean.getPicPath(), mWorldLogo);
@@ -1821,7 +1771,6 @@ public class FamilyRoomActivity extends BaseActivity {
                         xxlWebview.setBackgroundColor(0);
                         xxlWebview.getBackground().setAlpha(0);
                         User user = MyApplication.getInstance().user;
-//                        http://localhost:8888/sanxiao/index.html?userId=80&headUrl=&nickName=;
                         xxlWebview.loadUrl(APPURL.BASE_H5_URL_XXL + "gameType=10000&userId=" + user.getUserId() + "&time=" + System.currentTimeMillis() + "&headUrl=" + user.getHeadUrl()
                                 + "&nickName=" + user.getNickName() + "&token=" + user.getToken() + "&uid=" + user.getUserId() + "&termType=1&deviceId=" + DeviceUtils.getDeviceId(FamilyRoomActivity.this));
                         Tools.showDialog(FamilyRoomActivity.this);
@@ -1852,10 +1801,6 @@ public class FamilyRoomActivity extends BaseActivity {
                                             // 拉起分享
                                             share();
                                             break;
-//                                        case "ShoppingMall":
-//                                            Intent intent = new Intent(FamilyRoomActivity.this, HotMallActivity.class);
-//                                            startActivityForResult(intent, 100);
-//                                            break;
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -2004,8 +1949,6 @@ public class FamilyRoomActivity extends BaseActivity {
                                             initRemainMoney();// 刷新
                                             break;
                                         case "updateSkill":
-//                                            JSONObject value = jsonObject.getJSONObject("value");
-//                                            String skillType = value.getString("skillType");
                                             startActivity(new Intent(FamilyRoomActivity.this, SkillDetailActivity.class));
                                             break;
                                         case "GetMoreFubao"://获取福宝
@@ -2151,7 +2094,7 @@ public class FamilyRoomActivity extends BaseActivity {
                         NetUtils.getInstance().familyUserInfo(userBean.getUserId(), new NetCallBack() {
                             @Override
                             public void onSuccess(String result, String msg, ResultModel model) {
-                                Log.e("FAMILYrOOMaCI",result);
+                                Log.e("FAMILYrOOMaCI", result);
                                 UserInfo familyUserInfo = model.getModel();
                                 if (familyUserInfo != null) {
                                     UserInfo.UserInfoBean userInfo = familyUserInfo.getUserInfo();
@@ -2349,11 +2292,10 @@ public class FamilyRoomActivity extends BaseActivity {
     //权限回调
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 100 && grantResults.length > 0) {
             for (int i = 0; i < grantResults.length; i++) {
                 if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
-//                    Toast.makeText(this, permissions[i] + "，权限别用户拒绝了。", Toast.LENGTH_SHORT).show();
+                    // 权限别用户拒绝了
                 }
             }
         }
@@ -2422,7 +2364,6 @@ public class FamilyRoomActivity extends BaseActivity {
         /**
          * 按下返回键，如果表情显示，则隐藏，没有显示则回退页面
          */
-        AppLog.e("=========onBackPressed==========" + mEmotionKeyboard.interceptBackPress());
         if (!mEmotionKeyboard.interceptBackPress()) {
             super.onBackPressed();
         }
@@ -2434,29 +2375,12 @@ public class FamilyRoomActivity extends BaseActivity {
         UMImage image = new UMImage(FamilyRoomActivity.this, com.qianyu.communicate.R.drawable.sharelogo);
         UMWeb web = new UMWeb(APPURL.BASE_SHARE_URL + "gameType=10003&headUrl=" + user.getHeadUrl() + "&userId=" + user.getUserId() + "&time=" + System.currentTimeMillis() + "&token=" + user.getToken() + "&uid=" +
                 user.getUserId() + "&termType=1&deviceId=" + DeviceUtils.getDeviceId(FamilyRoomActivity.this));
-        web.setTitle("千语分享");//标题
-        web.setThumb(image);  //缩略图
-        web.setDescription("据说有实力的人，可以让任何人闭嘴。");//描述
+        web.setTitle("千语分享");// 标题
+        web.setThumb(image);  // 缩略图
+        web.setDescription("据说有实力的人，可以让任何人闭嘴。");// 描述
         new ShareAction(FamilyRoomActivity.this)
                 .withMedia(web)
                 .setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE)
-                .setCallback(shareListener)
-                .open();
-    }
-
-    //分享
-    private void share(LiveRoomShare liveRoomShare) {
-//        UMImage image = new UMImage(ChatRoomUserActivity.this, imgUrl);
-        UMImage image = new UMImage(FamilyRoomActivity.this, TextUtils.isEmpty(liveRoomShare.getFamilyPath()) ? "" : liveRoomShare.getFamilyPath());
-        UMWeb web = new UMWeb(TextUtils.isEmpty(liveRoomShare.getUrl()) ? "" : liveRoomShare.getUrl());
-        web.setTitle(TextUtils.isEmpty(liveRoomShare.getFamilyName()) ? "" : liveRoomShare.getFamilyName());//标题
-        web.setThumb(image);  //缩略图
-        web.setDescription(TextUtils.isEmpty(liveRoomShare.getFamilyDescribe()) ? "" : liveRoomShare.getFamilyDescribe());//描述
-        new ShareAction(FamilyRoomActivity.this)
-//                .withText("千语")
-                .withMedia(web)
-//                .withMedia(image)
-                .setDisplayList(SHARE_MEDIA.QQ, SHARE_MEDIA.QZONE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.WEIXIN_CIRCLE, SHARE_MEDIA.SINA)
                 .setCallback(shareListener)
                 .open();
     }
@@ -2502,7 +2426,7 @@ public class FamilyRoomActivity extends BaseActivity {
                         jsonObject.put("eventType", "shareBySanxiao");
                         jsonObject.put("value", "success");
                         if (xxlWebview != null) {
-                            Log.e("分享成功", "分享成功");
+                            // 分享成功
                             xxlWebview.loadUrl("javascript:new CommunicateAppUtils().receiveAppMessage(" + jsonObject + ")");
                         }
                     } catch (JSONException e) {

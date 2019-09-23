@@ -47,7 +47,6 @@ public class TopicCreateActivity extends BaseActivity {
     @Override
     public void setNextOnClick(View.OnClickListener onClick) {
         super.setNextOnClick(onClick);
-        Log.e("保存", "baocun");
         if (titleEt.getText().toString().equals("")) {
             ToastUtils.getInstance().show(this, "请输入标题");
             return;
@@ -88,9 +87,7 @@ public class TopicCreateActivity extends BaseActivity {
         mEditor.setEditorFontSize(15);
         mEditor.setEditorFontColor(Color.rgb(74, 74, 74));
         mEditor.setPadding(10, 10, 10, 10);
-        //mEditor.setBackground("https://raw.githubusercontent.com/wasabeef/art/master/chip.jpg");
         mEditor.setPlaceholder("点击添写回答内容");
-        //mEditor.setInputEnabled(false);
 
         mEditor.setOnTextChangeListener(new RichEditor.OnTextChangeListener() {
             @Override

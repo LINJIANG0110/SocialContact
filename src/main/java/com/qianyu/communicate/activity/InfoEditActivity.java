@@ -1045,7 +1045,6 @@ public class InfoEditActivity extends BaseActivity implements EasyPermissions.Pe
                     case 1:
                         List<String> addList = (List<String>) msg.obj;
                         // 这里改为uploadfile以后刷新
-                        // activity.postArticleImgAdapter.notifyDataSetChanged();
                         activity.refreshLayout(false, activity, addList);
                         break;
                 }

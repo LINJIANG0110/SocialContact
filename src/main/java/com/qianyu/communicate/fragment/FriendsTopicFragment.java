@@ -1,26 +1,19 @@
 package com.qianyu.communicate.fragment;
 
 import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
 import com.qianyu.communicate.R;
-import com.qianyu.communicate.activity.CommentPraiseDetailActivity;
-import com.qianyu.communicate.activity.FriendDetailActivity;
 import com.qianyu.communicate.activity.TopicAllActivity;
-import com.qianyu.communicate.activity.TopicDelActivity;
 import com.qianyu.communicate.activity.TopicNewsActivity;
-import com.qianyu.communicate.adapter.FriendCircleAdapter;
 import com.qianyu.communicate.adapter.TopicAdapter;
 import com.qianyu.communicate.appliction.MyApplication;
 import com.qianyu.communicate.base.BaseMListFragment;
 import com.qianyu.communicate.base.MyMBaseAdapter;
-import com.qianyu.communicate.entity.CircleList;
 import com.qianyu.communicate.entity.TopicBean;
 import com.qianyu.communicate.entity.User;
 import com.qianyu.communicate.event.EventBuss;
@@ -34,7 +27,6 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

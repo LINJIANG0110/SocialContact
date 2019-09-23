@@ -126,7 +126,6 @@ public class MainActivity extends BaseMainActivity {
 
     @Override
     public int getRootViewId() {
-//        StatusBarCompats.setStatusBarColor(this, getResources().getColor(R.color.transparent), 0);
         return R.layout.activity_main;
     }
 
@@ -150,32 +149,18 @@ public class MainActivity extends BaseMainActivity {
             finish();
             return;
         }
-        // runtime permission for android 6.0, just require all permissions here for simple
         requestPermissions();
-
         //umeng api
         MobclickAgent.updateOnlineConfig(this);
         UmengUpdateAgent.setUpdateOnlyWifi(false);
         UmengUpdateAgent.update(this);
-
         showExceptionDialogFromIntent(getIntent());
-
         inviteMessgeDao = new InviteMessgeDao(this);
-        UserDao userDao = new UserDao(this);
-        //register broadcast receiver to receive the change of group from DemoHelper
         registerBroadcastReceiver();
-
-
         EMClient.getInstance().contactManager().setContactListener(new MainActivity.MyContactListener());
         EMClient.getInstance().addClientListener(clientListener);
         EMClient.getInstance().addMultiDeviceListener(new MainActivity.MyMultiDeviceListener());
-        //debug purpose only
         registerInternalDebugReceiver();
-
-
-        // 2. 启动系统任务
-//        mJobManager = JobSchedulerManager.getJobSchedulerInstance(this);
-//        mJobManager.startJobScheduler();
 
         if (getIntent() != null) {
             boolean family = getIntent().getBooleanExtra("family", false);
@@ -238,11 +223,8 @@ public class MainActivity extends BaseMainActivity {
         handler.sendEmptyMessageDelayed(0, 2000);//发送消息
         boolean isAddKf = SpUtil.getBooleanSP(this, "kefuTag", false);
         if (!isAddKf) {
-            Log.e("添加客服","yes");
             // 请求官方客服接口
             addKefu();
-        }else {
-            Log.e("添加客服","no");
         }
     }
 
@@ -261,7 +243,6 @@ public class MainActivity extends BaseMainActivity {
 
                 }
             }
-
             @Override
             public void onFail(String code, String msg, String result) {
                 Log.e("添加客服返回结果fail",result);
@@ -426,7 +407,6 @@ public class MainActivity extends BaseMainActivity {
         String mKey = SpUtil.getStringSP(this, "tempStamp", "0");
         Long resultStamp = Long.valueOf(tempStamp) - Long.valueOf(mKey);
         if (resultStamp / 1000 / 60 / 60 / 24 < 3 && !mKey.equals("0")) {
-            Log.e("每三天提示更新", "每三天提示更新");
             return;
         }
         // 检查版本
@@ -460,7 +440,6 @@ public class MainActivity extends BaseMainActivity {
                     e.printStackTrace();
                 }
             }
-
             @Override
             public void onFail(String result, String info, String msg) {
                 Log.e("更新a", result);
@@ -564,7 +543,7 @@ public class MainActivity extends BaseMainActivity {
         PermissionsManager.getInstance().requestAllManifestPermissionsIfNecessary(this, new PermissionsResultAction() {
             @Override
             public void onGranted() {
-//				Toast.makeText(MainActivity.this, "All permissions have been granted", Toast.LENGTH_SHORT).show();
+				// Toast.makeText(MainActivity.this, "All permissions have been granted", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -771,8 +750,6 @@ public class MainActivity extends BaseMainActivity {
             updateUnreadAddressLable();
         }
 
-        // unregister this event listener when this activity enters the
-        // background
         DemoHelper sdkHelper = DemoHelper.getInstance();
         sdkHelper.pushActivity(this);
 
@@ -793,9 +770,6 @@ public class MainActivity extends BaseMainActivity {
     protected void onSaveInstanceState(Bundle outState) {
         outState.putBoolean("isConflict", isConflict);
         outState.putBoolean(Constant.ACCOUNT_REMOVED, isCurrentAccountRemoved);
-        //=====dyj======
-//        super.onSaveInstanceState(outState);
-        //=====dyj======
     }
 
 

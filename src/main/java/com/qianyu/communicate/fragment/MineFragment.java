@@ -20,6 +20,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.donkingliang.banner.CustomBanner;
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.gyf.immersionbar.ImmersionBar;
 import com.pizidea.imagepicker.AndroidImagePicker;
 import com.pizidea.imagepicker.bean.ImageItem;
@@ -38,14 +39,13 @@ import com.qianyu.communicate.activity.SettingActivity;
 import com.qianyu.communicate.activity.SkillDetailActivity;
 import com.qianyu.communicate.activity.SuggestBackActivity;
 import com.qianyu.communicate.activity.WalletActivity;
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.qianyu.communicate.appliction.MyApplication;
+import com.qianyu.communicate.base.BaseFragment;
 import com.qianyu.communicate.base.BaseWebActivity;
 import com.qianyu.communicate.entity.PersonalInfo;
 import com.qianyu.communicate.entity.User;
 import com.qianyu.communicate.event.EventBuss;
 import com.qianyu.communicate.http.NetUtils;
-import com.qianyu.communicate.base.BaseFragment;
 import com.qianyu.communicate.image.ImagePreviewActivity;
 import com.qianyu.communicate.utils.NumberUtils;
 import com.qianyu.communicate.utils.Tools;
@@ -148,7 +148,6 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     RelativeLayout suggestBack;
     @InjectView(R.id.iv_edit)
     ImageView ivEdit;
-    private List<String> bannersImg = new ArrayList<String>();
     private PersonalInfo personalInfo;
     @InjectView(R.id.lldot)
     LinearLayout point_group;
@@ -183,7 +182,6 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
             @Override
             public View createView(Context context, int position) {
                 //这里返回的是轮播图的项的布局 支持任何的布局
-                //position 轮播图的第几个项
                 ImageView imageView = new ImageView(context);
                 return imageView;
             }
@@ -225,61 +223,6 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 }
             }
         });
-    }
-
-
-    private void initContentView(View contentView) {
-        mHeadImg = contentView.findViewById(R.id.mHeadImg);
-        vipTv = contentView.findViewById(R.id.vipTv);
-        mNameTv = contentView.findViewById(R.id.mNameTv);
-        mIdTv = contentView.findViewById(R.id.mIdTv);
-        mLeveTv = contentView.findViewById(R.id.mLeveTv);
-        mHeadLL = contentView.findViewById(R.id.mHeadLL);
-        mFansTv = contentView.findViewById(R.id.mFansTv);
-        mFansLL = contentView.findViewById(R.id.mFansLL);
-        mMoneyTv = contentView.findViewById(R.id.mMoneyTv);
-        mConcernLL = contentView.findViewById(R.id.mConcernLL);
-        mDiamondTv = contentView.findViewById(R.id.mDiamondTv);
-        mDiamondLL = contentView.findViewById(R.id.mDiamondLL);
-        mCoinLL = contentView.findViewById(R.id.mCoinLL);
-        mCollectTv = contentView.findViewById(R.id.mCollectTv);
-        mChargeRv = contentView.findViewById(R.id.mChargeRv);
-        mTaskTv = contentView.findViewById(R.id.mTaskTv);
-        mTaskRv = contentView.findViewById(R.id.mTaskRv);
-        mMyRoomRv = contentView.findViewById(R.id.mMyRoomRv);
-        mMyRoomTv = contentView.findViewById(R.id.mMyRoomTv);
-        mSkillRv = contentView.findViewById(R.id.mSkillRv);
-        mBagRv = contentView.findViewById(R.id.mBagRv);
-        mLevelTv = contentView.findViewById(R.id.mLevelTv);
-        mLevelRv = contentView.findViewById(R.id.mLevelRv);
-        mDaynmicRv = contentView.findViewById(R.id.mDaynmicRv);
-        mMallRv = contentView.findViewById(R.id.mMallRv);
-        mMallView = contentView.findViewById(R.id.mMallView);
-        mMallManageRv = contentView.findViewById(R.id.mMallManageRv);
-        mGiftRv = contentView.findViewById(R.id.mGiftRv);
-        mSettingRv = contentView.findViewById(R.id.mSettingRv);
-        mAgeTv = contentView.findViewById(R.id.mAgeTv);
-        ageSexLL = contentView.findViewById(R.id.ageSexLL);
-        sexLogo = contentView.findViewById(R.id.sexLogo);
-        mWalletLL = contentView.findViewById(R.id.mWalletLL);
-        mFriendCount = contentView.findViewById(R.id.mFriendCount);
-        vipTv.setOnClickListener(this);
-        mHeadLL.setOnClickListener(this);
-        mFansLL.setOnClickListener(this);
-        mConcernLL.setOnClickListener(this);
-        mDiamondLL.setOnClickListener(this);
-        mCoinLL.setOnClickListener(this);
-        mMyRoomRv.setOnClickListener(this);
-        mTaskRv.setOnClickListener(this);
-        mSkillRv.setOnClickListener(this);
-        mBagRv.setOnClickListener(this);
-        mLevelRv.setOnClickListener(this);
-        mDaynmicRv.setOnClickListener(this);
-        mMallRv.setOnClickListener(this);
-        mMallManageRv.setOnClickListener(this);
-        mGiftRv.setOnClickListener(this);
-        mSettingRv.setOnClickListener(this);
-        mHeadImg.setOnClickListener(this);
     }
 
     /**

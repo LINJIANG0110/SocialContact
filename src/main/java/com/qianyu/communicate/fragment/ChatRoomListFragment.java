@@ -15,6 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.gyf.immersionbar.ImmersionBar;
+import com.jcodecraeer.xrecyclerview.ProgressStyle;
+import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.qianyu.communicate.R;
 import com.qianyu.communicate.activity.CityChooseActivity;
 import com.qianyu.communicate.activity.FamilyCretaeActivity;
@@ -43,8 +45,6 @@ import com.qianyu.communicate.utils.Tools;
 import com.qianyu.communicate.views.banner.Banner;
 import com.qianyu.communicate.views.banner.listener.OnBannerClickListener;
 import com.qianyu.communicate.views.banner.loader.FrescoImageLoader;
-import com.jcodecraeer.xrecyclerview.ProgressStyle;
-import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
 import net.neiquan.applibrary.wight.RefreshLayout;
 import net.neiquan.okhttp.NetCallBack;
@@ -73,7 +73,6 @@ public class ChatRoomListFragment extends BaseFragment implements RefreshLayout.
     protected static int PAEG_SIZE = 10;
     protected View view;
     protected MyBaseAdapter adapter;
-    RelativeLayout mHeadView;
     @InjectView(R.id.status_view)
     View statusView;
     @InjectView(R.id.recyclerview)
@@ -99,9 +98,7 @@ public class ChatRoomListFragment extends BaseFragment implements RefreshLayout.
     @InjectView(R.id.mUnReadDot)
     View mUnReadDot;
     private Banner bannerView;
-    private LinearLayout mSuggestLL;
     private RecyclerView mSuggestRecylerView;
-    private LinearLayout mOtherLL;
     private ChatRoomSuggestAdapter chatRoomSuggestAdapter;
     private List<String> bannersImg = new ArrayList<String>();
     private View headView;
@@ -122,24 +119,7 @@ public class ChatRoomListFragment extends BaseFragment implements RefreshLayout.
         mImmersionBar.init();
         setAdapter();
         setHeaderViews();
-//        mRecyclerview.setVisibility(View.GONE);
     }
-
-//    @Override
-//    public void onHiddenChanged(boolean hidden) {
-//        super.onHiddenChanged(hidden);
-//        AppLog.e("==========onHiddenChanged===========");
-//        if (mRecyclerview != null) {
-//            mRecyclerview.scrollToPosition(0);
-//        }
-//    }
-//
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        AppLog.e("==========onResume===========");
-//        mRecyclerview.scrollToPosition(0);
-//    }
 
     /**
      * 普通事件
@@ -229,7 +209,7 @@ public class ChatRoomListFragment extends BaseFragment implements RefreshLayout.
                         adapter.append(list);
                         if (alllist == null || alllist.size() < PAEG_SIZE) {
                             if (pageNum == 0 && (alllist == null || alllist.size() == 0)) {
-//                                mRefeshLy.showEmptyView();
+                                // mRefeshLy.showEmptyView();
                             }
                             mRecyclerview.setLoadingMoreEnabled(false);
                         } else {
@@ -240,7 +220,6 @@ public class ChatRoomListFragment extends BaseFragment implements RefreshLayout.
                     mRecyclerview.loadMoreComplete();
                     mRecyclerview.refreshComplete();
                     mRefeshLy.hideAll();
-//                    mRefeshLy.showEmptyView();
                 }
             }
 
@@ -415,9 +394,7 @@ public class ChatRoomListFragment extends BaseFragment implements RefreshLayout.
         LinearLayout mMasterLL = headView.findViewById(R.id.mMasterLL);
         LinearLayout mRankListLL = headView.findViewById(R.id.mRankListLL);
         LinearLayout mComplicatedLL = headView.findViewById(R.id.mComplicatedLL);
-        mSuggestLL = headView.findViewById(R.id.mSuggestLL);
         mSuggestRecylerView = headView.findViewById(R.id.mSuggestRecylerView);
-        mOtherLL = headView.findViewById(R.id.mOtherLL);
         mRecyclerview.addHeaderView(headView);
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2,
                 StaggeredGridLayoutManager.VERTICAL);

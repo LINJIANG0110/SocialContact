@@ -103,21 +103,8 @@ public class FriendsCircleFragment extends BaseMListFragment {
         } else if (event.getState() == EventBuss.FRIEND_CIRCLE) {
             onRefresh();
         } else if (event.getState() == EventBuss.CIRCLE_MSG) {
-//            mRecyclerview.scrollToPosition(0);
-//            String headUrl = (String) event.getMessage();
-//            List<String> headUrl1 = SpUtil.getStrListValue(getActivity(), "headUrl");
-//            if (headUrl1 == null) {
-//                headUrl1 = new ArrayList<>();
-//            }
-//            headUrl1.add(headUrl);
-//            SpUtil.saveStrListValue(getActivity(), "headUrl", headUrl1);
-//            headView.setVisibility(View.VISIBLE);
-//            ImageUtil.loadHeadImgNet(headUrl, mHeadLogo);
-//            mMsgNum.setText(headUrl1.size() + "条新消息");
             onRefresh();
         } else if (event.getState() == EventBuss.CIRCLE_READ) {
-//            SpUtil.removeStrList(getActivity(), "headUrl");
-//            headView.setVisibility(View.GONE);
             onRefresh();
         }
     }
@@ -153,15 +140,6 @@ public class FriendsCircleFragment extends BaseMListFragment {
             }
         });
         loadDatas();
-//        List<String> headUrl1 = SpUtil.getStrListValue(getActivity(), "headUrl");
-//        if (headUrl1 == null||headUrl1.size()<=0) {
-//            headView.setVisibility(View.GONE);
-//        }else {
-//            mRecyclerview.scrollToPosition(0);
-//            headView.setVisibility(View.VISIBLE);
-//            ImageUtil.loadHeadImgNet(headUrl1.get(0), mHeadLogo);
-//            mMsgNum.setText(headUrl1.size() + "条新消息");
-//        }
     }
 
     private void loadDatas() {
@@ -174,7 +152,6 @@ public class FriendsCircleFragment extends BaseMListFragment {
                     if (circleList != null) {
                         CircleList.UnReadBean unRead = circleList.getUnRead();
                         if (unRead != null && unRead.getCount() > 0) {
-//                            mRecyclerview.scrollToPosition(0);
                             headView.setVisibility(View.VISIBLE);
                             ImageUtil.loadHeadImgNet(unRead.getHeadUrl(), mHeadLogo);
                             mMsgNum.setText(unRead.getCount() + "条新消息");
@@ -188,7 +165,6 @@ public class FriendsCircleFragment extends BaseMListFragment {
                                 mRecyclerview.refreshComplete();
                                 mRefeshLy.hideAll();
                                 if (pageNum == 0) {
-//                                    mRecyclerview.scrollToPosition(0);
                                     adapter.clear();
                                 }
                                 adapter.append(list);

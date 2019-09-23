@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,10 +15,8 @@ import android.widget.TextView;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.gson.Gson;
-import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 import com.qianyu.communicate.R;
-import com.qianyu.communicate.activity.RedpackageActivity;
 import com.qianyu.communicate.activity.RedpackageResActivity;
 import com.qianyu.communicate.appliction.MyApplication;
 import com.qianyu.communicate.bukaSdk.entity.UserBean;
@@ -50,7 +47,6 @@ public class ContentAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-//        return mList.size() <= 0 ? 11 : mList.size();
         return mList.size();
     }
 
@@ -109,7 +105,6 @@ public class ContentAdapter extends BaseAdapter {
             if (userBean.getUserId() == user.getUserId()) {
                 String messageExt = userBean.getMessageExt();
                 if (messageExt != null && !messageExt.equals("")) {
-                    Log.e("解析的json", messageExt);
                     // 是json
                     SendCustomMsgBean customBean = mGson.fromJson(messageExt, SendCustomMsgBean.class);
                     int messageType = customBean.getMessageType();
@@ -171,7 +166,6 @@ public class ContentAdapter extends BaseAdapter {
             } else {
                 String messageExt = userBean.getMessageExt();
                 if (messageExt != null && !messageExt.equals("")) {
-                    Log.e("解析的jsonAA", messageExt);
                     SendCustomMsgBean mBean = mGson.fromJson(messageExt, SendCustomMsgBean.class);
                     int messageType = mBean.getMessageType();
                     if (messageType == 7) {
@@ -189,12 +183,7 @@ public class ContentAdapter extends BaseAdapter {
                         holder.text.setText(SpanStringUtils.getEmotionContent(EmotionUtils.EMOTION_CLASSIC_TYPE, activity, holder.text, (TextUtils.isEmpty(mText) ? "" : mText)));
                     }
                 } else {
-                    Log.e("item非本人", userBean.getText());
-                    if (messageExt == null) {
-                        Log.e("itemmessageExt", "空");
-                    } else {
-                        Log.e("itemmessageExt", messageExt);
-                    }
+                    // item非本人
                     // 非json直接显示
                     holder.text.setText(SpanStringUtils.getEmotionContent(EmotionUtils.EMOTION_CLASSIC_TYPE, activity, holder.text, (TextUtils.isEmpty(userBean.getText()) ? "" : userBean.getText())));
                 }
@@ -202,7 +191,6 @@ public class ContentAdapter extends BaseAdapter {
                 holder.mHeadImg.setImageURI(TextUtils.isEmpty(userBean.getHeadUrl()) ? "" : userBean.getHeadUrl());
                 holder.addressTv.setText(TextUtils.isEmpty(userBean.getAddress()) ? "" : userBean.getAddress().replace("市", ""));
                 holder.mUserLevel.setText("" + userBean.getLevel());
-                // Log.e("标签url", TextUtils.isEmpty(userBean.getDesignationUrl()) ? arg0 + "**" : userBean.getDesignationUrl());
                 holder.mLogoImg.setVisibility(TextUtils.isEmpty(userBean.getDesignationUrl()) ? View.GONE : View.VISIBLE);
                 holder.userOfficial.setVisibility(userBean.getExpand() > 0 ? View.VISIBLE : View.GONE);
                 ImageUtil.loadPicNet(userBean.getDesignationUrl(), holder.mLogoImg);
@@ -382,16 +370,6 @@ public class ContentAdapter extends BaseAdapter {
         TextView tvWord_;
         TextView tvIdiom;
         TextView tvIdiom_;
-    }
-
-    public boolean isGoodJson(String json) {
-        try {
-            parser.parse(json);
-            return true;
-        } catch (JsonParseException e) {
-            System.out.println("bad json: " + json);
-            return false;
-        }
     }
 
     public LinkedList<UserBean> getmList() {

@@ -7,10 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.qianyu.communicate.R;
-import com.qianyu.communicate.activity.BroadcastCreateActivity;
 import com.qianyu.communicate.activity.FriendSelectActivity;
 import com.qianyu.communicate.activity.PublishCircleActivity;
-import com.qianyu.communicate.activity.RedpackageActivity;
 import com.qianyu.communicate.activity.RedpackageResActivity;
 import com.qianyu.communicate.activity.TopicCreateActivity;
 import com.qianyu.communicate.base.BaseViewPagerFragment_Smart_Normal1;
@@ -74,7 +72,6 @@ public class HomeNearFragment extends BaseViewPagerFragment_Smart_Normal1 {
         ((TextView) mSmartTabLayout.getTabAt(0)).setTextSize(18);
         ((TextView) mSmartTabLayout.getTabAt(1)).setTextSize(13);
         ((TextView) mSmartTabLayout.getTabAt(2)).setTextSize(13);
-//        ((TextView) mSmartTabLayout.getTabAt(2)).setTextSize(13);
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -85,13 +82,6 @@ public class HomeNearFragment extends BaseViewPagerFragment_Smart_Normal1 {
             public void onPageSelected(int position) {
                 p = position;
                 mPublishCicle.setVisibility(View.VISIBLE);
-//                if(p==1) {
-//                    mPublishCicle.setVisibility(View.VISIBLE);
-//                }else if (p == 2){
-//                    mPublishCicle.setVisibility(View.VISIBLE);
-//                }else {
-//                    mPublishCicle.setVisibility(View.GONE);
-//                }
                 setmPublishCicle(position == 0 ? R.mipmap.sy_shaixuan : position == 1 ? R.mipmap.dongtai_xiedongtai : -1);// R.mipmap.add_topic
                 ((TextView) mSmartTabLayout.getTabAt(position)).setTextSize(18);
                 if (position == 0) {
@@ -104,7 +94,6 @@ public class HomeNearFragment extends BaseViewPagerFragment_Smart_Normal1 {
                     ((TextView) mSmartTabLayout.getTabAt(1)).setTextSize(13);
                     ((TextView) mSmartTabLayout.getTabAt(0)).setTextSize(13);
                 }
-//                ((TextView) mSmartTabLayout.getTabAt(position == 0 ? 1 : 0)).setTextSize(13);
             }
 
             @Override

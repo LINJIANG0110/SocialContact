@@ -2,8 +2,8 @@ package com.qianyu.communicate.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -53,7 +53,6 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 import org.haitao.common.utils.AppLog;
-import org.haitao.common.utils.CustomToast;
 import org.haitao.common.utils.KeyBoardUtils;
 import org.haitao.common.utils.ToastUtil;
 import org.json.JSONArray;
@@ -189,7 +188,6 @@ public class TopicDelActivity extends BaseActivity implements RefreshLayout.Retr
                         initUser();
                         boolean isZanStatus = answerBean.fabulousFlag == 1 ? true : false;
                         initZan(isZanStatus, answerBean.topicComment.fabulousNum);
-//                        mWebview.loadData(answerBean.topicComment.content, "text/html", "UTF-8");
                         mWebview.loadData(answerBean.topicComment.content, "text/html;charset=UTF-8", "UTF-8");
                     } else {
                         llayRoot.setVisibility(View.GONE);
@@ -235,9 +233,7 @@ public class TopicDelActivity extends BaseActivity implements RefreshLayout.Retr
         switch (view.getId()) {
             // 查看贴住详情
             case R.id.relyMainUser:
-                Log.e("传入的userId", answerBean.topicComment.userId);
                 intentPersonal(Long.valueOf(answerBean.topicComment.userId));
-                // this.startActivity(new Intent(this,PersonalPageActivity.class).putExtra("userId",delBean.userId));
                 break;
             // 查看个人详情
             case R.id.rlly_evalue_1:
@@ -631,7 +627,6 @@ public class TopicDelActivity extends BaseActivity implements RefreshLayout.Retr
             bundle.putInt(EmotionComplateFragment.EMOTION_MAP_TYPE, EmotionUtils.EMOTION_CLASSIC_TYPE);
             emotionComplateFragment.setArguments(bundle);
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//            transaction.replace(R.id.emotionContainer, emotionComplateFragment);
             transaction.commit();
             //初始化EmotionKeyboard
             mEmotionKeyboard = EmotionKeyboard.with(this)
